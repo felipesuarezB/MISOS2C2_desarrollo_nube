@@ -10,6 +10,7 @@ class Jugador(db.Model):
     apellido = db.Column(db.String(50), nullable=False)
     email = db.Column(db.String(100), unique=True, nullable=False)
     password = db.Column(db.String(200), nullable=False)
+    password2 = db.Column(db.String(200), nullable=False)
     ciudad = db.Column(db.String(50), nullable=False)
     pais = db.Column(db.String(50), nullable=False)
     username = db.Column(db.String(50), unique=True, nullable=False)
