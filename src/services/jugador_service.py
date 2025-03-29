@@ -1,3 +1,4 @@
+import hashlib
 from flask import jsonify
 from api_messages.api_errors import InternalServerError
 from api_messages.api_users import UserAlreadyExists
@@ -12,10 +13,15 @@ class JugadorService:
 
   def crear_jugador(self, nuevo_jugador):
 
-    username = nuevo_jugador["username"]
+    email = nuevo_jugador["email"]
+    password = nuevo_jugador['password1']
+    
     found_user = None
+    encrypted_password = ""
+    
     try:
-      found_user = db.session.query(Jugador).filter(Jugador.usuario == username).first()
+      found_user = db.session.query(Jugador).filter(Jugador.email == email).first()
+      encrypted_password = hashlib.md5(password.encode('utf-8')).hexdigest()
     except Exception as ex:
       raise InternalServerError() from ex
 
@@ -26,19 +32,20 @@ class JugadorService:
         nombre=nuevo_jugador["nombre"],
         apellido=nuevo_jugador["apellido"],
         email=nuevo_jugador["email"],
-        password=nuevo_jugador["password1"],
-        paassword2=nuevo_jugador["password2"],
+        password1=encrypted_password,
         ciudad=nuevo_jugador["ciudad"],
         pais=nuevo_jugador["pais"],
         username=nuevo_jugador["username"]
     )
 
-    try:
-      db.session.add(nuevo_jugador)
-      db.session.commit()
-    except Exception as ex:
-      db.session.rollback()
-      raise InternalServerError() from ex
+    db.session.add(nuevo_jugador)
+    db.session.commit()
+    # try:
+    #   db.session.add(nuevo_jugador)
+    #   db.session.commit()
+    # except Exception as ex:
+    #   db.session.rollback()
+    #   raise InternalServerError() from ex
 
     return jsonify({"message": "Usuario creado exitosamente"}), 201
 
