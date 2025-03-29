@@ -17,4 +17,10 @@ def signup(nuevo_jugador):
     res = make_response(res_json, result.code)
 
     return res
+
+@jugadores_bp.route("", methods=["GET"])
+def lista_jugadores():
+  result = jugador_service.lista_jugadores()
+  res_json = jsonify(result.jugadores)
+  return res_json, result.code
     

@@ -2,7 +2,7 @@ import hashlib
 from flask import jsonify
 from api_messages.api_errors import InternalServerError
 from api_messages.api_users import UserAlreadyExists
-from api_messages.api_jugadores import JugadorCreado
+from api_messages.api_jugadores import JugadorCreado, JugadoresList
 from models.jugador import JugadorSchema, Jugador
 from database import db
 
@@ -49,6 +49,18 @@ class JugadorService:
     #   raise InternalServerError() from ex
 
     return JugadorCreado(nuevo_jugador.id)
+
+  def lista_jugadores(self):
+    found_jugadores = []
+    try:
+      found_jugadores = db.session.query(Jugador).all()
+    except Exception as ex:
+      raise InternalServerError() from ex
+
+    found_jugadores_json = [JugadorSchema().dump(jugador) for jugador in found_jugadores]
+
+    return JugadoresList(found_jugadores_json)
+
 
 
 jugador_service = JugadorService()
