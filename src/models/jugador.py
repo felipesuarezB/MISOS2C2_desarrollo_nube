@@ -15,7 +15,7 @@ class Jugador(db.Model):
     password1 = Column(String(200), nullable=False)
     ciudad = Column(String(50), nullable=False)
     pais = Column(String(50), nullable=False)
-    username = Column(String(50), unique=True, nullable=False)
+    username = Column(String(50), unique=False, nullable=False)
     
 class JugadorSchema(Schema):
     id = fields.String(attribute='id')
@@ -26,13 +26,3 @@ class JugadorSchema(Schema):
     ciudad = fields.String(attribute='ciudad')
     pais = fields.String(attribute='pais')
     username = fields.String(attribute='username')
-
-    # @validates("email")
-    # def validate_email(self, value):
-    #     if Jugador.query.filter_by(email=value).first():
-    #         raise ValidationError("El email ya está registrado.")
-
-    # @validates("password2")
-    # def validate_password(self, value, **kwargs):
-    #     if kwargs.get("password1") and kwargs["password1"] != value:
-    #         raise ValidationError("Las contraseñas no coinciden.")
