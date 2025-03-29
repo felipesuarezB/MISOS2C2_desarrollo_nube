@@ -17,5 +17,4 @@ def signup(nuevo_jugador):
     res = make_response(res_json, result.code)
 
     return res
-
     

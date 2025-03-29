@@ -2,6 +2,7 @@ import hashlib
 from flask import jsonify
 from api_messages.api_errors import InternalServerError
 from api_messages.api_users import UserAlreadyExists
+from api_messages.api_jugadores import JugadorCreado
 from models.jugador import JugadorSchema, Jugador
 from database import db
 
@@ -47,7 +48,7 @@ class JugadorService:
     #   db.session.rollback()
     #   raise InternalServerError() from ex
 
-    return jsonify({"message": "Usuario creado exitosamente"}), 201
+    return JugadorCreado(nuevo_jugador.id)
 
 
 jugador_service = JugadorService()

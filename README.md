@@ -25,7 +25,13 @@ Proyecto del servicio de backend 'backend-app-enforma'.
 
 ## Ejecución
 
-Primero, instale las dependencias del proyecto:
+Primero se debe instalar pipenv:
+
+```bash
+  pip install pipenv
+```
+
+Luego, instale las dependencias del proyecto:
 
 ```bash
   pipenv install
