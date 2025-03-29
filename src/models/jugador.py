@@ -26,3 +26,8 @@ class JugadorSchema(Schema):
     ciudad = fields.String(attribute='ciudad')
     pais = fields.String(attribute='pais')
     username = fields.String(attribute='username')
+    
+class JugadorJsonSchema(Schema):
+    username = fields.String()
+    password1 = fields.String()
+
