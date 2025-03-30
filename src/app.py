@@ -10,14 +10,8 @@ import logging
 from database import db, get_postgresql_url
 
 from apis.health_bp import health_bp
-from apis.usuarios_bp import usuarios_bp
-from apis.ejercicios_bp import ejercicios_bp
-from apis.entrenadores_bp import entrenadores_bp
-from apis.personas_bp import personas_bp
-from apis.grupos_bp import grupos_bp
-from apis.rutinas_bp import rutinas_bp
-from apis.programas_bp import programas_bp
 from apis.jugador_bp import jugadores_bp
+from apis.video_bp import videos_bp
 from api_messages.base_api_error import ApiError
 from api_messages.api_errors import TokenNotFound, TokenInvalidOrExpired
 
@@ -26,7 +20,7 @@ def create_app():
   app = Flask(__name__)
 
   # Configuración de endpoints OpenAPI y Swagger (flask-smorest).
-  app.config['API_TITLE'] = 'API Backend App En Forma'
+  app.config['API_TITLE'] = 'API Backend App ANB Rising Stars Showcase'
   app.config['API_VERSION'] = '1.0.0'
   app.config['OPENAPI_VERSION'] = "3.0.2"
   app.config['OPENAPI_JSON_PATH'] = "api-spec.json"
@@ -37,14 +31,8 @@ def create_app():
   # Inicialización de flask-smorest extension y registro de APIs:
   api = Api(app)
   api.register_blueprint(health_bp)
-  api.register_blueprint(usuarios_bp)
-  api.register_blueprint(ejercicios_bp)
-  api.register_blueprint(entrenadores_bp)
-  api.register_blueprint(personas_bp)
-  api.register_blueprint(grupos_bp)
-  api.register_blueprint(rutinas_bp)
-  api.register_blueprint(programas_bp)
   api.register_blueprint(jugadores_bp)
+  api.register_blueprint(videos_bp)
 
   # Configuración de base de datos con SQLAlchemy (flask-sqlalchemy).
   if os.getenv('ENVIRONMENT') in ['test']:
