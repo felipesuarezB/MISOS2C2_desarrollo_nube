@@ -12,13 +12,18 @@ class JugadorCreado:
   def __init__(self, user_id):
     self.message = "Usuario creado exitosamente."
     self.user_id = user_id
+
+class JugadoresList:
+  code = 200
+
+  def __init__(self, found_jugadores):
+    self.jugadores = found_jugadores
     
 class UserAuthFailed(ApiError):
   code = 401
 
   def __init__(self):
     self.message = "Autenticación de usuario no exitosa."
-
 
 class UserAuthSucceed:
   code = 200
