@@ -11,7 +11,7 @@ health_bp = Blueprint(name='health', import_name=__name__, url_prefix='/health',
 def ping_posts():
   response = {
       'status': 'UP',
-      'componentName': 'backend-app-enforma',
+      'componentName': 'backend-app-ANB-Rising-Stars-Showcase',
       'currentTime': datetime.today().strftime('%Y-%m-%dT%H:%M:%S.%fZ')
   }
 

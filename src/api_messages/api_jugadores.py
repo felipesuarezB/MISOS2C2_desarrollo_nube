@@ -25,6 +25,7 @@ class UserAuthFailed(ApiError):
   def __init__(self):
     self.message = "Autenticación de usuario no exitosa."
 
+
 class UserAuthSucceed:
   code = 200
 

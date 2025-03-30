@@ -1,7 +1,6 @@
-from sqlalchemy import Column, String, Integer, DateTime, ForeignKey
+from sqlalchemy import Column, String
 from sqlalchemy.dialects.postgresql import UUID
-from marshmallow import fields, Schema, validates
-from marshmallow_sqlalchemy import SQLAlchemyAutoSchema
+from marshmallow import fields, Schema
 
 import uuid
 
@@ -28,6 +27,6 @@ class JugadorSchema(Schema):
     username = fields.String(attribute='username')
     
 class JugadorJsonSchema(Schema):
-    username = fields.String()
-    password1 = fields.String()
+    username = fields.String(attribute='username')
+    password1 = fields.String(attribute='password1')
 
