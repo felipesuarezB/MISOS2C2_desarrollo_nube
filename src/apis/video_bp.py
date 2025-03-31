@@ -30,6 +30,34 @@ def upload_video():
 
     return res
 
+@videos_bp.route('/public/videos', methods=['GET'])
+@jwt_required()
+def public_video():
+    jwt_payload = get_jwt()
+    result = video_service.list_public_videos(jwt_payload)
+    res_json = jsonify(result.__dict__)
+    res = make_response(res_json, result.code)
+
+    return res
+
+@videos_bp.route('/public/videos/<string:id>/vote', methods=['POST'])
+@jwt_required()
+def vote_video(id):
+    result = video_service.vote_video(id)
+    res_json = jsonify(result.__dict__)
+    res = make_response(res_json, result.code)
+    return res
+
+@videos_bp.route('/public/rankings', methods=['GET'])
+@jwt_required()
+def ranking_videos():
+    jwt_payload = get_jwt()
+    result = video_service.list_ranking_videos(jwt_payload)
+    res_json = jsonify(result.__dict__)
+    res = make_response(res_json, result.code)
+
+    return res
+
 @videos_bp.route('/videos/<string:id>')
 class VideosResources(MethodView):
     
@@ -47,3 +75,6 @@ class VideosResources(MethodView):
         res_json = jsonify(result.__dict__)
 
         return res_json, result.code
+    
+    
+    
