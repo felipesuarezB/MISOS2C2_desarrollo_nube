@@ -32,3 +32,16 @@ class VideoDeleted:
   def __init__(self, id_video):
     self.message = "Video borrado exitosamente."
     self.id_video = id_video
+
+class VideoVoted:
+  code = 200
+
+  def __init__(self):
+    self.message = "Voto exitoso."
+
+class VideoRanking:
+  code = 200
+
+  def __init__(self, ranking):
+    self.message = "Lista de rankings obtenida."
+    self.ranking = ranking
