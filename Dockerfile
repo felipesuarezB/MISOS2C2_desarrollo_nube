@@ -1,33 +1,37 @@
-# Imagen Docker base Python.
-FROM python:3.12
+# Imagen base de Python
+FROM python:3.12-slim
 
-# Variables de entorno de la aplicación.
-ENV ENVIRONMENT=production
-ENV DB_USER=dbuser
-ENV DB_PASSWORD=mypass
-ENV DB_HOST=172.18.0.2
-ENV DB_PORT=5432
-ENV DB_NAME=db
-ENV JWT_SECRET_KEY=6a037737-af5d-4b93-a9e5-dd8fec11221b
-
-# Instalar dependencias de la aplicación.
-COPY Pipfile Pipfile.lock ./
-
-RUN python -m pip install --upgrade pip
-RUN pip install pipenv && pipenv install --system --deploy
-
-# Directorio de instalación.
+# Configuración del directorio de trabajo
 WORKDIR /app
 
-# Copiar código fuente de la aplicación.
+# Instalar dependencias del sistema necesarias para compilar psycopg2
+RUN apt-get update && apt-get install -y \
+    libpq-dev gcc python3-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# Variables de entorno de la aplicación
+ENV ENVIRONMENT=production \
+    DB_USER=dbuser \
+    DB_PASSWORD=mypass \
+    DB_HOST=172.18.0.2 \
+    DB_PORT=5432 \
+    DB_NAME=db \
+    JWT_SECRET_KEY=6a037737-af5d-4b93-a9e5-dd8fec11221b \
+    FLASK_APP=app.py
+
+# Copiar archivos de dependencias primero para optimizar el caché de Docker
+COPY Pipfile Pipfile.lock ./
+
+# Actualizar pip y instalar dependencias de la aplicación
+RUN python -m pip install --upgrade pip \
+    && pip install --no-cache-dir pipenv \
+    && pipenv install --system --deploy
+
+# Copiar el código fuente de la aplicación
 COPY ./src .
 
-# Set environment variables
-ENV FLASK_APP="apirest"
-ENV FLASK_DEBUG=1
+# Exponer el puerto 8081 para la aplicación Flask
+EXPOSE 8081
 
-# Expose port 5000 for the Flask development server to listen on
-EXPOSE 5000
-
-# Define the command to run the Flask development server
-CMD ["flask", "run", "--host=0.0.0.0"]
+# Comando de ejecución de Flask
+CMD ["flask", "run", "--host=0.0.0.0", "--port=8081"]
