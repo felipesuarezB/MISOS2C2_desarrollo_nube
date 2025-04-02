@@ -16,9 +16,6 @@ from database import db
 def generate_new_token(user_id):
     token = create_access_token(user_id,expires_delta=timedelta(seconds=3600))
     return token
-def generate_new_token(user_id):
-    token = create_access_token(user_id,expires_delta=timedelta(seconds=3600))
-    return token
 
 class JugadorService:
 
@@ -28,14 +25,15 @@ class JugadorService:
   def crear_jugador(self, nuevo_jugador):
 
     email = nuevo_jugador["email"]
-    password = nuevo_jugador['password1']
-    
+    password1 = nuevo_jugador['password1']
+    password2 = nuevo_jugador['password2']
     found_user = None
-    encrypted_password = ""
-    
+    encrypted_password1 = ""
+    encrypted_password2 = ""    
     try:
       found_user = db.session.query(Jugador).filter(Jugador.email == email).first()
-      encrypted_password = hashlib.md5(password.encode('utf-8')).hexdigest()
+      encrypted_password1 = hashlib.md5(password1.encode('utf-8')).hexdigest()
+      encrypted_password2 = hashlib.md5(password2.encode('utf-8')).hexdigest()
     except Exception as ex:
       raise InternalServerError() from ex
 
@@ -46,7 +44,8 @@ class JugadorService:
         nombre=nuevo_jugador["nombre"],
         apellido=nuevo_jugador["apellido"],
         email=nuevo_jugador["email"],
-        password1=encrypted_password,
+        password1=encrypted_password1,
+        password2=encrypted_password2,
         ciudad=nuevo_jugador["ciudad"],
         pais=nuevo_jugador["pais"],
         username=nuevo_jugador["username"]
@@ -67,35 +66,6 @@ class JugadorService:
 
     return JugadorCreado(nuevo_jugador.id)
 
-  def auth_user(self, user_credentials):
-    if 'username' not in user_credentials:
-      raise InvalidRequestBody()
-    if 'password1' not in user_credentials:
-      raise InvalidRequestBody()
-
-    username = user_credentials['username']
-    password = user_credentials['password1']
-
-    encrypted_password = ""
-    try:
-      encrypted_password = hashlib.md5(password.encode('utf-8')).hexdigest()
-    except Exception as ex:
-      raise InvalidRequestBody() from ex
-
-    found_user = None
-    try:
-      filter1 = Jugador.username == username
-      filter2 = Jugador.password1 == encrypted_password
-      found_user = db.session.query(Jugador).filter(filter1, filter2).first()
-    except Exception as ex:
-      raise InternalServerError() from ex
-
-    if found_user is None:
-      raise UserAuthFailed()
-    
-    token = generate_new_token(found_user.id)
-
-    return UserAuthSucceed(found_user.id, token)
   def lista_jugadores(self):
     found_jugadores = []
     try:
@@ -126,12 +96,19 @@ class JugadorService:
     try:
       filter1 = Jugador.username == username
       filter2 = Jugador.password1 == encrypted_password
-      found_user = db.session.query(Jugador).filter(filter1, filter2).first()
+      filter3 = Jugador.password2 == encrypted_password
+      found_user1 = db.session.query(Jugador).filter(filter1, filter2).first()
+      found_user2 = db.session.query(Jugador).filter(filter1, filter3).first()
     except Exception as ex:
       raise InternalServerError() from ex
 
-    if found_user is None:
-      raise UserAuthFailed()
+    if found_user1 is None:
+      if found_user2 is None:
+        raise UserAuthFailed()
+      else:
+        found_user = found_user2
+    if found_user1 is not None:
+      found_user = found_user1
     
     token = generate_new_token(found_user.id)
 
