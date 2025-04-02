@@ -15,7 +15,7 @@ class Jugador(db.Model):
     password2 = Column(String(200), nullable=False)
     ciudad = Column(String(50), nullable=False)
     pais = Column(String(50), nullable=False)
-    username = Column(String(50), unique=False, nullable=False)
+    username = Column(String(50), unique=True, nullable=False)
     
 class JugadorSchema(Schema):
     id = fields.String(attribute='id')
@@ -29,7 +29,7 @@ class JugadorSchema(Schema):
     username = fields.String(attribute='username')
     
 class JugadorJsonSchema(Schema):
-    username = fields.String(attribute='username', unique=True)
+    username = fields.String(attribute='username')
     password1 = fields.String(attribute='password1')
     password2 = fields.String(attribute='password2')
 

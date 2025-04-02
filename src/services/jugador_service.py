@@ -1,14 +1,9 @@
 from datetime import timedelta
-from datetime import timedelta
 import hashlib
 from flask import jsonify
-from api_messages.api_errors import InternalServerError, InvalidRequestBody, InvalidUrlPathParams, ForbiddenOperation
-from api_messages.api_jugadores import UserAlreadyExists, UserAuthFailed, UserAuthSucceed
 from api_messages.api_jugadores import JugadorCreado, JugadoresList
 from api_messages.api_errors import InternalServerError, InvalidRequestBody, InvalidUrlPathParams, ForbiddenOperation
 from api_messages.api_jugadores import UserAlreadyExists, UserAuthFailed, UserAuthSucceed
-from api_messages.api_jugadores import JugadorCreado
-from flask_jwt_extended import create_access_token, jwt_required, get_jwt
 from flask_jwt_extended import create_access_token, jwt_required, get_jwt
 from models.jugador import JugadorSchema, Jugador
 from database import db
@@ -27,7 +22,6 @@ class JugadorService:
     email = nuevo_jugador["email"]
     password1 = nuevo_jugador['password1']
     password2 = nuevo_jugador['password2']
-    found_user = None
     encrypted_password1 = ""
     encrypted_password2 = ""    
     try:
@@ -51,12 +45,6 @@ class JugadorService:
         username=nuevo_jugador["username"]
     )
 
-    try:
-      db.session.add(nuevo_jugador)
-      db.session.commit()
-    except Exception as ex:
-      db.session.rollback()
-      raise InternalServerError() from ex
     try:
       db.session.add(nuevo_jugador)
       db.session.commit()
@@ -92,23 +80,14 @@ class JugadorService:
     except Exception as ex:
       raise InvalidRequestBody() from ex
 
-    found_user = None
     try:
-      filter1 = Jugador.username == username
-      filter2 = Jugador.password1 == encrypted_password
-      filter3 = Jugador.password2 == encrypted_password
-      found_user1 = db.session.query(Jugador).filter(filter1, filter2).first()
-      found_user2 = db.session.query(Jugador).filter(filter1, filter3).first()
+      filter = Jugador.username == username
+      found_user = db.session.query(Jugador).filter(filter).first()
     except Exception as ex:
       raise InternalServerError() from ex
 
-    if found_user1 is None:
-      if found_user2 is None:
+    if found_user is None or (found_user.password1 != encrypted_password and found_user.password2 != encrypted_password):
         raise UserAuthFailed()
-      else:
-        found_user = found_user2
-    if found_user1 is not None:
-      found_user = found_user1
     
     token = generate_new_token(found_user.id)
 
