@@ -1,8 +1,7 @@
 from flask import jsonify, make_response
 from flask.views import MethodView
-from flask_jwt_extended import get_jwt, jwt_required
+from flask_jwt_extended import get_jwt, jwt_required, get_jwt_identity
 from flask_smorest import Blueprint
-
 from models.video import VideoJsonSchema
 from services.video_service import video_service
 
@@ -43,10 +42,16 @@ def public_video():
 @videos_bp.route('/public/videos/<string:id>/vote', methods=['POST'])
 @jwt_required()
 def vote_video(id):
-    result = video_service.vote_video(id)
+    # 🔹 Extraer el username desde el JWT
+    username = get_jwt_identity()
+    print(f"👤 Username extraído del JWT: {username} (tipo: {type(username)})")
+
+    # 🔹 Llamar al servicio de votos
+    result = video_service.vote_video(id, username)
+
+    # 🔹 Crear la respuesta JSON
     res_json = jsonify(result.__dict__)
-    res = make_response(res_json, result.code)
-    return res
+    return make_response(res_json, result.code)
 
 @videos_bp.route('/public/rankings', methods=['GET'])
 @jwt_required()

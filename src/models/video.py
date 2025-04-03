@@ -1,7 +1,8 @@
 from datetime import datetime
-from sqlalchemy import Column, DateTime, ForeignKey, String, Integer
+from sqlalchemy import Column, DateTime, ForeignKey, String, Integer, UniqueConstraint
 from sqlalchemy.dialects.postgresql import UUID
 from marshmallow import fields, Schema
+from sqlalchemy import JSON
 
 import uuid
 
@@ -11,11 +12,10 @@ class Video(db.Model):
     id = Column(UUID(as_uuid=True), primary_key=True, nullable=False, default=uuid.uuid4)
     title = Column(String(50), nullable=False)
     status = Column(String(200), nullable=False)
-    uploaded_at = Column(DateTime(), unique=True, nullable=False)
+    uploaded_at = Column(DateTime(), nullable=False, default=datetime.utcnow)
     processed_at = Column(DateTime(), nullable=False)
     processed_url = Column(String(50), nullable=False)
     id_jugador = Column(UUID(as_uuid=True), ForeignKey('jugador.id'), nullable=False)
-    vote = Column(Integer(), default=0)
     
 class VideoSchema(Schema):
     id = fields.String(attribute='id')
@@ -25,10 +25,22 @@ class VideoSchema(Schema):
     processed_at = fields.DateTime(attribute='processed_at')
     processed_url = fields.String(attribute='processed_url')
     id_jugador = fields.String(attribute='id_jugador')
-    votes = fields.Integer(attribute='vote')
     
 class VideoJsonSchema(Schema):
     video_file = fields.String(attribute='video_file')
     title = fields.String(attribute='title')
     id_jugador = fields.String(attribute='id_jugador')
+
+class Vote(db.Model):
+    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    video_id = Column(UUID(as_uuid=True), ForeignKey('video.id'), nullable=False)
+    jugador_id = Column(UUID(as_uuid=True), ForeignKey('jugador.id'), nullable=False)
+    value = Column(Integer, nullable=False)  # 1 (like) o -1 (dislike)
+    __table_args__ = (UniqueConstraint('video_id', 'jugador_id', name='uq_video_jugador'),)
+
+class VoteSchema(Schema):
+    id = fields.String()
+    video_id = fields.String()
+    jugador_id = fields.String()
+    value = fields.Integer()
     
