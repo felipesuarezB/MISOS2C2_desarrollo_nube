@@ -7,7 +7,8 @@ from flask import jsonify
 from api_messages.api_errors import InternalServerError
 from api_messages.api_videos import VideoDeleted, VideoFailed, VideoListed, VideoUploaded, VideoVoted, VideoRanking, ForbiddenOperation, UsserIssue, VideoIssue
 from database import db
-from models.video import Video, VideoSchema, Vote, VoteSchema
+from models.video import Video, VideoSchema
+from models.vote import Vote, VoteSchema
 from models.jugador import Jugador, JugadorSchema
 
 
@@ -19,7 +20,7 @@ class VideoService:
     def allowed_file(filename):
         return '.' in filename and filename.rsplit('.', 1)[1].lower() in VideoService.ALLOWED_EXTENSIONS
 
-    def save_video(selft, uploadVideo):
+    def save_video(selft, jwt_payload, uploadVideo):
         # if file.filename == '' or not VideoService.allowed_file(file.filename):
         #     raise VideoFailed()
         
@@ -31,14 +32,15 @@ class VideoService:
         #filename = secure_filename(file.filename)
         # file_path = os.path.join(VideoService.UPLOAD_FOLDER, filename)
         # file.save(file_path)
-        
+        jugador_id = jwt_payload['sub']
+        id_jugador_uuid = uuid.UUID(jugador_id)
         video = Video(
             title=uploadVideo['title'], 
             status='subido', 
             uploaded_at=datetime.now(), 
             processed_at=datetime.now(), 
             processed_url="https://example.com/processed_video.mp4",
-            id_jugador=uuid.UUID(uploadVideo["id_jugador"]))
+            id_jugador= id_jugador_uuid)
         
         db.session.add(video)
         db.session.commit()
@@ -144,7 +146,7 @@ class VideoService:
             db.session.rollback()
             raise InternalServerError() from ex
     
-    def list_ranking_videos(self, jwt_payload):
+    def list_ranking_videos(self):
         found_videos = []
         try:
             found_videos = (

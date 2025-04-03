@@ -12,8 +12,8 @@ videos_bp = Blueprint("videos", __name__, url_prefix='/api', description="API de
 @videos_bp.arguments(VideoJsonSchema)
 @jwt_required()
 def upload_video(uploadVideo):
-    
-    result = video_service.save_video(uploadVideo)
+    jwt_payload = get_jwt()
+    result = video_service.save_video(jwt_payload, uploadVideo)
     res_json = jsonify(result.__dict__)
     res = make_response(res_json, result.code)
 
@@ -54,10 +54,8 @@ def vote_video(id):
     return make_response(res_json, result.code)
 
 @videos_bp.route('/public/rankings', methods=['GET'])
-@jwt_required()
 def ranking_videos():
-    jwt_payload = get_jwt()
-    result = video_service.list_ranking_videos(jwt_payload)
+    result = video_service.list_ranking_videos()
     res_json = jsonify(result.__dict__)
     res = make_response(res_json, result.code)
 

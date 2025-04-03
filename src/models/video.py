@@ -24,23 +24,9 @@ class VideoSchema(Schema):
     uploaded_at = fields.DateTime(attribute='uploaded_at')
     processed_at = fields.DateTime(attribute='processed_at')
     processed_url = fields.String(attribute='processed_url')
-    id_jugador = fields.String(attribute='id_jugador')
+
     
 class VideoJsonSchema(Schema):
     video_file = fields.String(attribute='video_file')
     title = fields.String(attribute='title')
-    id_jugador = fields.String(attribute='id_jugador')
-
-class Vote(db.Model):
-    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
-    video_id = Column(UUID(as_uuid=True), ForeignKey('video.id'), nullable=False)
-    jugador_id = Column(UUID(as_uuid=True), ForeignKey('jugador.id'), nullable=False)
-    value = Column(Integer, nullable=False)  # 1 (like) o -1 (dislike)
-    __table_args__ = (UniqueConstraint('video_id', 'jugador_id', name='uq_video_jugador'),)
-
-class VoteSchema(Schema):
-    id = fields.String()
-    video_id = fields.String()
-    jugador_id = fields.String()
-    value = fields.Integer()
     
