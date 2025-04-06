@@ -14,22 +14,25 @@ from models.vote import Vote, VoteSchema
 from models.jugador import Jugador, JugadorSchema
 
 # Configuración de S3
-S3_BUCKET = "tu-bucket"
+S3_BUCKET = "my-bucket-for-cloud-api"
 S3_REGION = "us-east-2"
-S3_ACCESS_KEY = ""
-S3_SECRET_KEY = ""
+#S3_ACCESS_KEY = ""
+#S3_SECRET_KEY = ""
 
 s3_client = boto3.client(
     "s3",
-    aws_access_key_id=S3_ACCESS_KEY,
-    aws_secret_access_key=S3_SECRET_KEY,
+    #aws_access_key_id=S3_ACCESS_KEY,
+    #aws_secret_access_key=S3_SECRET_KEY,
     region_name=S3_REGION
 )
 
 
 class VideoService:
     
-    def save_video(selft, uploadVideo):        
+    def save_video(self,jwt_payload, uploadVideo): 
+        jugador_id = jwt_payload['sub']
+        id_jugador_uuid = uuid.UUID(jugador_id)
+        print(str(uploadVideo)+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
         if not uploadVideo['video_file'] or uploadVideo['video_file'].filename.split('.')[-1].lower() != "mp4":
             return {"error": "Solo se permiten archivos MP4"}, 400
 
@@ -37,14 +40,19 @@ class VideoService:
         s3_client.upload_fileobj(uploadVideo['video_file'], S3_BUCKET, filename, ExtraArgs={"ContentType": "video/mp4"})
 
 
+        # Guardar metadata en la BD
+        video_url = f"https://{S3_BUCKET}.s3.{S3_REGION}.amazonaws.com/{filename}"
         video = Video(
-            title=uploadVideo['title'], 
-            status='subido', 
-            uploaded_at=datetime.now(), 
-            processed_at=datetime.now(), 
+            title=uploadVideo['title'],
+            status='subido',
+            uploaded_at=datetime.now(),
+            processed_at=datetime.now(),
+            processed_url=video_url,
+            id_jugador=id_jugador_uuid)
         
         db.session.add(video)
         db.session.commit()
+        return VideoUploaded(video.id)
         
         # try:
         #     db.session.add(video)
@@ -53,7 +61,6 @@ class VideoService:
         #     db.session.rollback()
         #     raise InternalServerError() from ex
                 
-        return VideoUploaded(video.id)
     
     def list_videos(self, jwt_payload):
         jugador_id = jwt_payload['sub']
