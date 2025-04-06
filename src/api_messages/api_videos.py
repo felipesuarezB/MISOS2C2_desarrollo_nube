@@ -45,3 +45,18 @@ class VideoRanking:
   def __init__(self, ranking):
     self.message = "Lista de rankings obtenida."
     self.ranking = ranking
+
+class ForbiddenOperation:
+  code = 404
+  def __init__(self):
+    self.message = "El usuario ya voto"
+
+class UsserIssue:
+  code = 404
+  def __init__(self):
+    self.message = "Usuario no existe"
+
+class VideoIssue:
+  code = 404
+  def __init__(self):
+    self.message = "Video no existe"
