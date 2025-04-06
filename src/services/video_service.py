@@ -1,6 +1,8 @@
 
 from datetime import datetime
+import boto3
 import os
+from werkzeug.utils import secure_filename
 import uuid
 from sqlalchemy import func
 from flask import jsonify
@@ -11,36 +13,35 @@ from models.video import Video, VideoSchema
 from models.vote import Vote, VoteSchema
 from models.jugador import Jugador, JugadorSchema
 
+# Configuración de S3
+S3_BUCKET = "tu-bucket"
+S3_REGION = "us-east-2"
+S3_ACCESS_KEY = ""
+S3_SECRET_KEY = ""
+
+s3_client = boto3.client(
+    "s3",
+    aws_access_key_id=S3_ACCESS_KEY,
+    aws_secret_access_key=S3_SECRET_KEY,
+    region_name=S3_REGION
+)
+
 
 class VideoService:
-    UPLOAD_FOLDER = 'D:/OneDrive/Videos/' 
-    ALLOWED_EXTENSIONS = {'mp4'}
-    MAX_FILE_SIZE = 100 * 1024 * 1024  
+    
+    def save_video(selft, uploadVideo):        
+        if not uploadVideo['video_file'] or uploadVideo['video_file'].filename.split('.')[-1].lower() != "mp4":
+            return {"error": "Solo se permiten archivos MP4"}, 400
 
-    def allowed_file(filename):
-        return '.' in filename and filename.rsplit('.', 1)[1].lower() in VideoService.ALLOWED_EXTENSIONS
+        filename = f"{datetime.now().strftime('%Y%m%d%H%M%S')}_{secure_filename(uploadVideo['video_file'].filename)}"
+        s3_client.upload_fileobj(uploadVideo['video_file'], S3_BUCKET, filename, ExtraArgs={"ContentType": "video/mp4"})
 
-    def save_video(selft, jwt_payload, uploadVideo):
-        # if file.filename == '' or not VideoService.allowed_file(file.filename):
-        #     raise VideoFailed()
-        
-        # file.seek(0)
-        # if len(file.read()) > VideoService.MAX_FILE_SIZE:
-        #     raise VideoFailed()
-        # file.seek(0)
-        
-        #filename = secure_filename(file.filename)
-        # file_path = os.path.join(VideoService.UPLOAD_FOLDER, filename)
-        # file.save(file_path)
-        jugador_id = jwt_payload['sub']
-        id_jugador_uuid = uuid.UUID(jugador_id)
+
         video = Video(
             title=uploadVideo['title'], 
             status='subido', 
             uploaded_at=datetime.now(), 
             processed_at=datetime.now(), 
-            processed_url="https://example.com/processed_video.mp4",
-            id_jugador= id_jugador_uuid)
         
         db.session.add(video)
         db.session.commit()
