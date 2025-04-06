@@ -1,4 +1,3 @@
-
 from datetime import datetime
 import boto3
 import os
@@ -14,10 +13,10 @@ from models.vote import Vote, VoteSchema
 from models.jugador import Jugador, JugadorSchema
 
 # Configuración de S3
-S3_BUCKET = "tu-bucket"
-S3_REGION = "us-east-2"
-S3_ACCESS_KEY = ""
-S3_SECRET_KEY = ""
+S3_BUCKET = os.getenv("S3_BUCKET")
+S3_REGION = os.getenv("S3_REGION")
+S3_ACCESS_KEY = os.getenv("S3_ACCESS_KEY")
+S3_SECRET_KEY = os.getenv("S3_SECRET_KEY")
 
 s3_client = boto3.client(
     "s3",
@@ -42,6 +41,7 @@ class VideoService:
             status='subido', 
             uploaded_at=datetime.now(), 
             processed_at=datetime.now(), 
+        )
         
         db.session.add(video)
         db.session.commit()
