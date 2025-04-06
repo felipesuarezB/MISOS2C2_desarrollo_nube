@@ -1,0 +1,55 @@
+name: Continuous Deployment
+
+on:
+  push:
+    branches:
+      - main
+      - 'release/**'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+          
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          
+      - name: Run tests
+        run: |
+          pip install pytest pytest-cov
+          pytest --cov=src/
+          
+      - name: Build and package application
+        run: |
+          # Aquí puedes añadir comandos para construir/empaquetar tu aplicación
+          # Por ejemplo, crear un archivo ZIP, construir una imagen Docker, etc.
+          echo "Building application package"
+          
+      # Deploy a desarrollo (desde develop)
+      - name: Deploy to Development
+        if: github.ref == 'refs/heads/develop'
+        run: |
+          echo "Deploying to development environment"
+          # Aquí comandos para desplegar a desarrollo
+          
+      # Deploy a staging (desde release)
+      - name: Deploy to Staging
+        if: startsWith(github.ref, 'refs/heads/release/')
+        run: |
+          echo "Deploying to staging environment"
+          # Aquí comandos para desplegar a staging
+          
+      # Deploy a producción (desde main)
+      - name: Deploy to Production
+        if: github.ref == 'refs/heads/main'
+        run: |
+          echo "Deploying to production environment"
+          # Aquí comandos para desplegar a producción 
