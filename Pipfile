@@ -1,0 +1,30 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+python-abc = "*"
+python-dotenv = "*"
+Flask = "==3.1.0"
+Flask-Cors = "==5.0.0"
+Flask-JWT-Extended = "==4.7.1"
+flask-smorest = "==0.45.0"
+SQLAlchemy = "==2.0.38"
+psycopg2 = "==2.9.10"
+Flask-SQLAlchemy = "==3.1.1"
+marshmallow = "==3.26.1"
+marshmallow-sqlalchemy = "==1.4.1"
+requests = "==2.32.3"
+boto3 = "*"
+
+[dev-packages]
+pytest = "~=8.3.4"
+pytest-cov = "~=6.0.0"
+pytest-mock = "~=3.14.0"
+pytest-env = "~=1.1.5"
+Faker = "~=36.1.0"
+coverage = "~=7.6.10"
+
+[requires]
+python_version = "3.12"
