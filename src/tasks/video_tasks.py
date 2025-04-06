@@ -4,11 +4,12 @@ from database import db
 from models.video import Video
 import boto3
 import uuid
+import os
 
-S3_BUCKET = "my-bucket-for-cloud-api"
-S3_REGION = "us-east-2"
-S3_ACCESS_KEY = ""
-S3_SECRET_KEY = ""
+S3_BUCKET = os.getenv("S3_BUCKET")
+S3_REGION = os.getenv("S3_REGION")
+S3_ACCESS_KEY = os.getenv("S3_ACCESS_KEY")
+S3_SECRET_KEY = os.getenv("S3_SECRET_KEY")
 
 @celery.task
 def async_save_video(jugador_id, title, filename, file_data_bytes):

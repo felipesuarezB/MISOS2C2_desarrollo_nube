@@ -1,0 +1,652 @@
+{
+	"info": {
+		"_postman_id": "4402311b-362f-4ed3-9adf-f109d6c813fe",
+		"name": "PostMan_Nube",
+		"description": "# Video Sharing Platform API\n\nThis API provides endpoints for managing a video sharing platform where users can upload, list, and manage their videos, as well as view and vote on public videos.\n\n## Getting started guide\n\nTo start using the Video Sharing Platform API, you need to:\n\n- Register a user account using the signup endpoint.\n    \n- Login to receive an authentication token.\n    \n- Include the authentication token in the Authorization header for authenticated requests.\n    \n- The API returns responses in JSON format.\n    \n\n## Authentication\n\nThe Video Sharing Platform API uses JWT token-based authentication.\n\nAfter registering, you can obtain a token by logging in. The token must be included in the Authorization header for authenticated endpoints.\n\n### Authentication error response\n\nIf a token is missing, expired, or invalid, you will receive an HTTP 401 Unauthorized response code.\n\n## Rate and usage limits\n\nAPI access rate limits apply to prevent abuse. The limit is 300 requests per minute. If you exceed this limit, your request will return an HTTP 429 Too Many Requests status code.\n\n## Need some help?\n\nFor questions, visit our documentation or contact our support team.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3551205"
+	},
+	"item": [
+		{
+			"name": "Collections",
+			"item": [
+				{
+					"name": "Signup Player",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nombre\": \"Felipe\",\n  \"apellido\": \"Suarez\",\n  \"email\": \"f.suarezb@uniandes.edu.co\",\n  \"password1\": \"123456\",\n  \"password2\": \"123456\",\n  \"ciudad\": \"Bogota\",\n  \"pais\": \"Colombia\",\n  \"username\": \"fsuarez\"\n}"
+						},
+						"url": {
+							"raw": "{{BASE_URL}}api/auth/signup",
+							"host": [
+								"{{BASE_URL}}api"
+							],
+							"path": [
+								"auth",
+								"signup"
+							],
+							"query": [
+								{
+									"key": "workspace",
+									"value": "{{workspaceId}}",
+									"description": "Optional. A workspace ID in which to create the collection.\n\nIf you do not include this query parameter, the system creates the collection in your \"My Workspace\" workspace.",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Registers a new player in the video sharing platform. Registration requires personal information including name, email, password, location, and a unique username."
+					},
+					"response": [
+						{
+							"name": "Successful Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nombre\": \"Felipe\",\n  \"apellido\": \"Suarez\",\n  \"email\": \"f.suarezb@uniandes.edu.co\",\n  \"password1\": \"123456\",\n  \"password2\": \"123456\",\n  \"ciudad\": \"Bogota\",\n  \"pais\": \"Colombia\",\n  \"username\": \"fsuarez\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}api/auth/signup",
+									"host": [
+										"{{BASE_URL}}api"
+									],
+									"path": [
+										"auth",
+										"signup"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Player registered successfully\",\n    \"user_id\": \"87e9ae5e-51f8-4c61-be36-0a949524cd7e\",\n    \"username\": \"fsuarez\"\n}"
+						},
+						{
+							"name": "Username Already Exists",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nombre\": \"Felipe\",\n  \"apellido\": \"Suarez\",\n  \"email\": \"f.suarezb@uniandes.edu.co\",\n  \"password1\": \"123456\",\n  \"password2\": \"123456\",\n  \"ciudad\": \"Bogota\",\n  \"pais\": \"Colombia\",\n  \"username\": \"fsuarez\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}api/auth/signup",
+									"host": [
+										"{{BASE_URL}}api"
+									],
+									"path": [
+										"auth",
+										"signup"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Username already exists\",\n    \"message\": \"The username 'fsuarez' is already taken. Please choose a different username.\"\n}"
+						},
+						{
+							"name": "Email Already Registered",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nombre\": \"Felipe\",\n  \"apellido\": \"Suarez\",\n  \"email\": \"f.suarezb@uniandes.edu.co\",\n  \"password1\": \"123456\",\n  \"password2\": \"123456\",\n  \"ciudad\": \"Bogota\",\n  \"pais\": \"Colombia\",\n  \"username\": \"felipe_s\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}api/auth/signup",
+									"host": [
+										"{{BASE_URL}}api"
+									],
+									"path": [
+										"auth",
+										"signup"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Email already registered\",\n    \"message\": \"The email 'f.suarezb@uniandes.edu.co' is already registered. Please use a different email or try to login.\"\n}"
+						},
+						{
+							"name": "Missing Required Fields",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nombre\": \"Felipe\",\n  \"apellido\": \"Suarez\",\n  \"email\": \"f.suarezb@uniandes.edu.co\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}api/auth/signup",
+									"host": [
+										"{{BASE_URL}}api"
+									],
+									"path": [
+										"auth",
+										"signup"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": ""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Missing required fields\",\n    \"message\": \"The following fields are required: password1, ciudad, pais, username\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Login Player",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"fsuarez\",\r\n  \"password1\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}api/auth/login",
+							"host": [
+								"{{BASE_URL}}api"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Failed login Player",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"fsuarez\",\r\n  \"password1\": \"123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}api/auth/login",
+									"host": [
+										"{{BASE_URL}}api"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "UNAUTHORIZED",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.1.3 Python/3.13.2"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 06 Apr 2025 16:01:01 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "61"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Autenticación de usuario no exitosa.\"\n}"
+						},
+						{
+							"name": "Missing Required Fields",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"fsuarez\",\r\n  \"password\": \"123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}api/auth/login",
+									"host": [
+										"{{BASE_URL}}api"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "UNPROCESSABLE ENTITY",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.1.3 Python/3.13.2"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 06 Apr 2025 17:03:51 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "146"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 422,\n    \"errors\": {\n        \"json\": {\n            \"password\": [\n                \"Unknown field.\"\n            ]\n        }\n    },\n    \"status\": \"Unprocessable Entity\"\n}"
+						},
+						{
+							"name": "Successful auth",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"fsuarez\",\r\n  \"password1\": \"123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}api/auth/login",
+									"host": [
+										"{{BASE_URL}}api"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.1.3 Python/3.13.2"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 06 Apr 2025 17:14:04 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "576"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"expires_in\": [\n        3600\n    ],\n    \"message\": \"Autenticación de usuario exitosa.\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0Mzk1OTY0NCwianRpIjoiODMzN2Y4YTAtMGUyNi00MjU2LThjMDUtNjkwNjRlYWNhNTJkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjczMmE2MmI5LWE0ZDQtNGVmMi1hZWNlLTFjNjRhOTc1MjY4ZSIsIm5iZiI6MTc0Mzk1OTY0NCwiY3NyZiI6ImNmZWFiNTA4LWVjMjAtNDY2Ny04OGIxLWUxMmIxYzgyYzE5NSIsImV4cCI6MTc0Mzk2MzI0NH0.eXHGTsrkcX_qTaJX61tw_DxQzugS38E2avO1gcOjpGw\",\n    \"token_type\": [\n        \"Bearer\"\n    ],\n    \"user_id\": [\n        \"732a62b9-a4d4-4ef2-aece-1c64a975268e\"\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Upload Videos",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"video_file\": \"prueba\",\r\n  \"title\": \"prueba2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}api/videos/upload",
+							"host": [
+								"{{BASE_URL}}api"
+							],
+							"path": [
+								"videos",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Video Player",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}api/videos",
+							"host": [
+								"{{BASE_URL}}api"
+							],
+							"path": [
+								"videos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List videos By Player Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}api/videos/7d62a882-738a-4ee4-9ced-89554a947127",
+							"host": [
+								"{{BASE_URL}}api"
+							],
+							"path": [
+								"videos",
+								"7d62a882-738a-4ee4-9ced-89554a947127"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Video",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}api/videos/7d62a882-738a-4ee4-9ced-89554a947127",
+							"host": [
+								"{{BASE_URL}}api"
+							],
+							"path": [
+								"videos",
+								"7d62a882-738a-4ee4-9ced-89554a947127"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Public Videos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}api/public/videos",
+							"host": [
+								"{{BASE_URL}}api"
+							],
+							"path": [
+								"public",
+								"videos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vote Videos",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}api/public/videos/7d737c2f-d2ed-4c4a-b7a6-f9d22e32714c/vote",
+							"host": [
+								"{{BASE_URL}}api"
+							],
+							"path": [
+								"public",
+								"videos",
+								"7d737c2f-d2ed-4c4a-b7a6-f9d22e32714c",
+								"vote"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ranking Videos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}api/public/rankings",
+							"host": [
+								"{{BASE_URL}}api"
+							],
+							"path": [
+								"public",
+								"rankings"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "The video sharing platform API provides endpoints for user authentication, video management, and community interactions like voting and rankings."
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "key",
+				"value": "X-API-Key",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://farming-simulator.pstmn.io"
+		}
+	]
+}
