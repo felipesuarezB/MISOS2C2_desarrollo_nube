@@ -1,5 +1,6 @@
 from flask import jsonify, make_response, request
 from flask.views import MethodView
+from database import db
 from flask_jwt_extended import get_jwt, jwt_required, get_jwt_identity
 from flask_smorest import Blueprint
 from models.video import VideoJsonSchema
