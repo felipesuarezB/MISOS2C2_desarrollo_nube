@@ -1,0 +1,46 @@
+services: 
+  anb-api:
+    build: .
+    container_name: nba-api1
+    networks:
+      - web_net
+    ports:
+      - "8081:8081"
+    environment:
+      ENVIRONMENT: production
+      DB_USER: dbuser
+      DB_PASSWORD: mypass
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_NAME: db
+      JWT_SECRET_KEY: 6a037737-af5d-4b93-a9e5-dd8fec11221b
+    depends_on: 
+      db:
+        condition: service_healthy
+
+  db: 
+    container_name: db-api
+    environment: 
+      POSTGRES_USER: dbuser
+      POSTGRES_PASSWORD: mypass
+      POSTGRES_DB: db
+    image: "postgres:latest"
+    networks:
+      - web_net
+    ports: 
+      - "5432:5432"
+    volumes: 
+      - pg-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -d db -U dbuser"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+networks:
+  web_net:
+    driver: bridge
+
+volumes: 
+  pg-data: 
+    driver: local
