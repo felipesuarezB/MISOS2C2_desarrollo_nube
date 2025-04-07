@@ -1,3 +1,4 @@
+import os
 from flask import Flask, jsonify
 from flask_smorest import Api
 from flask_cors import CORS
