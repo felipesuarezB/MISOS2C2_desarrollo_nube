@@ -272,5 +272,5 @@ Para ejecutar las pruebas utilizando Apache Bench como alternativa rápida, se u
 ab -n 1000 -c 100 -T 'application/json' -p login_data.json http://api-url/api/auth/login
 
 # Ejemplo para probar listar videos (con token)
-ab -n 1000 -c 100 -H "Authorization: Bearer TOKEN" http://api-url/api/public/videos
+ab -n 1000 -c 100 -H "Authorization: Bearer TOKEN" http://api-url/api/videos
 ``` 
