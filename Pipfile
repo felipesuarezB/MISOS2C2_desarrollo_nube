@@ -17,6 +17,8 @@ marshmallow = "==3.26.1"
 marshmallow-sqlalchemy = "==1.4.1"
 requests = "==2.32.3"
 boto3 = "*"
+celery = "*"
+redis = "*"
 
 [dev-packages]
 pytest = "~=8.3.4"

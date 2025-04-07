@@ -6,7 +6,7 @@ from flask_jwt_extended import JWTManager
 import os
 from dotenv import load_dotenv
 import logging
-from src.database import db, get_postgresql_url
+from src.database import db, get_database_url
 from src.apis.health_bp import health_bp
 from src.apis.jugador_bp import jugadores_bp
 from src.apis.video_bp import videos_bp
@@ -39,13 +39,13 @@ def create_app():
         if os.getenv('DB_HOST') in ['memory']:
             database_uri = 'sqlite:///:memory:'
         elif os.getenv('DB_HOST') in ['sqlite']:
-            database_uri = 'sqlite:///test.db'
+            database_uri = 'sqlite:///' + os.getenv('DB_NAME', 'test.db')
         else:
-            database_uri = get_postgresql_url()
+            database_uri = get_database_url()
         app.config['SQLALCHEMY_DATABASE_URI'] = database_uri
         app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     else:
-        app.config['SQLALCHEMY_DATABASE_URI'] = get_postgresql_url()
+        app.config['SQLALCHEMY_DATABASE_URI'] = get_database_url()
 
     # Inicialización de SQLAlchemy
     db.init_app(app)

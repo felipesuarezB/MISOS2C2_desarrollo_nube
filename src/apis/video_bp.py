@@ -28,7 +28,7 @@ def upload_video():
 
 @videos_bp.route('/videos', methods=['GET'])
 @jwt_required()
-def upload_video():
+def list_videos():
     jwt_payload = get_jwt()
     result = video_service.list_videos(jwt_payload)
     res_json = jsonify(result.__dict__)
