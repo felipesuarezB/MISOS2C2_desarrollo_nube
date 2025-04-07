@@ -34,4 +34,4 @@ COPY ./src .
 EXPOSE 8081
 
 # Comando de ejecución de Flask
-CMD ["flask", "run", "--host=0.0.0.0", "--port=8081"]
+CMD ["uvicorn", "asgi:asgi_app", "--host=0.0.0.0", "--port=8081"]
