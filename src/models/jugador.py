@@ -4,7 +4,7 @@ from marshmallow import fields, Schema
 
 import uuid
 
-from database import db
+from src.database import db
 
 class Jugador(db.Model):
     id = Column(UUID(as_uuid=True), primary_key=True, nullable=False, default=uuid.uuid4)
