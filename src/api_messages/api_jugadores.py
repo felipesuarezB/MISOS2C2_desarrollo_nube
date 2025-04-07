@@ -1,4 +1,4 @@
-from api_messages.base_api_error import ApiError
+from src.api_messages.base_api_error import ApiError
 
 class UserAlreadyExists(ApiError):
   code = 409

@@ -6,7 +6,7 @@ from sqlalchemy import JSON
 
 import uuid
 
-from database import db
+from src.database import db
 
 class Vote(db.Model):
     id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)

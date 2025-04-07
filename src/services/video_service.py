@@ -5,55 +5,24 @@ from werkzeug.utils import secure_filename
 import uuid
 from sqlalchemy import func
 from flask import jsonify
-from api_messages.api_errors import InternalServerError
-from api_messages.api_videos import VideoDeleted, VideoFailed, VideoListed, VideoUploaded, VideoVoted, VideoRanking, ForbiddenOperation, UsserIssue, VideoIssue
-from database import db
-from models.video import Video, VideoSchema
-from models.vote import Vote, VoteSchema
-from models.jugador import Jugador, JugadorSchema
-
-# Configuración de S3
-S3_BUCKET = os.getenv("S3_BUCKET")
-S3_REGION = os.getenv("S3_REGION")
-S3_ACCESS_KEY = os.getenv("S3_ACCESS_KEY")
-S3_SECRET_KEY = os.getenv("S3_SECRET_KEY")
-
-s3_client = boto3.client(
-    "s3",
-    aws_access_key_id=S3_ACCESS_KEY,
-    aws_secret_access_key=S3_SECRET_KEY,
-    region_name=S3_REGION
-)
-
+from src.api_messages.api_errors import InternalServerError
+from src.api_messages.api_videos import VideoDeleted, VideoFailed, VideoListed, VideoUploaded, VideoVoted, VideoRanking, ForbiddenOperation, UsserIssue, VideoIssue
+from src.database import db
+from src.models.video import Video, VideoSchema
+from src.models.vote import Vote, VoteSchema
+from src.models.jugador import Jugador, JugadorSchema
+from src.tasks.video_tasks import async_save_video
 
 class VideoService:
     
-    def save_video(selft, uploadVideo):        
-        if not uploadVideo['video_file'] or uploadVideo['video_file'].filename.split('.')[-1].lower() != "mp4":
-            return {"error": "Solo se permiten archivos MP4"}, 400
-
+    def save_video(self, jwt_payload, uploadVideo):
+        jugador_id = jwt_payload['sub']
         filename = f"{datetime.now().strftime('%Y%m%d%H%M%S')}_{secure_filename(uploadVideo['video_file'].filename)}"
-        s3_client.upload_fileobj(uploadVideo['video_file'], S3_BUCKET, filename, ExtraArgs={"ContentType": "video/mp4"})
+        file_data = uploadVideo['video_file'].read()
 
+        async_save_video.delay(jugador_id, uploadVideo['title'], filename, file_data)
 
-        video = Video(
-            title=uploadVideo['title'], 
-            status='subido', 
-            uploaded_at=datetime.now(), 
-            processed_at=datetime.now(), 
-        )
-        
-        db.session.add(video)
-        db.session.commit()
-        
-        # try:
-        #     db.session.add(video)
-        #     db.session.commit()
-        # except Exception as ex:
-        #     db.session.rollback()
-        #     raise InternalServerError() from ex
-                
-        return VideoUploaded(video.id)
+        return VideoUploaded("CARGA EN PROCESO. El video se está subiendo en segundo plano.")
     
     def list_videos(self, jwt_payload):
         jugador_id = jwt_payload['sub']
