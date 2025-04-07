@@ -1,30 +1,38 @@
-services: 
+services:
   anb-api:
     build: .
-    container_name: nba-api1
+    container_name: nba-api
     networks:
       - web_net
     ports:
       - "8081:8081"
     environment:
       ENVIRONMENT: production
-      DB_USER: dbuser
-      DB_PASSWORD: mypass
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
       DB_HOST: db
       DB_PORT: 5432
-      DB_NAME: db
-      JWT_SECRET_KEY: 6a037737-af5d-4b93-a9e5-dd8fec11221b
+      DB_NAME: ${DB_NAME}
+      JWT_SECRET_KEY: ${JWT_SECRET_KEY}
+      CELERY_BROKER_URL: redis://redis:6379/0
+      CELERY_RESULT_BACKEND: redis://redis:6379/0
+      S3_BUCKET: ${S3_BUCKET}
+      S3_REGION: ${S3_REGION}
+      S3_ACCESS_KEY: ${S3_ACCESS_KEY}
+      S3_SECRET_KEY: ${S3_SECRET_KEY}
     depends_on: 
       db:
         condition: service_healthy
+      redis:
+        condition: service_started
 
   db: 
     container_name: db-api
-    environment: 
-      POSTGRES_USER: dbuser
-      POSTGRES_PASSWORD: mypass
-      POSTGRES_DB: db
     image: "postgres:latest"
+    environment: 
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
     networks:
       - web_net
     ports: 
@@ -36,6 +44,39 @@ services:
       interval: 5s
       timeout: 5s
       retries: 5
+
+  redis:
+    image: redis:latest
+    container_name: redis
+    networks:
+      - web_net
+    ports:
+      - "6379:6379"
+
+  celery-worker:
+    build: .
+    container_name: celery-worker
+    depends_on:
+      - anb-api
+      - redis
+    environment:
+      ENVIRONMENT: production
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_NAME: ${DB_NAME}
+      JWT_SECRET_KEY: ${JWT_SECRET_KEY}
+      CELERY_BROKER_URL: redis://redis:6379/0
+      CELERY_RESULT_BACKEND: redis://redis:6379/0
+      S3_BUCKET: ${S3_BUCKET}
+      S3_REGION: ${S3_REGION}
+      S3_ACCESS_KEY: ${S3_ACCESS_KEY}
+      S3_SECRET_KEY: ${S3_SECRET_KEY}
+    command: >
+      pipenv run celery -A src.tasks.celery_worker worker --loglevel=info
+    networks:
+      - web_net
 
 networks:
   web_net:

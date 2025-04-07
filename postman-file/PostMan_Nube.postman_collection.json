@@ -94,7 +94,6 @@
 								{
 									"key": "Content-Type",
 									"value": "application/json",
-									"name": "Content-Type",
 									"description": {
 										"content": "",
 										"type": "text/plain"
@@ -141,7 +140,6 @@
 								{
 									"key": "Content-Type",
 									"value": "application/json",
-									"name": "Content-Type",
 									"description": {
 										"content": "",
 										"type": "text/plain"
@@ -457,7 +455,74 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "Success upload videos",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "video_file",
+											"type": "file",
+											"src": "/Users/andyb/Downloads/video_1280.mp4"
+										},
+										{
+											"key": "title",
+											"value": "prueba con docker 10:42",
+											"type": "text"
+										}
+									],
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}api/videos/upload",
+									"host": [
+										"{{BASE_URL}}api"
+									],
+									"path": [
+										"videos",
+										"upload"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Mon, 07 Apr 2025 03:42:09 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "content-length",
+									"value": "135"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Video subido exitosamente, tarea creada.\",\n    \"video_id\": \"CARGA EN PROCESO. El video se está subiendo en segundo plano.\"\n}"
+						}
+					]
 				},
 				{
 					"name": "List Video Player",
@@ -480,7 +545,53 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "Succesful list",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}api/videos",
+									"host": [
+										"{{BASE_URL}}api"
+									],
+									"path": [
+										"videos"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Mon, 07 Apr 2025 03:42:15 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "content-length",
+									"value": "644"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Lista de videos obtenida.\",\n    \"videjugadoresListo_id\": [\n        {\n            \"id\": \"13c3f935-e1b1-4d16-8cf8-ca23821a1bda\",\n            \"processed_at\": \"2025-04-07T03:27:34.245286\",\n            \"processed_url\": \"https://my-bucket-for-cloud-api.s3.us-east-2.amazonaws.com/20250407032728_video_1280.mp4\",\n            \"status\": \"subido\",\n            \"title\": \"prueba con docker\",\n            \"uploaded_at\": \"2025-04-07T03:27:34.245284\"\n        },\n        {\n            \"id\": \"7c7dfe50-6ebc-4d88-abeb-63216f8e93b7\",\n            \"processed_at\": \"2025-04-07T03:42:15.364076\",\n            \"processed_url\": \"https://my-bucket-for-cloud-api.s3.us-east-2.amazonaws.com/20250407034209_video_1280.mp4\",\n            \"status\": \"subido\",\n            \"title\": \"prueba con docker 10:42\",\n            \"uploaded_at\": \"2025-04-07T03:42:15.364073\"\n        }\n    ]\n}"
+						}
+					]
 				},
 				{
 					"name": "List videos By Player Id",
@@ -504,7 +615,54 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "Success list videos By Player Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}api/videos/7a487203-0763-4305-b10d-f9a5f0dc2261",
+									"host": [
+										"{{BASE_URL}}api"
+									],
+									"path": [
+										"videos",
+										"7a487203-0763-4305-b10d-f9a5f0dc2261"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Mon, 07 Apr 2025 03:29:49 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "content-length",
+									"value": "292"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"7a487203-0763-4305-b10d-f9a5f0dc2261\",\n    \"processed_at\": \"2025-04-07T03:28:35.565346\",\n    \"processed_url\": \"https://my-bucket-for-cloud-api.s3.us-east-2.amazonaws.com/20250407032830_video_1280.mp4\",\n    \"status\": \"subido\",\n    \"title\": \"prueba con docker 10:28\",\n    \"uploaded_at\": \"2025-04-07T03:28:35.565343\"\n}"
+						}
+					]
 				},
 				{
 					"name": "Delete Video",
@@ -528,7 +686,54 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "Success delete Video",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}api/videos/7a487203-0763-4305-b10d-f9a5f0dc2261",
+									"host": [
+										"{{BASE_URL}}api"
+									],
+									"path": [
+										"videos",
+										"7a487203-0763-4305-b10d-f9a5f0dc2261"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Mon, 07 Apr 2025 03:29:58 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "content-length",
+									"value": "92"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id_video\": \"7a487203-0763-4305-b10d-f9a5f0dc2261\",\n    \"message\": \"Video borrado exitosamente.\"\n}"
+						}
+					]
 				},
 				{
 					"name": "List Public Videos",
@@ -552,7 +757,54 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "Sucess list Public Videos",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}api/public/videos",
+									"host": [
+										"{{BASE_URL}}api"
+									],
+									"path": [
+										"public",
+										"videos"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Mon, 07 Apr 2025 03:46:24 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "content-length",
+									"value": "644"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Lista de videos obtenida.\",\n    \"videjugadoresListo_id\": [\n        {\n            \"id\": \"13c3f935-e1b1-4d16-8cf8-ca23821a1bda\",\n            \"processed_at\": \"2025-04-07T03:27:34.245286\",\n            \"processed_url\": \"https://my-bucket-for-cloud-api.s3.us-east-2.amazonaws.com/20250407032728_video_1280.mp4\",\n            \"status\": \"subido\",\n            \"title\": \"prueba con docker\",\n            \"uploaded_at\": \"2025-04-07T03:27:34.245284\"\n        },\n        {\n            \"id\": \"7c7dfe50-6ebc-4d88-abeb-63216f8e93b7\",\n            \"processed_at\": \"2025-04-07T03:42:15.364076\",\n            \"processed_url\": \"https://my-bucket-for-cloud-api.s3.us-east-2.amazonaws.com/20250407034209_video_1280.mp4\",\n            \"status\": \"subido\",\n            \"title\": \"prueba con docker 10:42\",\n            \"uploaded_at\": \"2025-04-07T03:42:15.364073\"\n        }\n    ]\n}"
+						}
+					]
 				},
 				{
 					"name": "Vote Videos",
@@ -578,7 +830,56 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "Already vote video",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}api/public/videos/13c3f935-e1b1-4d16-8cf8-ca23821a1bda/vote",
+									"host": [
+										"{{BASE_URL}}api"
+									],
+									"path": [
+										"public",
+										"videos",
+										"13c3f935-e1b1-4d16-8cf8-ca23821a1bda",
+										"vote"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Mon, 07 Apr 2025 03:30:38 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "content-length",
+									"value": "33"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"El usuario ya voto\"\n}"
+						}
+					]
 				},
 				{
 					"name": "Ranking Videos",
@@ -602,7 +903,54 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "Sucess ranking Videos",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}api/public/rankings",
+									"host": [
+										"{{BASE_URL}}api"
+									],
+									"path": [
+										"public",
+										"rankings"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Mon, 07 Apr 2025 03:30:41 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "content-length",
+									"value": "143"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Lista de rankings obtenida.\",\n    \"ranking\": [\n        {\n            \"id\": \"13c3f935-e1b1-4d16-8cf8-ca23821a1bda\",\n            \"title\": \"prueba con docker\",\n            \"vote_count\": 1\n        }\n    ]\n}"
+						}
+					]
 				}
 			],
 			"description": "The video sharing platform API provides endpoints for user authentication, video management, and community interactions like voting and rankings."
