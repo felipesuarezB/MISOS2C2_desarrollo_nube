@@ -20,6 +20,7 @@ asgiref = "*"
 uvicorn = "*"
 boto3 = "*"
 celery = "*"
+redis = "*"
 
 [dev-packages]
 pytest = "~=8.3.4"

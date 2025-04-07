@@ -217,13 +217,15 @@ A continuación, se presentan estimaciones preliminares basadas en análisis ini
 ### Gráficos Preliminares
 
 #### Throughput vs. Usuarios
-![Throughput vs Usuarios](https://via.placeholder.com/800x400?text=Gr%C3%A1fico+Throughput+vs+Usuarios)
+<img width="599" alt="Screenshot 2025-04-06 at 8 34 44 PM" src="https://github.com/user-attachments/assets/80373040-6586-4fc9-a5cc-1734dd777e41" />
 
 #### Tiempo de Respuesta vs. Carga
-![Tiempo de Respuesta vs Carga](https://via.placeholder.com/800x400?text=Gr%C3%A1fico+Tiempo+de+Respuesta+vs+Carga)
+<img width="634" alt="Screenshot 2025-04-06 at 8 34 54 PM" src="https://github.com/user-attachments/assets/d3b2e044-3ae7-4633-991d-9b76a956e770" />
+
 
 #### Utilización de CPU vs. Usuarios
-![CPU vs Usuarios](https://via.placeholder.com/800x400?text=Gr%C3%A1fico+CPU+vs+Usuarios)
+<img width="642" alt="Screenshot 2025-04-06 at 8 35 03 PM" src="https://github.com/user-attachments/assets/44bfe866-3393-4913-b792-39b9204fa810" />
+
 
 ## Scripts de Prueba
 
@@ -283,5 +285,5 @@ Para ejecutar las pruebas utilizando Apache Bench como alternativa rápida, se u
 ab -n 1000 -c 100 -T 'application/json' -p login_data.json http://api-url/api/auth/login
 
 # Ejemplo para probar listar videos (con token)
-ab -n 1000 -c 100 -H "Authorization: Bearer TOKEN" http://api-url/api/public/videos
+ab -n 1000 -c 100 -H "Authorization: Bearer TOKEN" http://api-url/api/videos
 ``` 
