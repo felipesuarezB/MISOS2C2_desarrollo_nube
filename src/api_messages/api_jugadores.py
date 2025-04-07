@@ -1,4 +1,4 @@
-from api_messages.base_api_error import ApiError
+from src.api_messages.base_api_error import ApiError
 
 class UserAlreadyExists(ApiError):
   code = 409
@@ -11,7 +11,7 @@ class JugadorCreado:
 
   def __init__(self, user_id):
     self.message = "Usuario creado exitosamente."
-    self.user_id = str(user_id)
+    self.user_id = user_id
 
 class JugadoresList:
   code = 200

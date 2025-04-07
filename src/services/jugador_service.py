@@ -1,12 +1,12 @@
 from datetime import timedelta
 import hashlib
 from flask import jsonify
-from api_messages.api_jugadores import JugadorCreado, JugadoresList
-from api_messages.api_errors import InternalServerError, InvalidRequestBody, InvalidUrlPathParams, ForbiddenOperation
-from api_messages.api_jugadores import UserAlreadyExists, UserAuthFailed, UserAuthSucceed
+from src.api_messages.api_jugadores import JugadorCreado, JugadoresList
+from src.api_messages.api_errors import InternalServerError, InvalidRequestBody, InvalidUrlPathParams, ForbiddenOperation
+from src.api_messages.api_jugadores import UserAlreadyExists, UserAuthFailed, UserAuthSucceed
 from flask_jwt_extended import create_access_token, jwt_required, get_jwt
-from models.jugador import JugadorSchema, Jugador
-from database import db
+from src.models.jugador import JugadorSchema, Jugador
+from src.database import db
 
 def generate_new_token(user_id):
     token = create_access_token(user_id,expires_delta=timedelta(seconds=3600))

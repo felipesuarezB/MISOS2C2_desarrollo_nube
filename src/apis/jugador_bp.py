@@ -3,9 +3,8 @@ from flask import request, jsonify, make_response
 from werkzeug.security import generate_password_hash
 from marshmallow import ValidationError
 from flask_smorest import Blueprint
-from app import db
-from models.jugador import JugadorJsonSchema, JugadorSchema
-from services.jugador_service import jugador_service
+from src.models.jugador import JugadorJsonSchema, JugadorSchema
+from src.services.jugador_service import jugador_service
 from flask_jwt_extended import create_access_token, jwt_required, get_jwt
 
 jugadores_bp = Blueprint("jugadores", __name__, url_prefix='/api', description="API de jugadores.")

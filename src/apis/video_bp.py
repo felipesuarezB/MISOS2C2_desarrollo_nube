@@ -2,8 +2,8 @@ from flask import jsonify, make_response, request
 from flask.views import MethodView
 from flask_jwt_extended import get_jwt, jwt_required, get_jwt_identity
 from flask_smorest import Blueprint
-from models.video import VideoJsonSchema
-from services.video_service import video_service
+from src.models.video import VideoJsonSchema
+from src.services.video_service import video_service
 
 
 videos_bp = Blueprint("videos", __name__, url_prefix='/api', description="API de videos.")
@@ -28,7 +28,7 @@ def upload_video():
 
 @videos_bp.route('/videos', methods=['GET'])
 @jwt_required()
-def upload_video():
+def list_videos():
     jwt_payload = get_jwt()
     result = video_service.list_videos(jwt_payload)
     res_json = jsonify(result.__dict__)
