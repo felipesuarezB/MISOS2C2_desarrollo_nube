@@ -1,7 +1,7 @@
-services: 
+services:
   anb-api:
     build: .
-    container_name: nba-api1
+    container_name: nba-api
     networks:
       - web_net
     ports:
@@ -14,17 +14,20 @@ services:
       DB_PORT: 5432
       DB_NAME: db
       JWT_SECRET_KEY: 6a037737-af5d-4b93-a9e5-dd8fec11221b
+      CELERY_BROKER_URL: redis://redis:6379/0
     depends_on: 
       db:
         condition: service_healthy
+      redis:
+        condition: service_started
 
   db: 
     container_name: db-api
+    image: "postgres:latest"
     environment: 
       POSTGRES_USER: dbuser
       POSTGRES_PASSWORD: mypass
       POSTGRES_DB: db
-    image: "postgres:latest"
     networks:
       - web_net
     ports: 
@@ -36,6 +39,34 @@ services:
       interval: 5s
       timeout: 5s
       retries: 5
+
+  redis:
+    image: redis:latest
+    container_name: redis
+    networks:
+      - web_net
+    ports:
+      - "6379:6379"
+
+  celery-worker:
+    build: .
+    container_name: celery-worker
+    depends_on:
+      - anb-api
+      - redis
+    environment:
+      ENVIRONMENT: production
+      DB_USER: dbuser
+      DB_PASSWORD: mypass
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_NAME: db
+      JWT_SECRET_KEY: 6a037737-af5d-4b93-a9e5-dd8fec11221b
+      CELERY_BROKER_URL: redis://redis:6379/0
+    command: >
+      pipenv run celery -A src.tasks.video_tasks worker --loglevel=info
+    networks:
+      - web_net
 
 networks:
   web_net:

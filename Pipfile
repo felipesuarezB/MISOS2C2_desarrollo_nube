@@ -18,7 +18,8 @@ marshmallow-sqlalchemy = "==1.4.1"
 requests = "==2.32.3"
 asgiref = "*"
 uvicorn = "*"
-boto3 = “*"
+boto3 = "*"
+celery = "*"
 
 [dev-packages]
 pytest = "~=8.3.4"
