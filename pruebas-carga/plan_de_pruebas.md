@@ -217,12 +217,14 @@ A continuación, se presentan estimaciones preliminares basadas en análisis ini
 ### Gráficos Preliminares
 
 #### Throughput vs. Usuarios
-
+<img width="599" alt="Screenshot 2025-04-06 at 8 34 44 PM" src="https://github.com/user-attachments/assets/80373040-6586-4fc9-a5cc-1734dd777e41" />
 
 #### Tiempo de Respuesta vs. Carga
+<img width="634" alt="Screenshot 2025-04-06 at 8 34 54 PM" src="https://github.com/user-attachments/assets/d3b2e044-3ae7-4633-991d-9b76a956e770" />
 
 
 #### Utilización de CPU vs. Usuarios
+<img width="642" alt="Screenshot 2025-04-06 at 8 35 03 PM" src="https://github.com/user-attachments/assets/44bfe866-3393-4913-b792-39b9204fa810" />
 
 
 ## Scripts de Prueba
