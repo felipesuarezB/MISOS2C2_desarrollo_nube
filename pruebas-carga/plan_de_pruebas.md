@@ -214,17 +214,6 @@ A continuación, se presentan estimaciones preliminares basadas en análisis ini
 | Subir+Votar | 250    | 22                | 2500                    | 7.0            | 95      | 90          |
 | Subir+Votar | 500    | 15                | 4500                    | 15.0           | 100     | 95          |
 
-### Gráficos Preliminares
-
-#### Throughput vs. Usuarios
-![Throughput vs Usuarios](https://via.placeholder.com/800x400?text=Gr%C3%A1fico+Throughput+vs+Usuarios)
-
-#### Tiempo de Respuesta vs. Carga
-![Tiempo de Respuesta vs Carga](https://via.placeholder.com/800x400?text=Gr%C3%A1fico+Tiempo+de+Respuesta+vs+Carga)
-
-#### Utilización de CPU vs. Usuarios
-![CPU vs Usuarios](https://via.placeholder.com/800x400?text=Gr%C3%A1fico+CPU+vs+Usuarios)
-
 ## Scripts de Prueba
 
 A continuación, se presenta un ejemplo básico del script de prueba en JMeter (formato XML) que se utilizará para el Escenario 1:
