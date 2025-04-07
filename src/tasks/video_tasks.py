@@ -1,7 +1,7 @@
 from datetime import datetime
-from tasks.celery_worker import celery
-from database import db
-from models.video import Video
+from src.tasks.celery_worker import celery
+from src.database import db
+from src.models.video import Video
 import boto3
 import uuid
 import os

@@ -1,21 +1,14 @@
-<<<<<<< HEAD
 from flask import jsonify, make_response, request
 from flask.views import MethodView
-from database import db
-=======
-from flask import jsonify, make_response
-from flask.views import MethodView
->>>>>>> d31492ced5d9d91825722737c776146d5d8bcbd9
 from flask_jwt_extended import get_jwt, jwt_required, get_jwt_identity
 from flask_smorest import Blueprint
-from models.video import VideoJsonSchema
-from services.video_service import video_service
+from src.models.video import VideoJsonSchema
+from src.services.video_service import video_service
 
 
 videos_bp = Blueprint("videos", __name__, url_prefix='/api', description="API de videos.")
 
 @videos_bp.route('/videos/upload', methods=['POST'])
-<<<<<<< HEAD
 @jwt_required()
 def upload_video():
     jwt_payload = get_jwt()
@@ -27,12 +20,6 @@ def upload_video():
         "video_file": video_file,
         "title": title
     }
-=======
-@videos_bp.arguments(VideoJsonSchema)
-@jwt_required()
-def upload_video(uploadVideo):
-    jwt_payload = get_jwt()
->>>>>>> d31492ced5d9d91825722737c776146d5d8bcbd9
     result = video_service.save_video(jwt_payload, uploadVideo)
     res_json = jsonify(result.__dict__)
     res = make_response(res_json, result.code)

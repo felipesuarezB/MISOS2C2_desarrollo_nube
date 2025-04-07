@@ -5,13 +5,13 @@ from werkzeug.utils import secure_filename
 import uuid
 from sqlalchemy import func
 from flask import jsonify
-from api_messages.api_errors import InternalServerError
-from api_messages.api_videos import VideoDeleted, VideoFailed, VideoListed, VideoUploaded, VideoVoted, VideoRanking, ForbiddenOperation, UsserIssue, VideoIssue
-from database import db
-from models.video import Video, VideoSchema
-from models.vote import Vote, VoteSchema
-from models.jugador import Jugador, JugadorSchema
-from tasks.video_tasks import async_save_video
+from src.api_messages.api_errors import InternalServerError
+from src.api_messages.api_videos import VideoDeleted, VideoFailed, VideoListed, VideoUploaded, VideoVoted, VideoRanking, ForbiddenOperation, UsserIssue, VideoIssue
+from src.database import db
+from src.models.video import Video, VideoSchema
+from src.models.vote import Vote, VoteSchema
+from src.models.jugador import Jugador, JugadorSchema
+from src.tasks.video_tasks import async_save_video
 
 class VideoService:
     

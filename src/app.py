@@ -5,13 +5,13 @@ from flask_jwt_extended import JWTManager
 import os
 from dotenv import load_dotenv
 import logging
-from database import db, get_postgresql_url
-from apis.health_bp import health_bp
-from apis.jugador_bp import jugadores_bp
-from apis.video_bp import videos_bp
-from api_messages.base_api_error import ApiError
-from api_messages.api_errors import TokenNotFound, TokenInvalidOrExpired
-from tasks.celery_worker import celery
+from src.database import db, get_postgresql_url
+from src.apis.health_bp import health_bp
+from src.apis.jugador_bp import jugadores_bp
+from src.apis.video_bp import videos_bp
+from src.api_messages.base_api_error import ApiError
+from src.api_messages.api_errors import TokenNotFound, TokenInvalidOrExpired
+from src.tasks.celery_worker import celery
 
 
 def create_app():
