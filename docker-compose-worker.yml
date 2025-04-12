@@ -18,3 +18,7 @@ services:
       S3_SECRET_KEY: ${S3_SECRET_KEY}
     command: >
       pipenv run celery -A src.tasks.celery_worker worker --loglevel=info
+
+networks:
+  web_net:
+    driver: bridge
