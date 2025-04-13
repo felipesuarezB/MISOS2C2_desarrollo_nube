@@ -9,10 +9,11 @@ import os
 from sqlalchemy import inspect
 
 # Ruta local en el EC2
-LOCAL_VIDEO_PATH = "~/shared_folder"
+LOCAL_VIDEO_PATH = os.path.expanduser("~/shared_folder")
 
 @celery.task
 def async_save_video(jugador_id, title, filename, file_data_bytes):
+    print(f"Guardando archivo en: {file_path}")
     try:
         # Crear el directorio si no existe
         os.makedirs(LOCAL_VIDEO_PATH, exist_ok=True)
