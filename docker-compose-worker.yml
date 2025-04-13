@@ -28,6 +28,8 @@ services:
       S3_SECRET_KEY: ${S3_SECRET_KEY}
     command: >
       pipenv run celery -A src.tasks.celery_worker worker --loglevel=info
+    volumes:
+      - /home/ubuntu/shared_data:/root/shared_folder  # Aquí montas el volumen
 
 networks:
   web_net:
