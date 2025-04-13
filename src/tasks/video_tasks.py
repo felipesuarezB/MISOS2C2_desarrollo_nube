@@ -8,6 +8,7 @@ from src.models.vote import Vote
 import boto3
 import uuid
 import os
+from sqlalchemy import inspect
 
 S3_BUCKET = os.getenv("S3_BUCKET")
 S3_REGION = os.getenv("S3_REGION")
@@ -45,7 +46,15 @@ def async_save_video(jugador_id, title, filename, file_data_bytes):
         # Create app context and save the video
         with app.app_context():
             # Make sure all tables exist
-            db.create_all()
+            # Usar el inspector para verificar las tablas en la base de datos
+            inspector = inspect(db.engine)
+
+            # Obtener todos los nombres de las tablas en la base de datos
+            existing_tables = inspector.get_table_names()
+
+            # Verificar si alguna tabla de las que queremos crear ya existe
+            if not existing_tables:  # Si no existen tablas en absoluto
+                db.create_all()  # Crear todas las tablas
             
             video = Video(
                 title=title,

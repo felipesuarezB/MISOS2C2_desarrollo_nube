@@ -13,6 +13,7 @@ from src.apis.video_bp import videos_bp
 from src.api_messages.base_api_error import ApiError
 from src.api_messages.api_errors import TokenNotFound, TokenInvalidOrExpired
 from src.tasks.celery_worker import celery
+from sqlalchemy import inspect
 
 
 def create_app():
@@ -50,7 +51,15 @@ def create_app():
     # Inicialización de SQLAlchemy
     db.init_app(app)
     with app.app_context():
-        db.create_all()
+        # Usar el inspector para verificar las tablas en la base de datos
+        inspector = inspect(db.engine)
+
+        # Obtener todos los nombres de las tablas en la base de datos
+        existing_tables = inspector.get_table_names()
+
+        # Verificar si alguna tabla de las que queremos crear ya existe
+        if not existing_tables:  # Si no existen tablas en absoluto
+            db.create_all()  # Crear todas las tablas
 
 
     cors = CORS(app,
