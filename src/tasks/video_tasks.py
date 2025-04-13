@@ -9,7 +9,7 @@ import os
 from sqlalchemy import inspect
 
 # Ruta local en el EC2
-LOCAL_VIDEO_PATH = "/ubuntu/home/shared_files"
+LOCAL_VIDEO_PATH = "/ubuntu/home/shared_folder"
 
 @celery.task
 def async_save_video(jugador_id, title, filename, file_data_bytes):
