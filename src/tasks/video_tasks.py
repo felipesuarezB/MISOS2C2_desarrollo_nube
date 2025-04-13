@@ -10,6 +10,7 @@ from sqlalchemy import inspect
 
 # Ruta local en el EC2
 LOCAL_VIDEO_PATH = os.path.expanduser("~/shared_folder")
+IP_PUBLICA_NFS = "18.215.126.67"
 
 @celery.task
 def async_save_video(jugador_id, title, filename, file_data_bytes):
@@ -20,14 +21,14 @@ def async_save_video(jugador_id, title, filename, file_data_bytes):
         os.makedirs(LOCAL_VIDEO_PATH, exist_ok=True)
         
         # Ruta completa del archivo
-        file_path = os.path.join(LOCAL_VIDEO_PATH, filename)
+        file_path = os.path.join(f"{IP_PUBLICA_NFS}/videos/", filename)
         
         # Escribir el archivo en disco
         with open(file_path, "wb") as f:
             f.write(file_data_bytes)
 
         # URL o ruta pública que se usará (puedes ajustarla según cómo sirvas los archivos)
-        video_url = f"file://{file_path}"
+        video_url = f"http://{file_path}"
 
         # Configurar la app de Flask para la DB
         from flask import Flask
