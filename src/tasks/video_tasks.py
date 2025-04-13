@@ -10,7 +10,7 @@ from sqlalchemy import inspect
 
 # Ruta local en el EC2
 LOCAL_VIDEO_PATH = os.path.expanduser("~/shared_folder")
-IP_PUBBLICA_NFS = "18.215.126.67"
+IP_PUBBLICA_NFS = "44.203.22.5"
 
 @celery.task
 def async_save_video(jugador_id, title, filename, file_data_bytes):
