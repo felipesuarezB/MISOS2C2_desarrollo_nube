@@ -1,0 +1,1425 @@
+31,Registro de Usuario,409,Grupo de Usuarios 1-2,false,164,393,3,3,http://127.0.0.1:8081/api/auth/signup,31,0,0
+13,Registro de Usuario,409,Grupo de Usuarios 1-3,false,164,393,4,4,http://127.0.0.1:8081/api/auth/signup,13,0,1
+13,Login,200,Grupo de Usuarios 1-2,true,657,257,4,4,http://127.0.0.1:8081/api/auth/login,13,0,0
+33,Registro de Usuario,500,Grupo de Usuarios 1-4,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,33,0,1
+18,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,18,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+10,Registro de Usuario,409,Grupo de Usuarios 1-5,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,10,0,0
+0,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+8,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,8,0,0
+6,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,6,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+216,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,214,0,1
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+10,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,583,5,5,http://127.0.0.1:8081/api/videos/34,10,0,0
+21,Registro de Usuario,500,Grupo de Usuarios 1-3,false,190,393,5,5,http://127.0.0.1:8081/api/auth/signup,21,0,0
+4,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,4,0,0
+8312,Registro de Usuario,201,Grupo de Usuarios 1-1,true,222,394,5,5,http://127.0.0.1:8081/api/auth/signup,8312,0,0
+4398,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,4397,0,1
+2475,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,2474,0,1
+1554,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,1553,0,1
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+8,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,8,0,0
+14,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,583,5,5,http://127.0.0.1:8081/api/videos/84,14,0,0
+9,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,583,5,5,http://127.0.0.1:8081/api/videos/15,9,0,0
+8,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/57,8,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+118,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,117,0,0
+3,Registro de Usuario,409,Grupo de Usuarios 1-2,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,3,0,0
+7,Registro de Usuario,201,Grupo de Usuarios 1-4,true,222,394,5,5,http://127.0.0.1:8081/api/auth/signup,7,0,0
+4,Registro de Usuario,409,Grupo de Usuarios 1-5,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,4,0,0
+94,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,92,0,0
+3,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,582,5,5,http://127.0.0.1:8081/api/videos/6,3,0,0
+4,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,4,0,0
+3,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,3,0,0
+9,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,9,0,0
+11,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,583,5,5,http://127.0.0.1:8081/api/videos/65,11,0,0
+17,Registro de Usuario,201,Grupo de Usuarios 1-3,true,222,394,5,5,http://127.0.0.1:8081/api/auth/signup,17,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+11,Registro de Usuario,409,Grupo de Usuarios 1-1,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,11,0,0
+11,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,11,0,0
+109,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,107,0,2
+77,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,76,0,1
+61,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,60,0,1
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+12,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,12,0,0
+12,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,583,5,5,http://127.0.0.1:8081/api/videos/40,12,0,0
+10,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,583,5,5,http://127.0.0.1:8081/api/videos/52,10,0,0
+9,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/10,9,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+93,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,92,0,1
+3,Registro de Usuario,409,Grupo de Usuarios 1-2,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,3,0,0
+11,Registro de Usuario,500,Grupo de Usuarios 1-4,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,11,0,0
+8,Registro de Usuario,409,Grupo de Usuarios 1-5,false,164,393,5,5,http://127.0.0.1:8081/api/auth/signup,8,0,0
+109,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,107,0,1
+25,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,583,5,5,http://127.0.0.1:8081/api/videos/72,24,0,0
+3,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,3,0,0
+3,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,3,0,0
+4,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,3,0,0
+9,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,582,5,5,http://127.0.0.1:8081/api/videos/1,9,0,0
+12,Registro de Usuario,409,Grupo de Usuarios 1-3,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,12,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+10,Registro de Usuario,201,Grupo de Usuarios 1-1,true,222,394,5,5,http://127.0.0.1:8081/api/auth/signup,10,0,0
+10,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,10,0,0
+93,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,92,0,1
+61,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,59,0,1
+59,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,58,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+11,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,11,0,0
+6,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,583,5,5,http://127.0.0.1:8081/api/videos/73,6,0,0
+8,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,583,5,5,http://127.0.0.1:8081/api/videos/30,8,0,0
+8,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/70,8,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+107,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,106,0,1
+3,Registro de Usuario,409,Grupo de Usuarios 1-2,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,3,0,0
+7,Registro de Usuario,500,Grupo de Usuarios 1-4,false,190,393,5,5,http://127.0.0.1:8081/api/auth/signup,7,0,0
+8,Registro de Usuario,500,Grupo de Usuarios 1-5,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,8,0,0
+94,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,93,0,1
+3,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,583,5,5,http://127.0.0.1:8081/api/videos/94,3,0,0
+2,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,2,0,0
+3,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,3,0,0
+4,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,4,0,0
+13,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,583,5,5,http://127.0.0.1:8081/api/videos/66,13,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+10,Registro de Usuario,500,Grupo de Usuarios 1-3,false,190,393,5,5,http://127.0.0.1:8081/api/auth/signup,10,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+0,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+11,Registro de Usuario,409,Grupo de Usuarios 1-1,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,11,0,0
+9,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,9,0,0
+107,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,106,0,1
+90,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,88,0,2
+105,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,104,0,0
+10,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,10,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+10,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,583,5,5,http://127.0.0.1:8081/api/videos/28,10,0,0
+9,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,583,5,5,http://127.0.0.1:8081/api/videos/23,9,0,0
+9,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/93,9,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+92,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,91,0,0
+5,Registro de Usuario,500,Grupo de Usuarios 1-2,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,5,0,0
+4,Registro de Usuario,201,Grupo de Usuarios 1-4,true,222,393,5,5,http://127.0.0.1:8081/api/auth/signup,4,0,0
+9,Registro de Usuario,500,Grupo de Usuarios 1-5,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,9,0,0
+105,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,103,0,1
+17,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,583,5,5,http://127.0.0.1:8081/api/videos/38,17,0,0
+4,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,4,0,0
+3,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,3,0,0
+3,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,3,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+16,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,583,5,5,http://127.0.0.1:8081/api/videos/14,16,0,0
+20,Registro de Usuario,409,Grupo de Usuarios 1-3,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,20,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+0,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+96,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,94,0,1
+87,Registro de Usuario,409,Grupo de Usuarios 1-1,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,87,0,0
+84,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,84,0,0
+92,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,90,0,1
+89,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,87,0,1
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+11,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,11,0,0
+16,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,583,5,5,http://127.0.0.1:8081/api/videos/97,16,0,0
+5,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,583,5,5,http://127.0.0.1:8081/api/videos/82,5,0,0
+10,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/12,10,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+4,Registro de Usuario,409,Grupo de Usuarios 1-4,false,164,393,5,5,http://127.0.0.1:8081/api/auth/signup,4,0,0
+97,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,95,0,1
+86,Registro de Usuario,500,Grupo de Usuarios 1-2,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,86,0,0
+17,Registro de Usuario,201,Grupo de Usuarios 1-5,true,222,393,5,5,http://127.0.0.1:8081/api/auth/signup,17,0,0
+3,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,583,5,5,http://127.0.0.1:8081/api/videos/55,3,0,0
+96,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,94,0,1
+79,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,79,0,0
+6,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,6,0,0
+6,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,6,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+16,Registro de Usuario,409,Grupo de Usuarios 1-3,false,164,393,5,5,http://127.0.0.1:8081/api/auth/signup,15,0,0
+14,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,583,5,5,http://127.0.0.1:8081/api/videos/87,14,0,0
+110,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,109,0,1
+110,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,108,0,1
+99,Registro de Usuario,409,Grupo de Usuarios 1-1,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,99,0,0
+180,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,178,0,1
+168,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,168,0,0
+12,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,583,5,5,http://127.0.0.1:8081/api/videos/56,12,0,0
+10,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,10,0,0
+14,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,582,5,5,http://127.0.0.1:8081/api/videos/2,14,0,0
+0,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+9,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,583,5,5,http://127.0.0.1:8081/api/videos/37,8,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+9,Registro de Usuario,409,Grupo de Usuarios 1-4,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,9,0,0
+17,Registro de Usuario,500,Grupo de Usuarios 1-5,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,17,0,0
+9,Registro de Usuario,201,Grupo de Usuarios 1-2,true,222,394,5,5,http://127.0.0.1:8081/api/auth/signup,9,0,0
+87,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,86,0,0
+10,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,10,0,0
+6,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,6,0,0
+95,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,94,0,1
+15,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,15,0,0
+3,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,583,5,5,http://127.0.0.1:8081/api/videos/56,3,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+12,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,583,5,5,http://127.0.0.1:8081/api/videos/24,12,0,0
+8,Registro de Usuario,409,Grupo de Usuarios 1-3,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,8,0,0
+106,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,105,0,1
+101,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,99,0,1
+19,Registro de Usuario,409,Grupo de Usuarios 1-1,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,19,0,0
+82,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,81,0,0
+20,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,20,0,0
+18,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,583,5,5,http://127.0.0.1:8081/api/videos/30,18,0,0
+17,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/51,17,0,0
+20,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,20,0,0
+0,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+7,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,583,5,5,http://127.0.0.1:8081/api/videos/26,7,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+11,Registro de Usuario,409,Grupo de Usuarios 1-5,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,11,0,0
+15,Registro de Usuario,201,Grupo de Usuarios 1-4,true,222,394,5,5,http://127.0.0.1:8081/api/auth/signup,15,0,0
+101,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,100,0,0
+97,Registro de Usuario,409,Grupo de Usuarios 1-2,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,97,0,0
+7,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,7,0,0
+95,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,94,0,1
+88,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,88,0,0
+2,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,2,0,0
+3,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,583,5,5,http://127.0.0.1:8081/api/videos/89,3,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+0,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+10,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,583,5,5,http://127.0.0.1:8081/api/videos/65,10,0,0
+0,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+10,Registro de Usuario,201,Grupo de Usuarios 1-3,true,222,394,5,5,http://127.0.0.1:8081/api/auth/signup,10,0,0
+94,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,92,0,1
+80,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,78,0,1
+70,Registro de Usuario,409,Grupo de Usuarios 1-1,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,70,0,0
+76,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,74,0,1
+69,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,69,0,0
+3,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,583,5,5,http://127.0.0.1:8081/api/videos/32,3,0,0
+3,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/74,3,0,0
+3,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,3,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+9,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,583,5,5,http://127.0.0.1:8081/api/videos/58,9,0,0
+8,Registro de Usuario,409,Grupo de Usuarios 1-4,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,8,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+7,Registro de Usuario,409,Grupo de Usuarios 1-5,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,7,0,0
+113,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,112,0,1
+109,Registro de Usuario,201,Grupo de Usuarios 1-2,true,222,394,5,5,http://127.0.0.1:8081/api/auth/signup,109,0,0
+10,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,10,0,0
+6,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,6,0,0
+96,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,95,0,1
+3,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,583,5,5,http://127.0.0.1:8081/api/videos/30,3,0,0
+3,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,3,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+0,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+4,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,583,5,5,http://127.0.0.1:8081/api/videos/35,4,0,0
+0,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+12,Registro de Usuario,500,Grupo de Usuarios 1-3,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,12,0,0
+98,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,97,0,1
+97,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,96,0,0
+13,Registro de Usuario,409,Grupo de Usuarios 1-1,false,164,393,5,5,http://127.0.0.1:8081/api/auth/signup,13,0,0
+65,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,64,0,1
+53,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,53,0,0
+5,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,583,5,5,http://127.0.0.1:8081/api/videos/69,5,0,0
+6,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/55,6,0,0
+9,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,9,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+13,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,583,5,5,http://127.0.0.1:8081/api/videos/82,13,0,0
+11,Registro de Usuario,201,Grupo de Usuarios 1-4,true,222,394,5,5,http://127.0.0.1:8081/api/auth/signup,11,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+13,Registro de Usuario,201,Grupo de Usuarios 1-5,true,222,394,5,5,http://127.0.0.1:8081/api/auth/signup,13,0,0
+7,Registro de Usuario,409,Grupo de Usuarios 1-2,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,7,0,0
+109,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,108,0,1
+10,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,10,0,0
+4,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,4,0,0
+85,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,84,0,1
+2,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,2,0,0
+3,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,583,5,5,http://127.0.0.1:8081/api/videos/21,3,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+0,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+9,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,583,5,5,http://127.0.0.1:8081/api/videos/29,9,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+18,Registro de Usuario,500,Grupo de Usuarios 1-3,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,18,0,0
+107,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,106,0,1
+2,Registro de Usuario,409,Grupo de Usuarios 1-1,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,2,0,0
+84,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,83,0,1
+60,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,59,0,0
+3,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,3,0,0
+8,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,583,5,5,http://127.0.0.1:8081/api/videos/50,8,0,0
+7,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,7,0,0
+7,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/81,7,0,0
+10,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,583,5,5,http://127.0.0.1:8081/api/videos/96,10,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+16,Registro de Usuario,201,Grupo de Usuarios 1-4,true,222,394,5,5,http://127.0.0.1:8081/api/auth/signup,16,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+14,Registro de Usuario,409,Grupo de Usuarios 1-5,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,14,0,0
+9,Registro de Usuario,409,Grupo de Usuarios 1-2,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,9,0,0
+94,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,92,0,0
+7,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,7,0,0
+106,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,105,0,1
+88,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,88,0,0
+4,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,4,0,0
+5,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,583,5,5,http://127.0.0.1:8081/api/videos/15,4,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+13,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,583,5,5,http://127.0.0.1:8081/api/videos/85,13,0,0
+15,Registro de Usuario,201,Grupo de Usuarios 1-3,true,222,394,5,5,http://127.0.0.1:8081/api/auth/signup,14,0,0
+107,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,106,0,1
+60,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,59,0,1
+61,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,60,0,1
+54,Registro de Usuario,409,Grupo de Usuarios 1-1,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,54,0,0
+2,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,2,0,0
+9,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,583,5,5,http://127.0.0.1:8081/api/videos/52,9,0,0
+10,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,583,5,5,http://127.0.0.1:8081/api/videos/94,10,0,0
+6,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/81,6,0,0
+10,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,10,0,0
+0,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+9,Registro de Usuario,409,Grupo de Usuarios 1-4,false,164,393,5,5,http://127.0.0.1:8081/api/auth/signup,9,0,0
+0,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+12,Registro de Usuario,201,Grupo de Usuarios 1-2,true,222,394,5,5,http://127.0.0.1:8081/api/auth/signup,12,0,0
+16,Registro de Usuario,500,Grupo de Usuarios 1-5,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,16,0,0
+105,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,104,0,0
+6,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,6,0,0
+5,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,5,0,0
+90,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,88,0,1
+82,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,82,0,0
+4,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,583,5,5,http://127.0.0.1:8081/api/videos/97,4,0,0
+3,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+9,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,584,5,5,http://127.0.0.1:8081/api/videos/100,9,0,0
+6,Registro de Usuario,409,Grupo de Usuarios 1-3,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,6,0,0
+89,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,88,0,0
+129,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,128,0,1
+109,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,108,0,1
+105,Registro de Usuario,500,Grupo de Usuarios 1-1,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,105,0,0
+19,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,19,0,0
+15,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,583,5,5,http://127.0.0.1:8081/api/videos/61,15,0,0
+13,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/41,13,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+6,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,582,5,5,http://127.0.0.1:8081/api/videos/4,6,0,0
+5,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,5,0,0
+18,Registro de Usuario,500,Grupo de Usuarios 1-4,false,190,393,5,5,http://127.0.0.1:8081/api/auth/signup,18,0,0
+19,Registro de Usuario,500,Grupo de Usuarios 1-5,false,190,393,5,5,http://127.0.0.1:8081/api/auth/signup,19,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+7,Registro de Usuario,201,Grupo de Usuarios 1-2,true,222,394,5,5,http://127.0.0.1:8081/api/auth/signup,7,0,0
+82,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,81,0,0
+16,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,16,0,0
+10,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,10,0,0
+7,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,7,0,0
+109,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,108,0,1
+30,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,583,5,5,http://127.0.0.1:8081/api/videos/54,30,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+7,Registro de Usuario,409,Grupo de Usuarios 1-3,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,7,0,0
+11,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,583,5,5,http://127.0.0.1:8081/api/videos/56,11,0,0
+95,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,93,0,1
+85,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,84,0,1
+67,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,66,0,1
+2,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,2,0,0
+4,Registro de Usuario,201,Grupo de Usuarios 1-1,true,222,394,5,5,http://127.0.0.1:8081/api/auth/signup,4,0,0
+12,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,583,5,5,http://127.0.0.1:8081/api/videos/22,12,0,0
+14,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/34,14,0,0
+14,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,583,5,5,http://127.0.0.1:8081/api/videos/29,14,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+6,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,6,0,0
+8,Registro de Usuario,409,Grupo de Usuarios 1-4,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,8,0,0
+9,Registro de Usuario,409,Grupo de Usuarios 1-2,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,9,0,0
+9,Registro de Usuario,409,Grupo de Usuarios 1-5,false,164,392,5,5,http://127.0.0.1:8081/api/auth/signup,9,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+115,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,114,0,1
+6,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,6,0,0
+7,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,7,0,0
+7,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,7,0,0
+94,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,93,0,1
+2,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,583,5,5,http://127.0.0.1:8081/api/videos/97,2,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+11,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,583,5,5,http://127.0.0.1:8081/api/videos/97,11,0,0
+8,Registro de Usuario,409,Grupo de Usuarios 1-3,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,8,0,0
+90,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,88,0,1
+64,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,63,0,4
+138,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,137,0,3
+13,Registro de Usuario,500,Grupo de Usuarios 1-1,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,13,0,0
+8,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,8,0,0
+14,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,583,5,5,http://127.0.0.1:8081/api/videos/32,14,0,0
+12,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,582,5,5,http://127.0.0.1:8081/api/videos/3,12,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+9,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/27,9,0,0
+14,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,14,0,0
+17,Registro de Usuario,500,Grupo de Usuarios 1-4,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,17,0,0
+9,Registro de Usuario,409,Grupo de Usuarios 1-2,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,9,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+10,Registro de Usuario,409,Grupo de Usuarios 1-5,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,10,0,0
+96,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,95,0,1
+9,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,9,0,0
+9,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,9,0,0
+11,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,11,0,0
+124,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,122,0,1
+43,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,583,5,5,http://127.0.0.1:8081/api/videos/90,43,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+11,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,583,5,5,http://127.0.0.1:8081/api/videos/81,11,0,0
+5,Registro de Usuario,409,Grupo de Usuarios 1-3,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,5,0,0
+97,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,95,0,1
+79,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,77,0,1
+78,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,76,0,1
+3,Registro de Usuario,409,Grupo de Usuarios 1-1,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,3,0,0
+2,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,2,0,0
+22,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,583,5,5,http://127.0.0.1:8081/api/videos/28,22,0,0
+9,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,583,5,5,http://127.0.0.1:8081/api/videos/43,9,0,0
+9,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/32,9,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+11,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,11,0,0
+10,Registro de Usuario,409,Grupo de Usuarios 1-4,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,10,0,0
+17,Registro de Usuario,201,Grupo de Usuarios 1-2,true,222,394,5,5,http://127.0.0.1:8081/api/auth/signup,17,0,0
+21,Registro de Usuario,500,Grupo de Usuarios 1-5,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,21,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+84,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,83,0,0
+11,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,11,0,0
+10,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,10,0,0
+9,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,9,0,0
+122,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,120,0,2
+45,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,583,5,5,http://127.0.0.1:8081/api/videos/29,45,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+3,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+16,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,583,5,5,http://127.0.0.1:8081/api/videos/40,16,0,0
+28,Registro de Usuario,500,Grupo de Usuarios 1-3,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,28,0,0
+74,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,72,0,1
+62,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,60,0,1
+74,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,73,0,0
+4,Registro de Usuario,201,Grupo de Usuarios 1-1,true,222,393,5,5,http://127.0.0.1:8081/api/auth/signup,4,0,0
+1,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,1,0,0
+13,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,583,5,5,http://127.0.0.1:8081/api/videos/97,13,0,0
+10,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,583,5,5,http://127.0.0.1:8081/api/videos/96,10,0,0
+9,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/92,9,0,0
+10,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,10,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+10,Registro de Usuario,409,Grupo de Usuarios 1-4,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,10,0,0
+8,Registro de Usuario,409,Grupo de Usuarios 1-2,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,8,0,0
+22,Registro de Usuario,500,Grupo de Usuarios 1-5,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,22,0,0
+3,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+108,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,107,0,2
+3,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,3,0,0
+4,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,4,0,0
+11,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,11,0,0
+114,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,112,0,1
+2,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,583,5,5,http://127.0.0.1:8081/api/videos/72,2,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+12,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,583,5,5,http://127.0.0.1:8081/api/videos/26,12,0,0
+20,Registro de Usuario,201,Grupo de Usuarios 1-3,true,222,394,5,5,http://127.0.0.1:8081/api/auth/signup,20,0,0
+121,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,119,0,2
+103,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,101,0,1
+57,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,56,0,1
+4,Registro de Usuario,409,Grupo de Usuarios 1-1,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,4,0,0
+3,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,3,0,0
+13,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,583,5,5,http://127.0.0.1:8081/api/videos/99,13,0,0
+8,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,583,5,5,http://127.0.0.1:8081/api/videos/23,8,0,0
+10,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/40,10,0,0
+9,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,9,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+21,Registro de Usuario,500,Grupo de Usuarios 1-4,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,21,0,0
+13,Registro de Usuario,201,Grupo de Usuarios 1-2,true,222,393,5,5,http://127.0.0.1:8081/api/auth/signup,13,0,0
+18,Registro de Usuario,500,Grupo de Usuarios 1-5,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,18,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+114,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,113,0,0
+14,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,14,0,0
+14,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,14,0,0
+10,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,10,0,0
+97,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,96,0,2
+3,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,583,5,5,http://127.0.0.1:8081/api/videos/64,3,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+15,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,583,5,5,http://127.0.0.1:8081/api/videos/68,15,0,0
+9,Registro de Usuario,409,Grupo de Usuarios 1-3,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,9,0,0
+75,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,74,0,1
+90,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,89,0,1
+75,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,74,0,0
+6,Registro de Usuario,500,Grupo de Usuarios 1-1,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,6,0,0
+2,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,2,0,0
+9,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,583,5,5,http://127.0.0.1:8081/api/videos/20,9,0,0
+5,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,582,5,5,http://127.0.0.1:8081/api/videos/5,5,0,0
+9,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/96,9,0,0
+11,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,11,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+9,Registro de Usuario,409,Grupo de Usuarios 1-2,false,164,393,5,5,http://127.0.0.1:8081/api/auth/signup,9,0,0
+8,Registro de Usuario,409,Grupo de Usuarios 1-4,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,8,0,0
+10,Registro de Usuario,409,Grupo de Usuarios 1-5,false,164,393,5,5,http://127.0.0.1:8081/api/auth/signup,10,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+93,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,91,0,1
+10,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,10,0,0
+11,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,11,0,0
+11,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,11,0,0
+23,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,583,5,5,http://127.0.0.1:8081/api/videos/42,23,0,0
+118,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,115,0,1
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+11,Registro de Usuario,409,Grupo de Usuarios 1-3,false,164,392,5,5,http://127.0.0.1:8081/api/auth/signup,11,0,0
+18,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,583,5,5,http://127.0.0.1:8081/api/videos/63,18,0,0
+96,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,94,0,1
+116,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,115,0,1
+101,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,100,0,1
+4,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,4,0,0
+3,Registro de Usuario,409,Grupo de Usuarios 1-1,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,3,0,0
+8,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,583,5,5,http://127.0.0.1:8081/api/videos/15,8,0,0
+5,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,583,5,5,http://127.0.0.1:8081/api/videos/15,5,0,0
+8,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/29,8,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+11,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,11,0,0
+9,Registro de Usuario,409,Grupo de Usuarios 1-4,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,9,0,0
+12,Registro de Usuario,201,Grupo de Usuarios 1-2,true,222,392,5,5,http://127.0.0.1:8081/api/auth/signup,12,0,0
+19,Registro de Usuario,201,Grupo de Usuarios 1-5,true,222,394,5,5,http://127.0.0.1:8081/api/auth/signup,19,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+96,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,94,0,1
+8,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,8,0,0
+8,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,8,0,0
+11,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,11,0,0
+124,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,122,0,0
+47,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,583,5,5,http://127.0.0.1:8081/api/videos/19,47,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+12,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,583,5,5,http://127.0.0.1:8081/api/videos/16,12,0,0
+17,Registro de Usuario,409,Grupo de Usuarios 1-3,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,17,0,0
+75,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,74,0,1
+65,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,64,0,1
+74,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,72,0,0
+2,Registro de Usuario,409,Grupo de Usuarios 1-1,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,2,0,0
+2,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,2,0,0
+8,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,583,5,5,http://127.0.0.1:8081/api/videos/82,8,0,0
+10,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,582,5,5,http://127.0.0.1:8081/api/videos/6,10,0,0
+8,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/43,8,0,0
+9,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,9,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+20,Registro de Usuario,409,Grupo de Usuarios 1-4,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,20,0,0
+21,Registro de Usuario,409,Grupo de Usuarios 1-2,false,164,393,5,5,http://127.0.0.1:8081/api/auth/signup,21,0,0
+10,Registro de Usuario,201,Grupo de Usuarios 1-5,true,222,394,5,5,http://127.0.0.1:8081/api/auth/signup,10,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+125,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,124,0,1
+10,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,10,0,0
+13,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,13,0,0
+11,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,11,0,0
+95,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,93,0,1
+3,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,583,5,5,http://127.0.0.1:8081/api/videos/20,3,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+13,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,583,5,5,http://127.0.0.1:8081/api/videos/90,13,0,0
+6,Registro de Usuario,409,Grupo de Usuarios 1-3,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,6,0,0
+135,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,133,0,1
+139,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,135,0,1
+335,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,334,0,1
+2,Registro de Usuario,409,Grupo de Usuarios 1-1,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,2,0,0
+3,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,3,0,0
+14,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,583,5,5,http://127.0.0.1:8081/api/videos/21,14,0,0
+9,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/11,9,0,0
+20,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,583,5,5,http://127.0.0.1:8081/api/videos/46,19,0,0
+18,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,18,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+11,Registro de Usuario,201,Grupo de Usuarios 1-4,true,222,393,5,5,http://127.0.0.1:8081/api/auth/signup,11,0,0
+19,Registro de Usuario,500,Grupo de Usuarios 1-5,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,19,0,0
+9,Registro de Usuario,409,Grupo de Usuarios 1-2,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,9,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+104,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,103,0,1
+9,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,9,0,0
+10,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,10,0,0
+9,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,9,0,0
+93,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,92,0,0
+3,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,583,5,5,http://127.0.0.1:8081/api/videos/50,3,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+13,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,583,5,5,http://127.0.0.1:8081/api/videos/36,13,0,0
+11,Registro de Usuario,409,Grupo de Usuarios 1-3,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,11,0,0
+118,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,117,0,1
+98,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,97,0,1
+60,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,58,0,0
+3,Registro de Usuario,409,Grupo de Usuarios 1-1,false,164,393,5,5,http://127.0.0.1:8081/api/auth/signup,3,0,0
+2,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,2,0,0
+8,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,583,5,5,http://127.0.0.1:8081/api/videos/26,8,0,0
+10,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/54,10,0,0
+13,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,583,5,5,http://127.0.0.1:8081/api/videos/21,13,0,0
+10,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,10,0,0
+0,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+5,Registro de Usuario,409,Grupo de Usuarios 1-4,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,5,0,0
+4,Registro de Usuario,409,Grupo de Usuarios 1-5,false,164,393,5,5,http://127.0.0.1:8081/api/auth/signup,4,0,0
+4,Registro de Usuario,409,Grupo de Usuarios 1-2,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,4,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+97,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,95,0,1
+11,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,11,0,0
+8,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,8,0,0
+8,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,8,0,0
+5,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,583,5,5,http://127.0.0.1:8081/api/videos/19,5,0,0
+164,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,163,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+20,Registro de Usuario,500,Grupo de Usuarios 1-3,false,190,393,5,5,http://127.0.0.1:8081/api/auth/signup,20,0,0
+7,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,583,5,5,http://127.0.0.1:8081/api/videos/96,7,0,0
+70,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,69,0,1
+60,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,59,0,1
+75,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,74,0,0
+3,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,3,0,0
+9,Registro de Usuario,500,Grupo de Usuarios 1-1,false,190,392,5,5,http://127.0.0.1:8081/api/auth/signup,9,0,0
+14,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,583,5,5,http://127.0.0.1:8081/api/videos/23,14,0,0
+10,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/73,10,0,0
+14,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,583,5,5,http://127.0.0.1:8081/api/videos/73,14,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+11,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,11,0,0
+17,Registro de Usuario,409,Grupo de Usuarios 1-4,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,17,0,0
+8,Registro de Usuario,409,Grupo de Usuarios 1-5,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,8,0,0
+11,Registro de Usuario,409,Grupo de Usuarios 1-2,false,164,393,5,5,http://127.0.0.1:8081/api/auth/signup,11,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+122,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,120,0,1
+9,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,9,0,0
+12,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,12,0,0
+11,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,11,0,0
+96,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,94,0,1
+39,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,583,5,5,http://127.0.0.1:8081/api/videos/93,39,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+12,Registro de Usuario,409,Grupo de Usuarios 1-3,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,12,0,0
+20,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,583,5,5,http://127.0.0.1:8081/api/videos/34,20,0,0
+72,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,71,0,1
+92,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,90,0,1
+82,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,81,0,1
+2,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,2,0,0
+5,Registro de Usuario,500,Grupo de Usuarios 1-1,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,5,0,0
+17,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,583,5,5,http://127.0.0.1:8081/api/videos/62,17,0,0
+11,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/26,11,0,0
+10,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,583,5,5,http://127.0.0.1:8081/api/videos/99,10,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+12,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,12,0,0
+15,Registro de Usuario,409,Grupo de Usuarios 1-4,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,15,0,0
+12,Registro de Usuario,409,Grupo de Usuarios 1-5,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,12,0,0
+11,Registro de Usuario,409,Grupo de Usuarios 1-2,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,11,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+98,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,97,0,2
+9,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,9,0,0
+7,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,7,0,0
+8,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,8,0,0
+3,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,583,5,5,http://127.0.0.1:8081/api/videos/52,3,0,0
+120,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,119,0,2
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+8,Registro de Usuario,409,Grupo de Usuarios 1-3,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,8,0,0
+10,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,582,5,5,http://127.0.0.1:8081/api/videos/9,10,0,0
+117,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,115,0,0
+65,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,64,0,1
+77,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,75,0,0
+3,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,3,0,0
+9,Registro de Usuario,201,Grupo de Usuarios 1-1,true,222,394,5,5,http://127.0.0.1:8081/api/auth/signup,9,0,0
+16,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,583,5,5,http://127.0.0.1:8081/api/videos/52,16,0,0
+11,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/18,11,0,0
+7,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,583,5,5,http://127.0.0.1:8081/api/videos/39,7,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+9,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,9,0,0
+22,Registro de Usuario,500,Grupo de Usuarios 1-4,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,22,0,0
+21,Registro de Usuario,500,Grupo de Usuarios 1-5,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,21,0,0
+7,Registro de Usuario,409,Grupo de Usuarios 1-2,false,164,393,5,5,http://127.0.0.1:8081/api/auth/signup,7,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+96,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,95,0,1
+11,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,11,0,0
+11,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,11,0,0
+5,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,5,0,0
+6,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,582,5,5,http://127.0.0.1:8081/api/videos/7,6,0,0
+95,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,94,0,1
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+13,Registro de Usuario,409,Grupo de Usuarios 1-3,false,164,393,5,5,http://127.0.0.1:8081/api/auth/signup,13,0,0
+13,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,583,5,5,http://127.0.0.1:8081/api/videos/88,13,0,0
+109,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,107,0,0
+115,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,114,0,1
+72,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,70,0,1
+5,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,5,0,0
+13,Registro de Usuario,409,Grupo de Usuarios 1-1,false,164,393,5,5,http://127.0.0.1:8081/api/auth/signup,13,0,0
+11,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,583,5,5,http://127.0.0.1:8081/api/videos/41,11,0,0
+9,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/15,9,0,0
+6,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,583,5,5,http://127.0.0.1:8081/api/videos/69,6,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+6,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,6,0,0
+11,Registro de Usuario,409,Grupo de Usuarios 1-5,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,11,0,0
+14,Registro de Usuario,201,Grupo de Usuarios 1-4,true,222,394,5,5,http://127.0.0.1:8081/api/auth/signup,14,0,0
+21,Registro de Usuario,500,Grupo de Usuarios 1-2,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,21,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+101,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,94,0,0
+10,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,10,0,0
+11,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,11,0,0
+10,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,10,0,0
+6,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,583,5,5,http://127.0.0.1:8081/api/videos/27,6,0,0
+109,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,108,0,2
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+5,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+12,Registro de Usuario,409,Grupo de Usuarios 1-3,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,12,0,0
+11,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,583,5,5,http://127.0.0.1:8081/api/videos/68,10,0,0
+93,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,91,0,0
+104,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,103,0,1
+106,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,105,0,0
+4,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,4,0,0
+16,Registro de Usuario,201,Grupo de Usuarios 1-1,true,222,394,5,5,http://127.0.0.1:8081/api/auth/signup,16,0,0
+16,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,583,5,5,http://127.0.0.1:8081/api/videos/29,16,0,0
+16,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/21,16,0,0
+7,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,583,5,5,http://127.0.0.1:8081/api/videos/36,7,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+9,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,9,0,0
+7,Registro de Usuario,409,Grupo de Usuarios 1-5,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,7,0,0
+12,Registro de Usuario,201,Grupo de Usuarios 1-4,true,222,394,5,5,http://127.0.0.1:8081/api/auth/signup,12,0,0
+10,Registro de Usuario,409,Grupo de Usuarios 1-2,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,10,0,0
+97,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,95,0,2
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+9,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,9,0,0
+9,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,9,0,0
+10,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,10,0,0
+13,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,583,5,5,http://127.0.0.1:8081/api/videos/57,13,0,0
+92,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,91,0,1
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+10,Registro de Usuario,409,Grupo de Usuarios 1-3,false,164,393,5,5,http://127.0.0.1:8081/api/auth/signup,10,0,0
+14,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,583,5,5,http://127.0.0.1:8081/api/videos/43,14,0,0
+114,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,113,0,2
+120,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,119,0,1
+163,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,162,0,1
+2,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,2,0,0
+12,Registro de Usuario,500,Grupo de Usuarios 1-1,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,12,0,0
+12,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,583,5,5,http://127.0.0.1:8081/api/videos/50,12,0,0
+11,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/49,11,0,0
+3,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,583,5,5,http://127.0.0.1:8081/api/videos/73,3,0,0
+0,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+4,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,4,0,0
+12,Registro de Usuario,409,Grupo de Usuarios 1-5,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,12,0,0
+22,Registro de Usuario,500,Grupo de Usuarios 1-4,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,22,0,0
+8,Registro de Usuario,409,Grupo de Usuarios 1-2,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,8,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+116,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,114,0,1
+9,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,9,0,0
+7,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,7,0,0
+8,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,8,0,0
+95,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,94,0,1
+89,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,583,5,5,http://127.0.0.1:8081/api/videos/69,89,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+13,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,583,5,5,http://127.0.0.1:8081/api/videos/71,13,0,0
+19,Registro de Usuario,409,Grupo de Usuarios 1-3,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,19,0,0
+102,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,101,0,1
+162,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,160,0,1
+75,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,74,0,0
+20,Registro de Usuario,500,Grupo de Usuarios 1-1,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,20,0,0
+15,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,15,0,0
+13,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/21,13,0,0
+10,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,583,5,5,http://127.0.0.1:8081/api/videos/93,10,0,0
+10,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,583,5,5,http://127.0.0.1:8081/api/videos/39,10,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+13,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,13,0,0
+20,Registro de Usuario,500,Grupo de Usuarios 1-5,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,20,0,0
+7,Registro de Usuario,409,Grupo de Usuarios 1-2,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,7,0,0
+17,Registro de Usuario,500,Grupo de Usuarios 1-4,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,17,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+95,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,93,0,1
+15,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,15,0,0
+12,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,11,0,0
+8,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,8,0,0
+107,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,106,0,1
+23,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,583,5,5,http://127.0.0.1:8081/api/videos/87,23,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+10,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,583,5,5,http://127.0.0.1:8081/api/videos/29,10,0,0
+12,Registro de Usuario,201,Grupo de Usuarios 1-3,true,222,394,5,5,http://127.0.0.1:8081/api/auth/signup,12,0,0
+95,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,94,0,2
+82,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,80,0,0
+113,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,111,0,1
+18,Registro de Usuario,500,Grupo de Usuarios 1-1,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,18,0,0
+15,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,15,0,0
+8,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/24,8,0,0
+8,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,583,5,5,http://127.0.0.1:8081/api/videos/30,7,0,0
+7,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,583,5,5,http://127.0.0.1:8081/api/videos/68,7,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+9,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,9,0,0
+10,Registro de Usuario,409,Grupo de Usuarios 1-5,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,10,0,0
+19,Registro de Usuario,500,Grupo de Usuarios 1-2,false,190,393,5,5,http://127.0.0.1:8081/api/auth/signup,19,0,0
+12,Registro de Usuario,500,Grupo de Usuarios 1-4,false,190,393,5,5,http://127.0.0.1:8081/api/auth/signup,12,0,0
+0,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+95,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,93,0,1
+11,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,11,0,0
+11,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,11,0,0
+9,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,9,0,0
+88,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,87,0,1
+3,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,582,5,5,http://127.0.0.1:8081/api/videos/1,3,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+7,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,583,5,5,http://127.0.0.1:8081/api/videos/71,7,0,0
+7,Registro de Usuario,409,Grupo de Usuarios 1-3,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,7,0,0
+111,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,110,0,1
+82,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,81,0,1
+98,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,97,0,1
+9,Registro de Usuario,409,Grupo de Usuarios 1-1,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,9,0,0
+7,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,7,0,0
+13,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/54,13,0,0
+8,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,582,5,5,http://127.0.0.1:8081/api/videos/8,8,0,0
+8,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,583,5,5,http://127.0.0.1:8081/api/videos/28,8,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+12,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,12,0,0
+8,Registro de Usuario,409,Grupo de Usuarios 1-2,false,164,393,5,5,http://127.0.0.1:8081/api/auth/signup,8,0,0
+15,Registro de Usuario,201,Grupo de Usuarios 1-5,true,222,394,5,5,http://127.0.0.1:8081/api/auth/signup,15,0,0
+9,Registro de Usuario,409,Grupo de Usuarios 1-4,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,9,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+118,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,116,0,2
+9,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,9,0,0
+9,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,9,0,0
+11,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,11,0,0
+94,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,93,0,2
+2,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,583,5,5,http://127.0.0.1:8081/api/videos/29,2,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+0,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+4,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,583,5,5,http://127.0.0.1:8081/api/videos/94,4,0,0
+3,Registro de Usuario,409,Grupo de Usuarios 1-3,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,3,0,0
+95,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,94,0,1
+106,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,105,0,1
+112,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,111,0,1
+4,Registro de Usuario,409,Grupo de Usuarios 1-1,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,4,0,0
+6,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,6,0,0
+13,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/10,13,0,0
+9,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,583,5,5,http://127.0.0.1:8081/api/videos/92,9,0,0
+8,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,583,5,5,http://127.0.0.1:8081/api/videos/28,8,0,0
+7,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,7,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+22,Registro de Usuario,500,Grupo de Usuarios 1-5,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,22,0,0
+19,Registro de Usuario,500,Grupo de Usuarios 1-2,false,190,392,5,5,http://127.0.0.1:8081/api/auth/signup,19,0,0
+4,Registro de Usuario,409,Grupo de Usuarios 1-4,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,4,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+112,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,111,0,1
+12,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,12,0,0
+10,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,10,0,0
+8,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,8,0,0
+93,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,92,0,1
+3,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,583,5,5,http://127.0.0.1:8081/api/videos/73,3,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+4,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,582,5,5,http://127.0.0.1:8081/api/videos/4,4,0,0
+7,Registro de Usuario,201,Grupo de Usuarios 1-3,true,222,394,5,5,http://127.0.0.1:8081/api/auth/signup,7,0,0
+111,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,109,0,1
+110,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,108,0,1
+142,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,141,0,1
+8,Registro de Usuario,500,Grupo de Usuarios 1-1,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,8,0,0
+4,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,4,0,0
+13,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/14,13,0,0
+12,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,583,5,5,http://127.0.0.1:8081/api/videos/11,11,0,0
+8,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,583,5,5,http://127.0.0.1:8081/api/videos/99,8,0,0
+9,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,9,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+13,Registro de Usuario,409,Grupo de Usuarios 1-5,false,164,393,5,5,http://127.0.0.1:8081/api/auth/signup,13,0,0
+21,Registro de Usuario,500,Grupo de Usuarios 1-2,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,21,0,0
+5,Registro de Usuario,409,Grupo de Usuarios 1-4,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,5,0,0
+0,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+94,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,93,0,1
+15,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,15,0,0
+9,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,9,0,0
+13,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,13,0,0
+94,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,92,0,2
+3,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,583,5,5,http://127.0.0.1:8081/api/videos/76,3,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+11,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,583,5,5,http://127.0.0.1:8081/api/videos/32,11,0,0
+8,Registro de Usuario,201,Grupo de Usuarios 1-3,true,222,393,5,5,http://127.0.0.1:8081/api/auth/signup,8,0,0
+107,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,106,0,1
+111,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,110,0,1
+107,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,106,0,0
+2,Registro de Usuario,409,Grupo de Usuarios 1-1,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,2,0,0
+2,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,2,0,0
+18,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/44,18,0,0
+17,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,583,5,5,http://127.0.0.1:8081/api/videos/21,17,0,0
+7,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,583,5,5,http://127.0.0.1:8081/api/videos/86,7,0,0
+9,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,9,0,0
+0,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+9,Registro de Usuario,409,Grupo de Usuarios 1-2,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,9,0,0
+13,Registro de Usuario,201,Grupo de Usuarios 1-5,true,222,393,5,5,http://127.0.0.1:8081/api/auth/signup,13,0,0
+25,Registro de Usuario,500,Grupo de Usuarios 1-4,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,25,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+107,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,106,0,1
+11,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,11,0,0
+9,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,9,0,0
+9,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,9,0,0
+94,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,93,0,2
+2,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,583,5,5,http://127.0.0.1:8081/api/videos/55,2,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+17,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,583,5,5,http://127.0.0.1:8081/api/videos/33,16,0,0
+8,Registro de Usuario,409,Grupo de Usuarios 1-3,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,8,0,0
+95,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,93,0,0
+106,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,105,0,1
+112,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,111,0,1
+4,Registro de Usuario,201,Grupo de Usuarios 1-1,true,222,393,5,5,http://127.0.0.1:8081/api/auth/signup,4,0,0
+3,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,3,0,0
+11,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/99,11,0,0
+9,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,583,5,5,http://127.0.0.1:8081/api/videos/71,9,0,0
+9,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,583,5,5,http://127.0.0.1:8081/api/videos/14,9,0,0
+9,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,9,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+11,Registro de Usuario,409,Grupo de Usuarios 1-5,false,164,393,5,5,http://127.0.0.1:8081/api/auth/signup,11,0,0
+9,Registro de Usuario,409,Grupo de Usuarios 1-2,false,164,393,5,5,http://127.0.0.1:8081/api/auth/signup,9,0,0
+9,Registro de Usuario,409,Grupo de Usuarios 1-4,false,164,393,5,5,http://127.0.0.1:8081/api/auth/signup,9,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+92,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,91,0,1
+10,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,10,0,0
+10,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,10,0,0
+10,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,10,0,0
+2,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,583,5,5,http://127.0.0.1:8081/api/videos/72,2,0,0
+94,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,92,0,1
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+12,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,583,5,5,http://127.0.0.1:8081/api/videos/73,12,0,0
+19,Registro de Usuario,201,Grupo de Usuarios 1-3,true,222,394,5,5,http://127.0.0.1:8081/api/auth/signup,19,0,0
+85,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,83,0,1
+87,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,86,0,1
+89,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,88,0,1
+2,Registro de Usuario,409,Grupo de Usuarios 1-1,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,2,0,0
+2,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,2,0,0
+14,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,583,5,5,http://127.0.0.1:8081/api/videos/94,14,0,0
+16,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/91,16,0,0
+9,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,583,5,5,http://127.0.0.1:8081/api/videos/99,9,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+7,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,7,0,0
+8,Registro de Usuario,409,Grupo de Usuarios 1-2,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,8,0,0
+7,Registro de Usuario,409,Grupo de Usuarios 1-5,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,7,0,0
+9,Registro de Usuario,201,Grupo de Usuarios 1-4,true,222,394,5,5,http://127.0.0.1:8081/api/auth/signup,9,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+95,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,93,0,1
+12,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,12,0,0
+9,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,9,0,0
+11,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,11,0,0
+3,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,583,5,5,http://127.0.0.1:8081/api/videos/45,3,0,0
+95,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,94,0,2
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+13,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,583,5,5,http://127.0.0.1:8081/api/videos/35,13,0,0
+14,Registro de Usuario,409,Grupo de Usuarios 1-3,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,14,0,0
+106,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,105,0,1
+108,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,107,0,1
+90,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,88,0,1
+2,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,2,0,0
+6,Registro de Usuario,500,Grupo de Usuarios 1-1,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,6,0,0
+13,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,583,5,5,http://127.0.0.1:8081/api/videos/88,13,0,0
+14,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/57,14,0,0
+5,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,583,5,5,http://127.0.0.1:8081/api/videos/22,5,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+4,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,4,0,0
+11,Registro de Usuario,409,Grupo de Usuarios 1-5,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,11,0,0
+10,Registro de Usuario,409,Grupo de Usuarios 1-2,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,10,0,0
+9,Registro de Usuario,409,Grupo de Usuarios 1-4,false,164,393,5,5,http://127.0.0.1:8081/api/auth/signup,9,0,0
+0,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+107,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,105,0,1
+12,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,11,0,0
+11,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,11,0,0
+10,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,10,0,0
+93,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,91,0,1
+3,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,583,5,5,http://127.0.0.1:8081/api/videos/48,3,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+13,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,583,5,5,http://127.0.0.1:8081/api/videos/78,13,0,0
+27,Registro de Usuario,500,Grupo de Usuarios 1-3,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,27,0,0
+123,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,122,0,1
+78,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,77,0,2
+177,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,176,0,1
+3,Registro de Usuario,409,Grupo de Usuarios 1-1,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,3,0,0
+3,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,3,0,0
+16,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/85,16,0,0
+18,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,583,5,5,http://127.0.0.1:8081/api/videos/34,18,0,0
+9,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,583,5,5,http://127.0.0.1:8081/api/videos/91,9,0,0
+8,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,8,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+8,Registro de Usuario,409,Grupo de Usuarios 1-4,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,8,0,0
+9,Registro de Usuario,409,Grupo de Usuarios 1-5,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,9,0,0
+8,Registro de Usuario,409,Grupo de Usuarios 1-2,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,8,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+100,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,99,0,0
+9,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,9,0,0
+8,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,8,0,0
+8,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,8,0,0
+99,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,97,0,1
+3,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,582,5,5,http://127.0.0.1:8081/api/videos/2,3,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+12,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,583,5,5,http://127.0.0.1:8081/api/videos/92,12,0,0
+15,Registro de Usuario,500,Grupo de Usuarios 1-3,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,15,0,0
+98,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,97,0,1
+110,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,109,0,1
+112,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,111,0,1
+3,Registro de Usuario,201,Grupo de Usuarios 1-1,true,222,394,5,5,http://127.0.0.1:8081/api/auth/signup,3,0,0
+2,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,2,0,0
+16,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,583,5,5,http://127.0.0.1:8081/api/videos/81,16,0,0
+10,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/70,10,0,0
+7,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,583,5,5,http://127.0.0.1:8081/api/videos/37,7,0,0
+9,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,9,0,0
+0,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+10,Registro de Usuario,409,Grupo de Usuarios 1-4,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,10,0,0
+7,Registro de Usuario,409,Grupo de Usuarios 1-5,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,7,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+27,Registro de Usuario,500,Grupo de Usuarios 1-2,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,27,0,0
+89,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,87,0,0
+12,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,12,0,0
+12,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,12,0,0
+5,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,5,0,0
+111,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,110,0,2
+3,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,582,5,5,http://127.0.0.1:8081/api/videos/6,3,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+12,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,583,5,5,http://127.0.0.1:8081/api/videos/90,12,0,0
+12,Registro de Usuario,409,Grupo de Usuarios 1-3,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,12,0,0
+88,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,87,0,2
+89,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,88,0,1
+86,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,85,0,1
+3,Registro de Usuario,409,Grupo de Usuarios 1-1,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,3,0,0
+2,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,2,0,0
+14,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/69,14,0,0
+13,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,583,5,5,http://127.0.0.1:8081/api/videos/25,13,0,0
+8,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,583,5,5,http://127.0.0.1:8081/api/videos/41,8,0,0
+0,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+7,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,7,0,0
+5,Registro de Usuario,409,Grupo de Usuarios 1-5,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,5,0,0
+15,Registro de Usuario,500,Grupo de Usuarios 1-4,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,15,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+20,Registro de Usuario,500,Grupo de Usuarios 1-2,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,20,0,0
+102,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,101,0,0
+9,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,9,0,0
+6,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,6,0,0
+8,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,8,0,0
+93,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,92,0,1
+3,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,582,5,5,http://127.0.0.1:8081/api/videos/8,3,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+0,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+0,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+12,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,583,5,5,http://127.0.0.1:8081/api/videos/78,12,0,0
+9,Registro de Usuario,409,Grupo de Usuarios 1-3,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,9,0,0
+97,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,93,0,0
+106,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,105,0,1
+93,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,92,0,1
+10,Registro de Usuario,500,Grupo de Usuarios 1-1,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,10,0,0
+7,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,7,0,0
+13,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,582,5,5,http://127.0.0.1:8081/api/videos/7,13,0,0
+10,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,583,5,5,http://127.0.0.1:8081/api/videos/15,10,0,0
+0,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+11,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,583,5,5,http://127.0.0.1:8081/api/videos/52,11,0,0
+15,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,15,0,0
+22,Registro de Usuario,500,Grupo de Usuarios 1-5,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,22,0,0
+19,Registro de Usuario,500,Grupo de Usuarios 1-4,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,19,0,0
+0,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+133,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,125,0,1
+122,Registro de Usuario,409,Grupo de Usuarios 1-2,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,122,0,0
+11,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,11,0,0
+9,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,9,0,0
+88,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,86,0,1
+2,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,2,0,0
+4,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,583,5,5,http://127.0.0.1:8081/api/videos/41,4,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+0,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+4,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,582,5,5,http://127.0.0.1:8081/api/videos/1,4,0,0
+0,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+3,Registro de Usuario,409,Grupo de Usuarios 1-3,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,3,0,0
+113,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,112,0,4
+2,Registro de Usuario,409,Grupo de Usuarios 1-1,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,2,0,0
+161,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,160,0,1
+75,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,74,0,1
+73,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,73,0,0
+14,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/82,14,0,0
+6,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,6,0,0
+7,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,583,5,5,http://127.0.0.1:8081/api/videos/70,7,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+10,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,583,5,5,http://127.0.0.1:8081/api/videos/24,10,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+20,Registro de Usuario,500,Grupo de Usuarios 1-5,false,190,393,5,5,http://127.0.0.1:8081/api/auth/signup,20,0,0
+12,Registro de Usuario,500,Grupo de Usuarios 1-4,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,12,0,0
+4,Registro de Usuario,409,Grupo de Usuarios 1-2,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,4,0,0
+97,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,95,0,1
+9,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,9,0,0
+2,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,2,0,0
+96,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,95,0,1
+2,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,2,0,0
+4,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,583,5,5,http://127.0.0.1:8081/api/videos/77,4,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+11,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,583,5,5,http://127.0.0.1:8081/api/videos/38,11,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+22,Registro de Usuario,500,Grupo de Usuarios 1-3,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,22,0,0
+123,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,122,0,1
+112,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,110,0,1
+64,Registro de Usuario,409,Grupo de Usuarios 1-1,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,64,0,0
+3,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,3,0,0
+134,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,133,0,0
+13,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/75,13,0,0
+9,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,583,5,5,http://127.0.0.1:8081/api/videos/70,9,0,0
+12,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,12,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+9,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,583,5,5,http://127.0.0.1:8081/api/videos/71,9,0,0
+10,Registro de Usuario,409,Grupo de Usuarios 1-5,false,164,393,5,5,http://127.0.0.1:8081/api/auth/signup,10,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+9,Registro de Usuario,409,Grupo de Usuarios 1-4,false,164,393,5,5,http://127.0.0.1:8081/api/auth/signup,9,0,0
+92,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,90,0,1
+63,Registro de Usuario,409,Grupo de Usuarios 1-2,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,63,0,0
+11,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,11,0,0
+9,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,9,0,0
+103,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,102,0,1
+3,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,583,5,5,http://127.0.0.1:8081/api/videos/68,3,0,0
+4,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,4,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+8,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,583,5,5,http://127.0.0.1:8081/api/videos/50,8,0,0
+0,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+12,Registro de Usuario,500,Grupo de Usuarios 1-3,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,12,0,0
+81,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,79,0,1
+106,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,105,0,2
+2,Registro de Usuario,409,Grupo de Usuarios 1-1,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,2,0,0
+2,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,2,0,0
+73,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,72,0,1
+15,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,583,5,5,http://127.0.0.1:8081/api/videos/48,15,0,0
+13,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/10,13,0,0
+6,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,6,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+8,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,583,5,5,http://127.0.0.1:8081/api/videos/35,8,0,0
+0,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+7,Registro de Usuario,409,Grupo de Usuarios 1-4,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,7,0,0
+8,Registro de Usuario,201,Grupo de Usuarios 1-5,true,222,393,5,5,http://127.0.0.1:8081/api/auth/signup,8,0,0
+69,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,68,0,0
+1,Registro de Usuario,409,Grupo de Usuarios 1-2,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,1,0,0
+11,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,11,0,0
+8,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,8,0,0
+95,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,94,0,1
+3,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,583,5,5,http://127.0.0.1:8081/api/videos/60,3,0,0
+3,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,3,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+0,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+13,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,583,5,5,http://127.0.0.1:8081/api/videos/32,13,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+10,Registro de Usuario,409,Grupo de Usuarios 1-3,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,10,0,0
+111,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,109,0,1
+113,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,111,0,1
+9,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,9,0,0
+19,Registro de Usuario,500,Grupo de Usuarios 1-1,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,19,0,0
+75,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,74,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+8,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,583,5,5,http://127.0.0.1:8081/api/videos/23,8,0,0
+8,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/38,8,0,0
+6,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,6,0,0
+8,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,583,5,5,http://127.0.0.1:8081/api/videos/93,8,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+7,Registro de Usuario,409,Grupo de Usuarios 1-5,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,7,0,0
+107,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,106,0,0
+104,Registro de Usuario,500,Grupo de Usuarios 1-4,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,104,0,0
+49,Registro de Usuario,201,Grupo de Usuarios 1-2,true,222,394,5,5,http://127.0.0.1:8081/api/auth/signup,49,0,0
+3,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,583,5,5,http://127.0.0.1:8081/api/videos/43,3,0,0
+103,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,101,0,2
+97,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,97,0,0
+2,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,2,0,0
+2,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,2,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+0,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+10,Registro de Usuario,409,Grupo de Usuarios 1-3,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,10,0,0
+11,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,583,5,5,http://127.0.0.1:8081/api/videos/16,11,0,0
+95,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,93,0,1
+111,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,109,0,1
+101,Registro de Usuario,409,Grupo de Usuarios 1-1,false,164,392,5,5,http://127.0.0.1:8081/api/auth/signup,101,0,0
+167,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,166,0,1
+166,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,166,0,0
+14,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,583,5,5,http://127.0.0.1:8081/api/videos/72,14,0,0
+11,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,583,5,5,http://127.0.0.1:8081/api/videos/18,11,0,0
+12,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,12,0,0
+0,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+6,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/21,6,0,0
+8,Registro de Usuario,409,Grupo de Usuarios 1-4,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,8,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+10,Registro de Usuario,201,Grupo de Usuarios 1-2,true,222,394,5,5,http://127.0.0.1:8081/api/auth/signup,10,0,0
+5,Registro de Usuario,409,Grupo de Usuarios 1-5,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,5,0,0
+74,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,73,0,1
+4,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,4,0,0
+3,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,3,0,0
+88,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,87,0,1
+81,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,81,0,0
+5,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,583,5,5,http://127.0.0.1:8081/api/videos/24,5,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+17,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,583,5,5,http://127.0.0.1:8081/api/videos/76,17,0,0
+19,Registro de Usuario,500,Grupo de Usuarios 1-3,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,18,0,0
+104,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,103,0,1
+129,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,127,0,1
+156,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,155,0,0
+143,Registro de Usuario,409,Grupo de Usuarios 1-1,false,164,392,5,5,http://127.0.0.1:8081/api/auth/signup,143,0,0
+98,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,98,0,0
+17,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,584,5,5,http://127.0.0.1:8081/api/videos/100,17,0,0
+7,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/61,7,0,0
+0,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+9,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,9,0,0
+14,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,583,5,5,http://127.0.0.1:8081/api/videos/63,14,0,0
+12,Registro de Usuario,409,Grupo de Usuarios 1-4,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,12,0,0
+11,Registro de Usuario,409,Grupo de Usuarios 1-5,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,11,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+7,Registro de Usuario,409,Grupo de Usuarios 1-2,false,164,393,5,5,http://127.0.0.1:8081/api/auth/signup,7,0,0
+108,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,107,0,1
+3,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,3,0,0
+3,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,3,0,0
+4,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,4,0,0
+92,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,91,0,1
+2,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,582,5,5,http://127.0.0.1:8081/api/videos/8,2,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+0,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+9,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,583,5,5,http://127.0.0.1:8081/api/videos/91,9,0,0
+13,Registro de Usuario,500,Grupo de Usuarios 1-3,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,13,0,0
+92,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,91,0,1
+60,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,58,0,1
+73,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,72,0,0
+4,Registro de Usuario,201,Grupo de Usuarios 1-1,true,222,394,5,5,http://127.0.0.1:8081/api/auth/signup,4,0,0
+2,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,2,0,0
+13,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,582,5,5,http://127.0.0.1:8081/api/videos/7,13,0,0
+8,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/63,8,0,0
+8,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,583,5,5,http://127.0.0.1:8081/api/videos/75,8,0,0
+6,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,6,0,0
+0,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+10,Registro de Usuario,201,Grupo de Usuarios 1-4,true,222,393,5,5,http://127.0.0.1:8081/api/auth/signup,10,0,0
+19,Registro de Usuario,500,Grupo de Usuarios 1-5,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,19,0,0
+5,Registro de Usuario,409,Grupo de Usuarios 1-2,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,5,0,0
+0,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+84,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,83,0,0
+11,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,11,0,0
+9,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,9,0,0
+12,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,12,0,0
+3,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,582,5,5,http://127.0.0.1:8081/api/videos/6,3,0,0
+89,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,87,0,1
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+8,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,583,5,5,http://127.0.0.1:8081/api/videos/62,8,0,0
+9,Registro de Usuario,201,Grupo de Usuarios 1-3,true,222,394,5,5,http://127.0.0.1:8081/api/auth/signup,9,0,0
+69,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,67,0,1
+114,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,112,0,1
+86,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,84,0,1
+2,Registro de Usuario,409,Grupo de Usuarios 1-1,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,2,0,0
+2,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,2,0,0
+14,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,583,5,5,http://127.0.0.1:8081/api/videos/30,14,0,0
+16,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/39,16,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+8,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,583,5,5,http://127.0.0.1:8081/api/videos/96,8,0,0
+5,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,5,0,0
+10,Registro de Usuario,409,Grupo de Usuarios 1-5,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,10,0,0
+11,Registro de Usuario,409,Grupo de Usuarios 1-4,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,11,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+13,Registro de Usuario,409,Grupo de Usuarios 1-2,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,13,0,0
+113,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,112,0,1
+11,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,11,0,0
+11,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,11,0,0
+93,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,92,0,2
+86,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,86,0,0
+3,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,583,5,5,http://127.0.0.1:8081/api/videos/50,3,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+13,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,583,5,5,http://127.0.0.1:8081/api/videos/76,13,0,0
+8,Registro de Usuario,409,Grupo de Usuarios 1-3,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,8,0,0
+90,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,89,0,1
+108,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,107,0,1
+1,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,1,0,0
+62,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,61,0,0
+49,Registro de Usuario,409,Grupo de Usuarios 1-1,false,164,393,5,5,http://127.0.0.1:8081/api/auth/signup,49,0,0
+13,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/28,13,0,0
+10,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,582,5,5,http://127.0.0.1:8081/api/videos/3,10,0,0
+0,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+7,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,7,0,0
+11,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,583,5,5,http://127.0.0.1:8081/api/videos/12,11,0,0
+7,Registro de Usuario,409,Grupo de Usuarios 1-5,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,7,0,0
+15,Registro de Usuario,409,Grupo de Usuarios 1-4,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,15,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+6,Registro de Usuario,500,Grupo de Usuarios 1-2,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,6,0,0
+95,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,94,0,0
+10,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,10,0,0
+10,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,10,0,0
+9,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,9,0,0
+95,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,94,0,1
+49,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,583,5,5,http://127.0.0.1:8081/api/videos/91,49,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+0,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+9,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,583,5,5,http://127.0.0.1:8081/api/videos/41,9,0,0
+21,Registro de Usuario,500,Grupo de Usuarios 1-3,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,21,0,0
+108,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,106,0,0
+94,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,93,0,1
+59,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,57,0,0
+2,Registro de Usuario,409,Grupo de Usuarios 1-1,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,2,0,0
+2,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,2,0,0
+6,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/72,6,0,0
+7,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,583,5,5,http://127.0.0.1:8081/api/videos/51,7,0,0
+7,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,583,5,5,http://127.0.0.1:8081/api/videos/65,7,0,0
+7,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,7,0,0
+0,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+14,Registro de Usuario,201,Grupo de Usuarios 1-5,true,222,394,5,5,http://127.0.0.1:8081/api/auth/signup,14,0,0
+9,Registro de Usuario,409,Grupo de Usuarios 1-4,false,164,393,5,5,http://127.0.0.1:8081/api/auth/signup,9,0,0
+15,Registro de Usuario,201,Grupo de Usuarios 1-2,true,222,394,5,5,http://127.0.0.1:8081/api/auth/signup,15,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+84,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,83,0,1
+11,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,11,0,0
+10,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,10,0,0
+10,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,10,0,0
+3,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,583,5,5,http://127.0.0.1:8081/api/videos/26,3,0,0
+98,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,97,0,2
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+16,Registro de Usuario,201,Grupo de Usuarios 1-3,true,222,394,5,5,http://127.0.0.1:8081/api/auth/signup,16,0,0
+9,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,583,5,5,http://127.0.0.1:8081/api/videos/61,9,0,0
+89,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,88,0,1
+100,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,98,0,1
+103,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,102,0,1
+2,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,2,0,0
+2,Registro de Usuario,409,Grupo de Usuarios 1-1,false,164,393,5,5,http://127.0.0.1:8081/api/auth/signup,2,0,0
+12,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/87,12,0,0
+6,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,583,5,5,http://127.0.0.1:8081/api/videos/98,6,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+9,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,583,5,5,http://127.0.0.1:8081/api/videos/57,9,0,0
+7,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,7,0,0
+12,Registro de Usuario,409,Grupo de Usuarios 1-5,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,12,0,0
+11,Registro de Usuario,409,Grupo de Usuarios 1-4,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,11,0,0
+7,Registro de Usuario,409,Grupo de Usuarios 1-2,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,7,0,0
+0,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+96,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,95,0,1
+11,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,11,0,0
+6,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,6,0,0
+10,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,10,0,0
+4,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,583,5,5,http://127.0.0.1:8081/api/videos/73,4,0,0
+99,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,96,0,1
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+17,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,583,5,5,http://127.0.0.1:8081/api/videos/23,17,0,0
+18,Registro de Usuario,409,Grupo de Usuarios 1-3,false,164,393,5,5,http://127.0.0.1:8081/api/auth/signup,18,0,0
+96,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,94,0,1
+109,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,108,0,1
+103,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,101,0,1
+3,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,3,0,0
+5,Registro de Usuario,201,Grupo de Usuarios 1-1,true,222,394,5,5,http://127.0.0.1:8081/api/auth/signup,5,0,0
+12,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,582,5,5,http://127.0.0.1:8081/api/videos/8,12,0,0
+7,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,583,5,5,http://127.0.0.1:8081/api/videos/23,7,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+9,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,583,5,5,http://127.0.0.1:8081/api/videos/28,9,0,0
+6,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,6,0,0
+11,Registro de Usuario,409,Grupo de Usuarios 1-5,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,11,0,0
+9,Registro de Usuario,409,Grupo de Usuarios 1-4,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,9,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+3,Registro de Usuario,409,Grupo de Usuarios 1-2,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,3,0,0
+73,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,71,0,1
+9,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,9,0,0
+8,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,8,0,0
+8,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,8,0,0
+128,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,126,0,2
+66,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,583,5,5,http://127.0.0.1:8081/api/videos/55,66,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+14,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,583,5,5,http://127.0.0.1:8081/api/videos/26,14,0,0
+20,Registro de Usuario,409,Grupo de Usuarios 1-3,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,20,0,0
+92,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,90,0,1
+98,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,96,0,2
+104,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,103,0,1
+2,Registro de Usuario,409,Grupo de Usuarios 1-1,false,164,393,5,5,http://127.0.0.1:8081/api/auth/signup,2,0,0
+2,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,2,0,0
+8,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/72,8,0,0
+10,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,583,5,5,http://127.0.0.1:8081/api/videos/44,10,0,0
+9,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,583,5,5,http://127.0.0.1:8081/api/videos/74,9,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+9,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,9,0,0
+10,Registro de Usuario,409,Grupo de Usuarios 1-5,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,10,0,0
+17,Registro de Usuario,500,Grupo de Usuarios 1-4,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,17,0,0
+16,Registro de Usuario,500,Grupo de Usuarios 1-2,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,16,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+92,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,90,0,0
+7,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,7,0,0
+6,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,6,0,0
+8,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,8,0,0
+73,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,71,0,1
+2,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,583,5,5,http://127.0.0.1:8081/api/videos/58,2,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+15,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,583,5,5,http://127.0.0.1:8081/api/videos/41,15,0,0
+18,Registro de Usuario,500,Grupo de Usuarios 1-3,false,190,392,5,5,http://127.0.0.1:8081/api/auth/signup,18,0,0
+84,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,83,0,0
+106,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,105,0,1
+99,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,97,0,1
+9,Registro de Usuario,500,Grupo de Usuarios 1-1,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,9,0,0
+2,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,2,0,0
+13,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,583,5,5,http://127.0.0.1:8081/api/videos/48,13,0,0
+9,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/28,9,0,0
+11,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,583,5,5,http://127.0.0.1:8081/api/videos/62,11,0,0
+11,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,11,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+11,Registro de Usuario,409,Grupo de Usuarios 1-4,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,11,0,0
+10,Registro de Usuario,409,Grupo de Usuarios 1-5,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,10,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+13,Registro de Usuario,409,Grupo de Usuarios 1-2,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,13,0,0
+105,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,104,0,1
+13,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,13,0,0
+12,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,12,0,0
+95,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,94,0,1
+93,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,93,0,0
+2,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,583,5,5,http://127.0.0.1:8081/api/videos/27,2,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+2,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+11,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,583,5,5,http://127.0.0.1:8081/api/videos/35,11,0,0
+5,Registro de Usuario,409,Grupo de Usuarios 1-3,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,5,0,0
+90,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,89,0,0
+110,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,108,0,1
+2,Registro de Usuario,409,Grupo de Usuarios 1-1,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,2,0,0
+77,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,75,0,1
+54,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,54,0,0
+7,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/50,7,0,0
+5,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,583,5,5,http://127.0.0.1:8081/api/videos/78,4,0,0
+8,Login,200,Grupo de Usuarios 1-1,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,8,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+10,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,583,5,5,http://127.0.0.1:8081/api/videos/83,10,0,0
+11,Registro de Usuario,409,Grupo de Usuarios 1-5,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,11,0,0
+18,Registro de Usuario,500,Grupo de Usuarios 1-4,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,18,0,0
+0,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-1,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+3,Registro de Usuario,409,Grupo de Usuarios 1-2,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,3,0,0
+71,Listar Videos Públicos,200,Grupo de Usuarios 1-3,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,70,0,1
+9,Login,200,Grupo de Usuarios 1-5,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,9,0,0
+8,Login,200,Grupo de Usuarios 1-4,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,8,0,0
+95,Listar Videos Públicos,200,Grupo de Usuarios 1-1,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,93,0,1
+32,Login,200,Grupo de Usuarios 1-2,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,32,0,0
+4,Ver Video Individual,500,Grupo de Usuarios 1-3,false,190,583,5,5,http://127.0.0.1:8081/api/videos/78,4,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-5,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+1,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-4,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+0,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-2,false,2541,0,5,5,http://127.0.0.1:8081/api/videos/upload,0,0,0
+11,Ver Video Individual,500,Grupo de Usuarios 1-1,false,190,583,5,5,http://127.0.0.1:8081/api/videos/74,11,0,0
+8,Registro de Usuario,409,Grupo de Usuarios 1-3,false,164,394,5,5,http://127.0.0.1:8081/api/auth/signup,8,0,0
+96,Listar Videos Públicos,200,Grupo de Usuarios 1-5,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,95,0,1
+99,Listar Videos Públicos,200,Grupo de Usuarios 1-4,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,97,0,1
+3,Login,200,Grupo de Usuarios 1-3,true,657,257,5,5,http://127.0.0.1:8081/api/auth/login,3,0,0
+78,Listar Videos Públicos,200,Grupo de Usuarios 1-2,true,416909,587,5,5,http://127.0.0.1:8081/api/public/videos,76,0,0
+73,Registro de Usuario,500,Grupo de Usuarios 1-1,false,190,394,5,5,http://127.0.0.1:8081/api/auth/signup,73,0,0
+9,Ver Video Individual,500,Grupo de Usuarios 1-5,false,190,583,5,5,http://127.0.0.1:8081/api/videos/98,9,0,0
+5,Ver Video Individual,500,Grupo de Usuarios 1-4,false,190,583,4,4,http://127.0.0.1:8081/api/videos/76,5,0,0
+0,Upload Video,Non HTTP response code: java.io.FileNotFoundException,Grupo de Usuarios 1-3,false,2541,0,3,3,http://127.0.0.1:8081/api/videos/upload,0,0,0
+9,Ver Video Individual,500,Grupo de Usuarios 1-2,false,190,582,2,2,http://127.0.0.1:8081/api/videos/8,9,0,0
+6,Login,200,Grupo de Usuarios 1-1,true,657,257,1,1,http://127.0.0.1:8081/api/auth/login,6,0,0

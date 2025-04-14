@@ -1,0 +1,57 @@
+{
+  "test_summary": {
+    "total_samples": 1460,
+    "duration_seconds": 300,
+    "throughput_per_second": 4.9,
+    "error_rate_percentage": 51.51,
+    "response_times": {
+      "average_ms": 15,
+      "min_ms": 0,
+      "max_ms": 112
+    },
+    "concurrent_users": {
+      "max": 5,
+      "completed": 5
+    },
+    "errors": {
+      "total": 752,
+      "percentage": 51.51
+    },
+    "test_progression": {
+      "first_minute": {
+        "requests": 241,
+        "error_rate": 49.38
+      },
+      "third_minute": {
+        "requests": 681,
+        "error_rate": 49.34
+      },
+      "fifth_minute": {
+        "requests": 1460,
+        "error_rate": 51.51
+      }
+    }
+  },
+  "conclusions": {
+    "performance_status": "CRITICAL",
+    "key_findings": [
+      "Error rate aumentó ligeramente durante la prueba (de 49.38% a 51.51%)",
+      "Throughput se mantuvo estable en ~4.9 solicitudes/segundo",
+      "Tiempos de respuesta consistentes (promedio 15ms)",
+      "Máximo tiempo de respuesta aumentó de 73ms a 112ms",
+      "Sistema mantuvo rendimiento similar durante los 5 minutos"
+    ],
+    "stability_analysis": {
+      "throughput": "ESTABLE",
+      "error_rate": "DEGRADACIÓN_LEVE",
+      "response_time": "ESTABLE"
+    },
+    "recommendations": [
+      "Investigar urgentemente la causa del alto porcentaje de errores",
+      "Analizar logs del servidor para patrones de error",
+      "Revisar la implementación de autenticación y manejo de sesiones",
+      "Verificar la capacidad y configuración de la base de datos",
+      "Considerar pruebas con diferentes niveles de concurrencia"
+    ]
+  }
+}
