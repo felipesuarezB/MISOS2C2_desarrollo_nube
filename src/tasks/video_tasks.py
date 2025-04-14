@@ -2,60 +2,51 @@ from datetime import datetime
 from src.tasks.celery_worker import celery
 from src.database import db
 from src.models.video import Video
-# Import all models to ensure tables are created
 from src.models.jugador import Jugador
 from src.models.vote import Vote
-import boto3
 import uuid
 import os
 from sqlalchemy import inspect
 
-S3_BUCKET = os.getenv("S3_BUCKET")
-S3_REGION = os.getenv("S3_REGION")
-S3_ACCESS_KEY = os.getenv("S3_ACCESS_KEY")
-S3_SECRET_KEY = os.getenv("S3_SECRET_KEY")
+# Ruta local en el EC2
+LOCAL_VIDEO_PATH = os.path.expanduser("~/shared_folder")
+IP_PUBBLICA_NFS = "44.203.22.5"
 
 @celery.task
 def async_save_video(jugador_id, title, filename, file_data_bytes):
-    s3 = boto3.client(
-        "s3",
-        aws_access_key_id=S3_ACCESS_KEY,
-        aws_secret_access_key=S3_SECRET_KEY,
-        region_name=S3_REGION
-    )
-
-    from io import BytesIO
-    file_data = BytesIO(file_data_bytes)
-
-    s3.upload_fileobj(file_data, S3_BUCKET, filename, ExtraArgs={"ContentType": "video/mp4"})
-
-    video_url = f"https://{S3_BUCKET}.s3.{S3_REGION}.amazonaws.com/{filename}"
     
+    print(f"Guardando archivo en: {LOCAL_VIDEO_PATH}")
     try:
-        # Use the Flask app to get properly configured database session
+        # Crear el directorio si no existe
+        os.makedirs(LOCAL_VIDEO_PATH, exist_ok=True)
+        
+        # Ruta completa del archivo
+        file_path = os.path.join(LOCAL_VIDEO_PATH, filename)
+        
+        # Escribir el archivo en disco
+        with open(file_path, "wb") as f:
+            f.write(file_data_bytes)
+
+        # URL o ruta pública que se usará (puedes ajustarla según cómo sirvas los archivos)
+        video_url = f"http://{IP_PUBBLICA_NFS}/videos/{filename}"
+
+        # Configurar la app de Flask para la DB
         from flask import Flask
         from src.database import get_database_url
         app = Flask(__name__)
         app.config['SQLALCHEMY_DATABASE_URI'] = get_database_url()
         app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
         
-        # Initialize the database with the app
         from src.database import db
         db.init_app(app)
-        
-        # Create app context and save the video
-        with app.app_context():
-            # Make sure all tables exist
-            # Usar el inspector para verificar las tablas en la base de datos
-            inspector = inspect(db.engine)
 
-            # Obtener todos los nombres de las tablas en la base de datos
+        with app.app_context():
+            inspector = inspect(db.engine)
             existing_tables = inspector.get_table_names()
 
-            # Verificar si alguna tabla de las que queremos crear ya existe
-            if not existing_tables:  # Si no existen tablas en absoluto
-                db.create_all()  # Crear todas las tablas
-            
+            if not existing_tables:
+                db.create_all()
+
             video = Video(
                 title=title,
                 status='subido',
@@ -66,8 +57,9 @@ def async_save_video(jugador_id, title, filename, file_data_bytes):
             )
             db.session.add(video)
             db.session.commit()
-        
+
         return True
+
     except Exception as e:
-        print(f"Error saving video to database: {e}")
+        print(f"Error saving video to local disk or database: {e}")
         return False
