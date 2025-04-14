@@ -133,7 +133,7 @@ $(document).ready(function() {
         widgets: ['zebra']
     });
 
-    var data = {"OkPercent": 48.49315068493151, "KoPercent": 51.50684931506849};
+    var data = {"OkPercent": 69.07801418439716, "KoPercent": 30.921985815602838};
     var dataset = [
         {
             "label" : "FAIL",
@@ -173,7 +173,7 @@ $(document).ready(function() {
     });
 
     // Creates APDEX table
-    createTable($("#apdexTable"), {"supportsControllersDiscrimination": true, "overall": {"data": [0.4849315068493151, 500, 1500, "Total"], "isController": false}, "titles": ["Apdex", "T (Toleration threshold)", "F (Frustration threshold)", "Label"], "items": [{"data": [1.0, 500, 1500, "Listar Videos Públicos"], "isController": false}, {"data": [0.0, 500, 1500, "Ver Video Individual"], "isController": false}, {"data": [0.0, 500, 1500, "Upload Video"], "isController": false}, {"data": [0.4217687074829932, 500, 1500, "Registro de Usuario"], "isController": false}, {"data": [1.0, 500, 1500, "Login"], "isController": false}]}, function(index, item){
+    createTable($("#apdexTable"), {"supportsControllersDiscrimination": true, "overall": {"data": [0.6907801418439716, 500, 1500, "Total"], "isController": false}, "titles": ["Apdex", "T (Toleration threshold)", "F (Frustration threshold)", "Label"], "items": [{"data": [1.0, 500, 1500, "Listar Videos Públicos"], "isController": false}, {"data": [0.07627118644067797, 500, 1500, "Registro de Usuario"], "isController": false}, {"data": [1.0, 500, 1500, "Login"], "isController": false}]}, function(index, item){
         switch(index){
             case 0:
                 item = item.toFixed(3);
@@ -187,7 +187,7 @@ $(document).ready(function() {
     }, [[0, 0]], 3);
 
     // Create statistics table
-    createTable($("#statisticsTable"), {"supportsControllersDiscrimination": true, "overall": {"data": ["Total", 1460, 752, 51.50684931506849, 15.760958904109588, 0, 112, 9.0, 40.0, 45.0, 73.0, 4.887274674879073, 76.10721432666075, 1.7355735434415116], "isController": false}, "titles": ["Label", "#Samples", "FAIL", "Error %", "Average", "Min", "Max", "Median", "90th pct", "95th pct", "99th pct", "Transactions/s", "Received", "Sent"], "items": [{"data": ["Listar Videos Públicos", 291, 0, 0.0, 40.037800687285205, 19, 112, 38.0, 55.400000000000034, 70.39999999999998, 91.71999999999986, 0.9843451905773473, 73.40388974382502, 0.564268190301663], "isController": false}, {"data": ["Ver Video Individual", 290, 290, 100.0, 10.424137931034481, 2, 57, 9.0, 19.0, 27.44999999999999, 46.89999999999975, 0.9843689007314879, 0.1826465733779128, 0.560347090808031], "isController": false}, {"data": ["Upload Video", 292, 292, 100.0, 1.424657534246576, 0, 6, 1.0, 2.0, 3.0, 5.069999999999993, 0.9844377916228391, 2.4880126999217844, 0.0], "isController": false}, {"data": ["Registro de Usuario", 294, 170, 57.82312925170068, 14.55102040816326, 2, 88, 12.0, 26.0, 36.75, 59.4500000000001, 0.9841630095303133, 0.1869954177002052, 0.3784203796643134], "isController": false}, {"data": ["Login", 293, 0, 0.0, 12.433447098976112, 2, 92, 9.0, 26.600000000000023, 42.0, 85.30000000000001, 0.984410697486897, 0.6315994416493079, 0.2470640129434888], "isController": false}]}, function(index, item){
+    createTable($("#statisticsTable"), {"supportsControllersDiscrimination": true, "overall": {"data": ["Total", 1410, 436, 30.921985815602838, 49.32765957446809, 2, 420, 11.0, 131.0, 138.0, 187.4500000000005, 4.7280372609574775, 813.7459496795162, 1.9037698238051646], "isController": false}, "titles": ["Label", "#Samples", "FAIL", "Error %", "Average", "Min", "Max", "Median", "90th pct", "95th pct", "99th pct", "Transactions/s", "Received", "Sent"], "items": [{"data": ["Listar Videos Públicos", 468, 0, 0.0, 126.08333333333336, 79, 420, 123.0, 144.0, 163.0, 232.24, 1.5802642553004695, 818.1386078310873, 0.9058741385364997], "isController": false}, {"data": ["Registro de Usuario", 472, 436, 92.37288135593221, 12.582627118644066, 2, 194, 9.0, 21.0, 26.0, 107.80999999999995, 1.5836481616931615, 0.269673137703576, 0.6089926135562967], "isController": false}, {"data": ["Login", 470, 0, 0.0, 9.799999999999997, 2, 123, 9.0, 12.0, 15.449999999999989, 105.58000000000004, 1.5816075863322183, 1.014761898652605, 0.39694643524158213], "isController": false}]}, function(index, item){
         switch(index){
             // Errors pct
             case 3:
@@ -217,7 +217,7 @@ $(document).ready(function() {
     }, [[0, 0]], 0, summaryTableHeader);
 
     // Create error table
-    createTable($("#errorsTable"), {"supportsControllersDiscrimination": false, "titles": ["Type of error", "Number of errors", "% in errors", "% in all samples"], "items": [{"data": ["500/Internal Server Error", 359, 47.73936170212766, 24.589041095890412], "isController": false}, {"data": ["Non HTTP response code: java.io.FileNotFoundException/Non HTTP response message: /Users/andyb/Documents/MISOS2C2_desarrollo_nube/pruebas-carga/scripts/test_video.mp4 (No such file or directory)", 292, 38.829787234042556, 20.0], "isController": false}, {"data": ["409/Conflict", 101, 13.430851063829786, 6.917808219178082], "isController": false}]}, function(index, item){
+    createTable($("#errorsTable"), {"supportsControllersDiscrimination": false, "titles": ["Type of error", "Number of errors", "% in errors", "% in all samples"], "items": [{"data": ["500/Internal Server Error", 108, 24.770642201834864, 7.659574468085107], "isController": false}, {"data": ["409/Conflict", 328, 75.22935779816514, 23.26241134751773], "isController": false}]}, function(index, item){
         switch(index){
             case 2:
             case 3:
@@ -228,7 +228,7 @@ $(document).ready(function() {
     }, [[1, 1]]);
 
         // Create top5 errors by sampler
-    createTable($("#top5ErrorsBySamplerTable"), {"supportsControllersDiscrimination": false, "overall": {"data": ["Total", 1460, 752, "500/Internal Server Error", 359, "Non HTTP response code: java.io.FileNotFoundException/Non HTTP response message: /Users/andyb/Documents/MISOS2C2_desarrollo_nube/pruebas-carga/scripts/test_video.mp4 (No such file or directory)", 292, "409/Conflict", 101, "", "", "", ""], "isController": false}, "titles": ["Sample", "#Samples", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors"], "items": [{"data": [], "isController": false}, {"data": ["Ver Video Individual", 290, 290, "500/Internal Server Error", 290, "", "", "", "", "", "", "", ""], "isController": false}, {"data": ["Upload Video", 292, 292, "Non HTTP response code: java.io.FileNotFoundException/Non HTTP response message: /Users/andyb/Documents/MISOS2C2_desarrollo_nube/pruebas-carga/scripts/test_video.mp4 (No such file or directory)", 292, "", "", "", "", "", "", "", ""], "isController": false}, {"data": ["Registro de Usuario", 294, 170, "409/Conflict", 101, "500/Internal Server Error", 69, "", "", "", "", "", ""], "isController": false}, {"data": [], "isController": false}]}, function(index, item){
+    createTable($("#top5ErrorsBySamplerTable"), {"supportsControllersDiscrimination": false, "overall": {"data": ["Total", 1410, 436, "409/Conflict", 328, "500/Internal Server Error", 108, "", "", "", "", "", ""], "isController": false}, "titles": ["Sample", "#Samples", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors"], "items": [{"data": [], "isController": false}, {"data": ["Registro de Usuario", 472, 436, "409/Conflict", 328, "500/Internal Server Error", 108, "", "", "", "", "", ""], "isController": false}, {"data": [], "isController": false}]}, function(index, item){
         return item;
     }, [[0, 0]], 0);
 

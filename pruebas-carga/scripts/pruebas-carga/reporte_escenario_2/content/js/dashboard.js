@@ -133,7 +133,7 @@ $(document).ready(function() {
         widgets: ['zebra']
     });
 
-    var data = {"OkPercent": 53.771577205013, "KoPercent": 46.228422794987};
+    var data = {"OkPercent": 59.24981791697014, "KoPercent": 40.75018208302986};
     var dataset = [
         {
             "label" : "FAIL",
@@ -173,7 +173,7 @@ $(document).ready(function() {
     });
 
     // Creates APDEX table
-    createTable($("#apdexTable"), {"supportsControllersDiscrimination": true, "overall": {"data": [0.5238827145897376, 500, 1500, "Total"], "isController": false}, "titles": ["Apdex", "T (Toleration threshold)", "F (Frustration threshold)", "Label"], "items": [{"data": [0.0, 500, 1500, "Ver Video Individual"], "isController": false}, {"data": [0.6220723917672107, 500, 1500, "Upload Video"], "isController": false}, {"data": [0.9483002832861189, 500, 1500, "Login"], "isController": false}]}, function(index, item){
+    createTable($("#apdexTable"), {"supportsControllersDiscrimination": true, "overall": {"data": [0.5666423889293518, 500, 1500, "Total"], "isController": false}, "titles": ["Apdex", "T (Toleration threshold)", "F (Frustration threshold)", "Label"], "items": [{"data": [0.5058309037900874, 500, 1500, "Upload Video"], "isController": false}, {"data": [0.6273653566229985, 500, 1500, "Login"], "isController": false}]}, function(index, item){
         switch(index){
             case 0:
                 item = item.toFixed(3);
@@ -187,7 +187,7 @@ $(document).ready(function() {
     }, [[0, 0]], 3);
 
     // Create statistics table
-    createTable($("#statisticsTable"), {"supportsControllersDiscrimination": true, "overall": {"data": ["Total", 4229, 1955, 46.228422794987, 369.7765429179466, 0, 30010, 11.0, 671.0, 1309.0, 2002.6999999999998, 12.819774403497018, 4.755245191637288, 4379.385678329838], "isController": false}, "titles": ["Label", "#Samples", "FAIL", "Error %", "Average", "Min", "Max", "Median", "90th pct", "95th pct", "99th pct", "Transactions/s", "Received", "Sent"], "items": [{"data": ["Ver Video Individual", 1408, 1408, 100.0, 324.2571022727272, 0, 30003, 4.0, 50.0, 660.0, 1345.6400000000003, 4.584258541762986, 0.996552369171187, 2.571313373385905], "isController": false}, {"data": ["Upload Video", 1409, 532, 37.75727466288148, 411.5230660042586, 6, 30003, 90.0, 1315.0, 1340.0, 2007.5000000000005, 4.496612381800368, 1.0513410701634291, 4606.827299038686], "isController": false}, {"data": ["Login", 1412, 15, 1.0623229461756374, 373.50920679886684, 2, 30010, 7.0, 89.00000000000045, 670.0, 26360.739999996942, 4.28033139222932, 2.828751480647567, 1.063611527717571], "isController": false}]}, function(index, item){
+    createTable($("#statisticsTable"), {"supportsControllersDiscrimination": true, "overall": {"data": ["Total", 2746, 1119, 40.75018208302986, 337.8841951930078, 0, 30005, 41.5, 567.0, 770.0, 2139.8400000000056, 13.590695372432565, 5.043465610306854, 34776.081323659055], "isController": false}, "titles": ["Label", "#Samples", "FAIL", "Error %", "Average", "Min", "Max", "Median", "90th pct", "95th pct", "99th pct", "Transactions/s", "Received", "Sent"], "items": [{"data": ["Upload Video", 1372, 624, 45.481049562682216, 362.9810495626819, 12, 6487, 222.0, 734.4000000000001, 1368.0999999999995, 2163.5299999999993, 7.623577524893314, 1.79850766872444, 39041.192886330835], "isController": false}, {"data": ["Login", 1374, 495, 36.02620087336245, 312.8238719068414, 0, 30005, 4.0, 176.0, 286.5, 1636.75, 6.80029695619896, 3.441516448589458, 1.691809344840386], "isController": false}]}, function(index, item){
         switch(index){
             // Errors pct
             case 3:
@@ -217,7 +217,7 @@ $(document).ready(function() {
     }, [[0, 0]], 0, summaryTableHeader);
 
     // Create error table
-    createTable($("#errorsTable"), {"supportsControllersDiscrimination": false, "titles": ["Type of error", "Number of errors", "% in errors", "% in all samples"], "items": [{"data": ["500/Internal Server Error", 1912, 97.8005115089514, 45.21163395601797], "isController": false}, {"data": ["422/Unprocessable Entity", 15, 0.7672634271099744, 0.3546937810357058], "isController": false}, {"data": ["Non HTTP response code: java.net.SocketTimeoutException/Non HTTP response message: Read timed out", 28, 1.432225063938619, 0.6620950579333176], "isController": false}]}, function(index, item){
+    createTable($("#errorsTable"), {"supportsControllersDiscrimination": false, "titles": ["Type of error", "Number of errors", "% in errors", "% in all samples"], "items": [{"data": ["500/Internal Server Error", 614, 54.8704200178731, 22.359796067006556], "isController": false}, {"data": ["422/Unprocessable Entity", 493, 44.05719392314567, 17.953386744355427], "isController": false}, {"data": ["Non HTTP response code: java.net.SocketTimeoutException/Non HTTP response message: Read timed out", 12, 1.0723860589812333, 0.43699927166788055], "isController": false}]}, function(index, item){
         switch(index){
             case 2:
             case 3:
@@ -228,7 +228,7 @@ $(document).ready(function() {
     }, [[1, 1]]);
 
         // Create top5 errors by sampler
-    createTable($("#top5ErrorsBySamplerTable"), {"supportsControllersDiscrimination": false, "overall": {"data": ["Total", 4229, 1955, "500/Internal Server Error", 1912, "Non HTTP response code: java.net.SocketTimeoutException/Non HTTP response message: Read timed out", 28, "422/Unprocessable Entity", 15, "", "", "", ""], "isController": false}, "titles": ["Sample", "#Samples", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors"], "items": [{"data": ["Ver Video Individual", 1408, 1408, "500/Internal Server Error", 1392, "Non HTTP response code: java.net.SocketTimeoutException/Non HTTP response message: Read timed out", 13, "422/Unprocessable Entity", 3, "", "", "", ""], "isController": false}, {"data": ["Upload Video", 1409, 532, "500/Internal Server Error", 519, "422/Unprocessable Entity", 12, "Non HTTP response code: java.net.SocketTimeoutException/Non HTTP response message: Read timed out", 1, "", "", "", ""], "isController": false}, {"data": ["Login", 1412, 15, "Non HTTP response code: java.net.SocketTimeoutException/Non HTTP response message: Read timed out", 14, "500/Internal Server Error", 1, "", "", "", "", "", ""], "isController": false}]}, function(index, item){
+    createTable($("#top5ErrorsBySamplerTable"), {"supportsControllersDiscrimination": false, "overall": {"data": ["Total", 2746, 1119, "500/Internal Server Error", 614, "422/Unprocessable Entity", 493, "Non HTTP response code: java.net.SocketTimeoutException/Non HTTP response message: Read timed out", 12, "", "", "", ""], "isController": false}, "titles": ["Sample", "#Samples", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors"], "items": [{"data": ["Upload Video", 1372, 624, "422/Unprocessable Entity", 493, "500/Internal Server Error", 131, "", "", "", "", "", ""], "isController": false}, {"data": ["Login", 1374, 495, "500/Internal Server Error", 483, "Non HTTP response code: java.net.SocketTimeoutException/Non HTTP response message: Read timed out", 12, "", "", "", "", "", ""], "isController": false}]}, function(index, item){
         return item;
     }, [[0, 0]], 0);
 
