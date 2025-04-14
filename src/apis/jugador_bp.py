@@ -6,6 +6,7 @@ from flask_smorest import Blueprint
 from src.models.jugador import JugadorJsonSchema, JugadorSchema
 from src.services.jugador_service import jugador_service
 from flask_jwt_extended import create_access_token, jwt_required, get_jwt
+from src.api_messages.api_jugadores import UserAlreadyExists
 
 jugadores_bp = Blueprint("jugadores", __name__, url_prefix='/api', description="API de jugadores.")
 
@@ -16,12 +17,15 @@ jugadores_bp = Blueprint("jugadores", __name__, url_prefix='/api', description="
 @jugadores_bp.route("/auth/signup", methods=["POST"])
 @jugadores_bp.arguments(JugadorSchema)
 def signup(nuevo_jugador):    
-    result = jugador_service.crear_jugador(nuevo_jugador)
-    res_json = jsonify(result.__dict__)
-    
-    res = make_response(res_json, result.code)
-
-    return res
+    try:
+        result = jugador_service.crear_jugador(nuevo_jugador)
+        res_json = jsonify(result.__dict__)
+        res = make_response(res_json, result.code)
+        return res
+    except UserAlreadyExists as e:
+        res_json = jsonify({"message": e.message})
+        res = make_response(res_json, e.code)
+        return res
 
 @jugadores_bp.route("", methods=["GET"])
 @jwt_required()
@@ -42,4 +46,3 @@ def login(user_credentials):
 #   res.headers['Authorization'] = f'Bearer {token}'
 
   return res
-
