@@ -14,7 +14,7 @@ class Video(db.Model):
     status = Column(String(200), nullable=False)
     uploaded_at = Column(DateTime(), nullable=False, default=datetime.utcnow)
     processed_at = Column(DateTime(), nullable=False)
-    processed_url = Column(String(50), nullable=False)
+    processed_url = Column(String(255), nullable=False)
     id_jugador = Column(UUID(as_uuid=True), ForeignKey('jugador.id'), nullable=False)
     
 class VideoSchema(Schema):

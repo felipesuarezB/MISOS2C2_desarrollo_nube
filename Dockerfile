@@ -28,10 +28,13 @@ RUN python -m pip install --upgrade pip \
     && pipenv install --system --deploy
 
 # Copiar el código fuente de la aplicación
-COPY ./src .
+COPY ./src /app/src
+
+# Copiar el archivo ASGI modificado
+COPY ./asgi.py /app/asgi.py
 
 # Exponer el puerto 8081 para la aplicación Flask
 EXPOSE 8081
 
 # Comando de ejecución de Flask
-CMD ["flask", "run", "--host=0.0.0.0", "--port=8081"]
+CMD ["uvicorn", "asgi:asgi_app", "--host=0.0.0.0", "--port=8081", "--workers=2"]
