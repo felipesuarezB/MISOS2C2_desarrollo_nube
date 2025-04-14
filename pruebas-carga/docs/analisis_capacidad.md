@@ -106,6 +106,6 @@ Este documento presenta el análisis de capacidad realizado sobre la aplicación
 
 ## 8. Anexos
 
-- [Plan de Pruebas](plan_pruebas.md)
+- [Plan de Pruebas](plan_de_pruebas.md)
 - [Gráficas de Rendimiento](../scripts/pruebas-carga/reporte_escenario_1/index.html)
 - [Gráficas de Rendimiento](../scripts/pruebas-carga/reporte_escenario_2/index.html) 
