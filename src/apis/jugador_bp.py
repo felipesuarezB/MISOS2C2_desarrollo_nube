@@ -46,4 +46,3 @@ def login(user_credentials):
 #   res.headers['Authorization'] = f'Bearer {token}'
 
   return res
-

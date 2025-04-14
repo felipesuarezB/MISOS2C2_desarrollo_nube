@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+# MISOS2C2_desarrollo_nube
+=======
 # MISW4201-202511-Backend-Grupo05
 
 Proyecto del servicio de backend 'nba-api'.
@@ -65,3 +68,4 @@ Para consumir la API siga la definición de los endpoints en la ruta `/swagger-u
 - Andy Yair Bolaño Castilla - a.bolanoc@uniandes.edu.co
 - Santiago Gómez Perdomo - s.gomezp2345@uniandes.edu.co
 - Javier Hernández - je.hernandezc1@uniandes.edu.co
+>>>>>>> 47fc610810f8b86b252ef92c15c0c2d192f71e1e
