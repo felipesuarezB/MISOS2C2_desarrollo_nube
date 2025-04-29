@@ -13,7 +13,27 @@ from src.apis.video_bp import videos_bp
 from src.api_messages.base_api_error import ApiError
 from src.api_messages.api_errors import TokenNotFound, TokenInvalidOrExpired
 from src.tasks.celery_worker import celery
-from sqlalchemy import inspect
+from sqlalchemy import inspect, create_engine, text
+from sqlalchemy.exc import OperationalError
+from urllib.parse import urlparse
+
+def create_database_if_not_exists(db_uri):
+    parsed = urlparse(db_uri)
+    db_name = parsed.path.lstrip('/')
+    db_url_without_db = db_uri.replace(f"/{db_name}", "/postgres")
+
+    tmp_engine = create_engine(db_url_without_db)
+    try:
+        with tmp_engine.connect() as conn:
+            result = conn.execute(text(f"SELECT 1 FROM pg_database WHERE datname='{db_name}'"))
+            exists = result.scalar() is not None
+            if not exists:
+                conn.execute(text(f'CREATE DATABASE "{db_name}"'))
+                print(f"✔ Base de datos '{db_name}' creada exitosamente.")
+            else:
+                print(f"ℹ La base de datos '{db_name}' ya existe.")
+    except OperationalError as e:
+        print(f"❌ Error conectando a PostgreSQL: {e}")
 
 
 def create_app():
@@ -46,7 +66,9 @@ def create_app():
         app.config['SQLALCHEMY_DATABASE_URI'] = database_uri
         app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     else:
-        app.config['SQLALCHEMY_DATABASE_URI'] = get_database_url()
+        db_uri = get_database_url()
+        create_database_if_not_exists(db_uri)
+        app.config['SQLALCHEMY_DATABASE_URI'] = db_uri
 
     # Inicialización de SQLAlchemy
     db.init_app(app)
