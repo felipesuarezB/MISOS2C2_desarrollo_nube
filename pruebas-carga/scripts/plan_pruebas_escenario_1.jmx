@@ -21,7 +21,7 @@
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Grupo de Usuarios">
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
           <boolProp name="LoopController.continue_forever">false</boolProp>
-          <intProp name="LoopController.loops">-1</intProp>
+          <intProp name="LoopController.loops">1</intProp>
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">5</stringProp>
         <stringProp name="ThreadGroup.ramp_time">5</stringProp>
@@ -51,7 +51,7 @@
           <collectionProp name="Arguments.arguments">
             <elementProp name="test_username" elementType="Argument">
               <stringProp name="Argument.name">test_username</stringProp>
-              <stringProp name="Argument.value">user_${__time()}</stringProp>
+              <stringProp name="Argument.value">user_${__UUID()}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="test_password" elementType="Argument">
@@ -212,7 +212,7 @@
         
         <!-- Tiempo de espera entre requests -->
         <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer">
-          <stringProp name="ConstantTimer.delay">1000</stringProp>
+          <stringProp name="ConstantTimer.delay">2000</stringProp>
         </ConstantTimer>
         <hashTree/>
         
