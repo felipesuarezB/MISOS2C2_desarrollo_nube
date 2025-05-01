@@ -8,7 +8,7 @@
         <collectionProp name="Arguments.arguments">
           <elementProp name="base_url" elementType="Argument">
             <stringProp name="Argument.name">base_url</stringProp>
-            <stringProp name="Argument.value">http://127.0.0.1:8081</stringProp>
+            <stringProp name="Argument.value">http://lb-anb-api-1062895997.us-east-1.elb.amazonaws.com</stringProp>
             <stringProp name="Argument.desc">Base URL de la API</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
@@ -33,8 +33,8 @@
         <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
           <intProp name="HTTPSampler.connect_timeout">10000</intProp>
           <intProp name="HTTPSampler.response_timeout">30000</intProp>
-          <stringProp name="HTTPSampler.domain">127.0.0.1</stringProp>
-          <stringProp name="HTTPSampler.port">8081</stringProp>
+          <stringProp name="HTTPSampler.domain">lb-anb-api-1062895997.us-east-1.elb.amazonaws.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
