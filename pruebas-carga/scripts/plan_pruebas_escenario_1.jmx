@@ -21,10 +21,10 @@
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Grupo de Usuarios">
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
           <boolProp name="LoopController.continue_forever">false</boolProp>
-          <intProp name="LoopController.loops">1</intProp>
+          <intProp name="LoopController.loops">-1</intProp>
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">5</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">5</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">10</stringProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
         <stringProp name="ThreadGroup.duration">300</stringProp>
         <stringProp name="ThreadGroup.delay">0</stringProp>
@@ -51,7 +51,7 @@
           <collectionProp name="Arguments.arguments">
             <elementProp name="test_username" elementType="Argument">
               <stringProp name="Argument.name">test_username</stringProp>
-              <stringProp name="Argument.value">user_${__UUID()}</stringProp>
+              <stringProp name="Argument.value">test_${__time()}${__threadNum}_${__Random(10000,99999)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="test_password" elementType="Argument">
@@ -84,7 +84,7 @@
             <collectionProp name="Arguments.arguments">
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">{"nombre": "Usuario", "apellido": "Test", "email": "${test_username}@test.com", "password1": "${test_password}", "password2": "${test_password}", "ciudad": "Bogota", "pais": "Colombia", "username": "${test_username}"}</stringProp>
+                <stringProp name="Argument.value">{"nombre": "Usuario", "apellido": "Test", "email": "${dynamic_username}@test.com", "password1": "${test_password}", "password2": "${test_password}", "ciudad": "Bogota", "pais": "Colombia", "username": "${dynamic_username}"}</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
             </collectionProp>
@@ -100,6 +100,22 @@
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
         </HTTPSamplerProxy>
         <hashTree>
+          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="Generar username dinámico" enabled="true">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">// Generar un username único para cada ejecución
+def timestamp = System.currentTimeMillis()
+def threadNum = ctx.getThreadNum()
+def random = new Random().nextInt(100000)
+def uniqueUsername = "test_" + timestamp + "_" + threadNum + "_" + random
+
+// Guardar en una variable para usar en la solicitud
+vars.put("dynamic_username", uniqueUsername)
+</stringProp>
+          </JSR223PreProcessor>
+          <hashTree/>
           <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extract Username">
             <stringProp name="JSONPostProcessor.referenceNames">created_username</stringProp>
             <stringProp name="JSONPostProcessor.jsonPathExprs">$.username</stringProp>
@@ -124,7 +140,7 @@
             <collectionProp name="Arguments.arguments">
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">{"username": "${test_username}", "password1": "${test_password}"}</stringProp>
+                <stringProp name="Argument.value">{"username": "${dynamic_username}", "password1": "${test_password}"}</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
             </collectionProp>
@@ -212,7 +228,7 @@
         
         <!-- Tiempo de espera entre requests -->
         <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer">
-          <stringProp name="ConstantTimer.delay">2000</stringProp>
+          <stringProp name="ConstantTimer.delay">3000</stringProp>
         </ConstantTimer>
         <hashTree/>
         
