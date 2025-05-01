@@ -24,7 +24,7 @@
           <intProp name="LoopController.loops">-1</intProp>
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">5</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">10</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">5</stringProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
         <stringProp name="ThreadGroup.duration">300</stringProp>
         <stringProp name="ThreadGroup.delay">0</stringProp>
@@ -228,7 +228,7 @@ vars.put("dynamic_username", uniqueUsername)
         
         <!-- Tiempo de espera entre requests -->
         <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer">
-          <stringProp name="ConstantTimer.delay">3000</stringProp>
+          <stringProp name="ConstantTimer.delay">2000</stringProp>
         </ConstantTimer>
         <hashTree/>
         
