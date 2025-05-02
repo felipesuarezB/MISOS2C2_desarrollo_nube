@@ -8,7 +8,7 @@ services:
       - web_net
     volumes:
       - redis_data:/data
-    command: redis-server --appendonly yes --maxmemory 2gb --maxmemory-policy noeviction
+    command: redis-server --appendonly yes --maxmemory 4gb --maxmemory-policy noeviction
 
 volumes:
   redis_data:
