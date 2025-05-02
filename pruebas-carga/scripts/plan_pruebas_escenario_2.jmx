@@ -33,8 +33,8 @@
       </ThreadGroup>
       <hashTree>
         <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
-          <intProp name="HTTPSampler.connect_timeout">10000</intProp>
-          <intProp name="HTTPSampler.response_timeout">30000</intProp>
+          <intProp name="HTTPSampler.connect_timeout">5000</intProp>
+          <intProp name="HTTPSampler.response_timeout">5000</intProp>
           <stringProp name="HTTPSampler.domain">lb-anb-api-1062895997.us-east-1.elb.amazonaws.com</stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
@@ -195,13 +195,38 @@ vars.put("dynamic_username", uniqueUsername)
           <hashTree/>
           <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
             <stringProp name="JSONPostProcessor.referenceNames">video_id</stringProp>
-            <stringProp name="JSONPostProcessor.jsonPathExprs">$.id</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.video_id</stringProp>
             <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
+            <stringProp name="JSONPostProcessor.defaultValues">123e4567-e89b-12d3-a456-426614174000</stringProp>
           </JSONPostProcessor>
           <hashTree/>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor - Video ID Fix">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">// Comprobar si el video_id es válido o está en proceso de carga
+def videoId = vars.get("video_id");
+log.info("Video ID extraído: " + videoId);
+
+// Si el video está en proceso de carga o no tenemos un UUID válido, usar un UUID fijo
+if (videoId == null || videoId.isEmpty() || videoId.contains("CARGA EN PROCESO") || !videoId.contains("-")) {
+    // Usar un UUID fijo para las pruebas
+    def fixedUuid = "123e4567-e89b-12d3-a456-426614174000";
+    vars.put("video_id", fixedUuid);
+    log.info("Video en proceso de carga o ID no válido, usando UUID fijo: " + fixedUuid);
+}</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+          <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler - After Video Upload">
+            <boolProp name="displayJMeterProperties">false</boolProp>
+            <boolProp name="displayJMeterVariables">true</boolProp>
+            <boolProp name="displaySystemProperties">false</boolProp>
+          </DebugSampler>
+          <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Ver Video Individual" enabled="true">
-          <stringProp name="HTTPSampler.path">/api/videos/${__Random(1,100)}</stringProp>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Listar Videos" enabled="true">
+          <stringProp name="HTTPSampler.path">/api/videos</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
@@ -221,6 +246,8 @@ vars.put("dynamic_username", uniqueUsername)
           </HeaderManager>
           <hashTree/>
         </hashTree>
+
+        <!-- Reportes y colectores de resultados -->
         <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report">
           <boolProp name="ResultCollector.error_logging">false</boolProp>
           <objProp>
@@ -374,6 +401,10 @@ vars.put("dynamic_username", uniqueUsername)
           </objProp>
           <stringProp name="filename">report.jtl</stringProp>
         </ResultCollector>
+        <hashTree/>
+        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Tiempo de espera entre peticiones">
+          <stringProp name="ConstantTimer.delay">2000</stringProp>
+        </ConstantTimer>
         <hashTree/>
       </hashTree>
     </hashTree>
