@@ -20,7 +20,7 @@ services:
       S3_ACCESS_KEY: ${S3_ACCESS_KEY}
       S3_SECRET_KEY: ${S3_SECRET_KEY}
     command: >
-      pipenv run celery -A src.tasks.celery_worker worker --loglevel=info --pool=threads --concurrency=10
+      pipenv run celery -A src.tasks.celery_worker worker --loglevel=info --pool=threads --concurrency=50
     volumes:
       - /home/ubuntu/shared_folder:/root/shared_folder
 
