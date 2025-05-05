@@ -21,6 +21,8 @@ uvicorn = "*"
 boto3 = "*"
 celery = "*"
 redis = "*"
+psycopg2-binary = "*"
+
 
 [dev-packages]
 pytest = "~=8.3.4"

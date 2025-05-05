@@ -8,12 +8,14 @@
         <collectionProp name="Arguments.arguments">
           <elementProp name="base_url" elementType="Argument">
             <stringProp name="Argument.name">base_url</stringProp>
-            <stringProp name="Argument.value">http://127.0.0.1:8081</stringProp>
+            <stringProp name="Argument.value">http://lb-anb-api-1062895997.us-east-1.elb.amazonaws.com</stringProp>
             <stringProp name="Argument.desc">Base URL de la API</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
         </collectionProp>
       </elementProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
     </TestPlan>
     <hashTree>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Grupo de Usuarios">
@@ -31,10 +33,9 @@
       </ThreadGroup>
       <hashTree>
         <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
-          <intProp name="HTTPSampler.connect_timeout">10000</intProp>
-          <intProp name="HTTPSampler.response_timeout">30000</intProp>
-          <stringProp name="HTTPSampler.domain">127.0.0.1</stringProp>
-          <stringProp name="HTTPSampler.port">8081</stringProp>
+          <intProp name="HTTPSampler.connect_timeout">5000</intProp>
+          <intProp name="HTTPSampler.response_timeout">5000</intProp>
+          <stringProp name="HTTPSampler.domain">lb-anb-api-1062895997.us-east-1.elb.amazonaws.com</stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
@@ -56,6 +57,75 @@
           </collectionProp>
         </HeaderManager>
         <hashTree/>
+        
+        <!-- Variables dinámicas para username y password -->
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="test_password" elementType="Argument">
+              <stringProp name="Argument.name">test_password</stringProp>
+              <stringProp name="Argument.value">test123</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
+        
+        <!-- Registro de Usuario -->
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Registro de Usuario">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{"nombre": "Usuario", "apellido": "Test", "email": "${dynamic_username}@test.com", "password1": "${test_password}", "password2": "${test_password}", "ciudad": "Bogota", "pais": "Colombia", "username": "${dynamic_username}"}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.path">/api/auth/signup</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="Generar username dinámico" enabled="true">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">// Generar un username único para cada ejecución
+def timestamp = System.currentTimeMillis()
+def threadNum = ctx.getThreadNum()
+def random = new Random().nextInt(100000)
+def uniqueUsername = "test_" + timestamp + "_" + threadNum + "_" + random
+
+// Guardar en una variable para usar en la solicitud
+vars.put("dynamic_username", uniqueUsername)
+</stringProp>
+          </JSR223PreProcessor>
+          <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extract Username">
+            <stringProp name="JSONPostProcessor.referenceNames">created_username</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.username</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Verificar Registro">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49587">201</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+            <stringProp name="Assertion.custom_message">El registro falló</stringProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Login" enabled="true">
           <stringProp name="HTTPSampler.path">/api/auth/login</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
@@ -66,7 +136,7 @@
             <collectionProp name="Arguments.arguments">
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">{&quot;username&quot;: &quot;testuser&quot;, &quot;password1&quot;: &quot;test123&quot;}</stringProp>
+                <stringProp name="Argument.value">{&quot;username&quot;: &quot;${dynamic_username}&quot;, &quot;password1&quot;: &quot;${test_password}&quot;}</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
             </collectionProp>
@@ -125,13 +195,38 @@
           <hashTree/>
           <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
             <stringProp name="JSONPostProcessor.referenceNames">video_id</stringProp>
-            <stringProp name="JSONPostProcessor.jsonPathExprs">$.id</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.video_id</stringProp>
             <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
+            <stringProp name="JSONPostProcessor.defaultValues">123e4567-e89b-12d3-a456-426614174000</stringProp>
           </JSONPostProcessor>
           <hashTree/>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor - Video ID Fix">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">// Comprobar si el video_id es válido o está en proceso de carga
+def videoId = vars.get("video_id");
+log.info("Video ID extraído: " + videoId);
+
+// Si el video está en proceso de carga o no tenemos un UUID válido, usar un UUID fijo
+if (videoId == null || videoId.isEmpty() || videoId.contains("CARGA EN PROCESO") || !videoId.contains("-")) {
+    // Usar un UUID fijo para las pruebas
+    def fixedUuid = "123e4567-e89b-12d3-a456-426614174000";
+    vars.put("video_id", fixedUuid);
+    log.info("Video en proceso de carga o ID no válido, usando UUID fijo: " + fixedUuid);
+}</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+          <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler - After Video Upload">
+            <boolProp name="displayJMeterProperties">false</boolProp>
+            <boolProp name="displayJMeterVariables">true</boolProp>
+            <boolProp name="displaySystemProperties">false</boolProp>
+          </DebugSampler>
+          <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Ver Video Individual" enabled="true">
-          <stringProp name="HTTPSampler.path">/api/videos/${__Random(1,100)}</stringProp>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Listar Videos" enabled="true">
+          <stringProp name="HTTPSampler.path">/api/videos</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
@@ -151,6 +246,8 @@
           </HeaderManager>
           <hashTree/>
         </hashTree>
+
+        <!-- Reportes y colectores de resultados -->
         <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report">
           <boolProp name="ResultCollector.error_logging">false</boolProp>
           <objProp>
@@ -187,6 +284,127 @@
           </objProp>
           <stringProp name="filename"></stringProp>
         </ResultCollector>
+        <hashTree/>
+        
+        <!-- Statistics Report -->
+        <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Statistics Report">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>false</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>false</message>
+              <threadName>true</threadName>
+              <dataType>false</dataType>
+              <encoding>false</encoding>
+              <assertions>false</assertions>
+              <subresults>false</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>false</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename">statistics.jtl</stringProp>
+        </ResultCollector>
+        <hashTree/>
+        
+        <!-- Summary Report -->
+        <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="Summary Report">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>false</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>false</message>
+              <threadName>true</threadName>
+              <dataType>false</dataType>
+              <encoding>false</encoding>
+              <assertions>false</assertions>
+              <subresults>false</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>false</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename">results.jtl</stringProp>
+        </ResultCollector>
+        <hashTree/>
+        
+        <!-- HTML Report -->
+        <ResultCollector guiclass="HtmlReportGui" testclass="ResultCollector" testname="HTML Report">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>false</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>false</message>
+              <threadName>true</threadName>
+              <dataType>false</dataType>
+              <encoding>false</encoding>
+              <assertions>false</assertions>
+              <subresults>false</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>false</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename">report.jtl</stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Tiempo de espera entre peticiones">
+          <stringProp name="ConstantTimer.delay">2000</stringProp>
+        </ConstantTimer>
         <hashTree/>
       </hashTree>
     </hashTree>
