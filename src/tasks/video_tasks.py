@@ -6,29 +6,25 @@ from src.models.jugador import Jugador
 from src.models.vote import Vote
 import uuid
 import os
+import boto3
+from botocore.exceptions import ClientError
 from sqlalchemy import inspect
-
-# Ruta local en el EC2
-LOCAL_VIDEO_PATH = os.path.expanduser("~/shared_folder")
-IP_PUBBLICA_NFS = "44.203.22.5"
 
 @celery.task
 def async_save_video(jugador_id, title, filename, file_data_bytes):
-    
-    print(f"Guardando archivo en: {LOCAL_VIDEO_PATH}")
+    print("Guardando archivo en S3")
     try:
-        # Crear el directorio si no existe
-        os.makedirs(LOCAL_VIDEO_PATH, exist_ok=True)
-        
-        # Ruta completa del archivo
-        file_path = os.path.join(LOCAL_VIDEO_PATH, filename)
-        
-        # Escribir el archivo en disco
-        with open(file_path, "wb") as f:
-            f.write(file_data_bytes)
+        # Configuración de S3
+        S3_BUCKET = os.environ.get("S3_BUCKET_NAME", "videoteca-bucket")
+        S3_PREFIX = os.environ.get("S3_VIDEO_PREFIX", "videos/")  # puede ser "" si no quieres prefijo
+        s3_key = f"{S3_PREFIX}{filename}" if S3_PREFIX else filename
 
-        # URL o ruta pública que se usará (puedes ajustarla según cómo sirvas los archivos)
-        video_url = f"http://{IP_PUBBLICA_NFS}/videos/{filename}"
+        s3_client = boto3.client("s3")
+        # Subir archivo
+        s3_client.put_object(Bucket=S3_BUCKET, Key=s3_key, Body=file_data_bytes, ContentType="video/mp4")
+
+        # URL pública
+        video_url = f"https://{S3_BUCKET}.s3.amazonaws.com/{s3_key}"
 
         # Configurar la app de Flask para la DB
         from flask import Flask
@@ -36,17 +32,14 @@ def async_save_video(jugador_id, title, filename, file_data_bytes):
         app = Flask(__name__)
         app.config['SQLALCHEMY_DATABASE_URI'] = get_database_url()
         app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-        
         from src.database import db
         db.init_app(app)
 
         with app.app_context():
             inspector = inspect(db.engine)
             existing_tables = inspector.get_table_names()
-
             if not existing_tables:
                 db.create_all()
-
             video = Video(
                 title=title,
                 status='subido',
@@ -57,9 +50,10 @@ def async_save_video(jugador_id, title, filename, file_data_bytes):
             )
             db.session.add(video)
             db.session.commit()
-
         return True
-
+    except ClientError as e:
+        print(f"Error al subir video a S3: {e}")
+        return False
     except Exception as e:
-        print(f"Error saving video to local disk or database: {e}")
+        print(f"Error general al guardar video: {e}")
         return False
