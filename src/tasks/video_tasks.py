@@ -15,7 +15,7 @@ def async_save_video(jugador_id, title, filename, file_data_bytes):
     print("Guardando archivo en S3")
     try:
         # Configuración de S3
-        S3_BUCKET = os.environ.get("S3_BUCKET_NAME", "videoteca-bucket")
+        S3_BUCKET = os.environ.get("S3_BUCKET_NAME", "videoteca-bucket1")
         S3_PREFIX = os.environ.get("S3_VIDEO_PREFIX", "videos/")  # puede ser "" si no quieres prefijo
         s3_key = f"{S3_PREFIX}{filename}" if S3_PREFIX else filename
 
