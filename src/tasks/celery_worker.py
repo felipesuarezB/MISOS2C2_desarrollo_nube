@@ -5,15 +5,19 @@ from dotenv import load_dotenv
 # Cargar variables de entorno
 load_dotenv()
 
-# Configurar Celery con valores de entorno o predeterminados
-broker_url = os.getenv('CELERY_BROKER_URL', 'redis://localhost:6379/0')
-result_backend = os.getenv('CELERY_RESULT_BACKEND', 'redis://localhost:6379/0')
-
+# Configurar Celery con Amazon SQS
 celery = Celery(
     'src',
-    broker=broker_url,
-    backend=result_backend,
+    broker='sqs://',
     include=['src.tasks.video_tasks']
 )
 
+# Configurar opciones de transporte SQS
+celery.conf.broker_transport_options = {
+    'region': os.getenv('AWS_REGION', 'us-east-1'),
+    'visibility_timeout': 3600,  # tiempo máximo que un worker tiene un mensaje
+    'polling_interval': 1,  # segundos entre chequeos de nueva tarea
+}
+
+celery.conf.task_default_queue = 'sqs-task-videos'
 celery.conf.timezone = 'UTC'
