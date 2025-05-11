@@ -15,9 +15,9 @@ def process_kinesis_records():
     print(":rocket: Iniciando consumidor de Kinesis...")
     kinesis_client = boto3.client('kinesis', region_name=REGION)
     s3_client = boto3.client('s3', region_name=REGION)
-    S3_BUCKET = os.environ.get("S3_BUCKET_NAME", "videoteca-bucket1")
-    S3_PREFIX = os.environ.get("S3_VIDEO_PREFIX", "videos/")
-    stream_name = os.environ.get('KINESIS_STREAM_NAME', 'video-upload-stream')
+    S3_BUCKET = "videoteca-bucket1"  # Nombre del bucket directamente aquí
+    S3_PREFIX = "videos/"  # Prefijo del video
+    stream_name = "video-upload-stream"  # Nombre del stream de Kinesis
 
     # Obtener shard iterator
     try:
@@ -45,7 +45,7 @@ def process_kinesis_records():
             payload = json.loads(record['Data'])
             video_id = payload['video_id']
             print(f":package: Recibido fragmento {payload['chunk_index'] + 1}/{payload['total_chunks']} del video '{payload['filename']}' (ID: {video_id})")
-            
+
             # Log al recibir un archivo
             if payload['chunk_index'] == 0:
                 print(f":incoming_envelope: Iniciando la recepción del video: '{payload['filename']}' (ID: {video_id})")
@@ -65,6 +65,7 @@ def process_kinesis_records():
 
                 try:
                     # Subir a S3
+                    print(f":cloud: Subiendo video '{filename}' a S3...")
                     s3_client.put_object(Bucket=S3_BUCKET, Key=s3_key, Body=file_data_bytes, ContentType="video/mp4")
                     video_url = f"https://{S3_BUCKET}.s3.amazonaws.com/{s3_key}"
                     print(f":white_check_mark: Video subido a S3: {video_url}")
@@ -80,6 +81,7 @@ def process_kinesis_records():
                     with app.app_context():
                         inspector = inspect(db.engine)
                         if not inspector.has_table("videos"):
+                            print(":warning: La tabla 'videos' no existe. Creando tabla...")
                             db.create_all()
                         video = Video(
                             title=title,
