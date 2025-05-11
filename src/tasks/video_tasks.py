@@ -10,30 +10,43 @@ from src.models.video import Video
 
 # --- Kinesis Consumer ---
 def process_kinesis_records():
-    kinesis_client = boto3.client(
-        'kinesis',
-        region_name=os.getenv("AWS_REGION", "us-east-1")  # o la región que uses
-    )
+    REGION = "us-east-1"
+
+    kinesis_client = boto3.client('kinesis', region_name=REGION)
+    s3_client = boto3.client('s3', region_name=REGION)
+
     S3_BUCKET = os.environ.get("S3_BUCKET_NAME", "videoteca-bucket1")
     S3_PREFIX = os.environ.get("S3_VIDEO_PREFIX", "videos/")
     stream_name = os.environ.get('KINESIS_STREAM_NAME', 'video-upload-stream')
-    shard_iterator = kinesis_client.get_shard_iterator(
-        StreamName=stream_name,
-        ShardId=kinesis_client.describe_stream(StreamName=stream_name)['StreamDescription']['Shards'][0]['ShardId'],
-        ShardIteratorType='TRIM_HORIZON'
-    )['ShardIterator']
+
+    # Obtener shard iterator
+    try:
+        stream_description = kinesis_client.describe_stream(StreamName=stream_name)
+        shard_id = stream_description['StreamDescription']['Shards'][0]['ShardId']
+        shard_iterator = kinesis_client.get_shard_iterator(
+            StreamName=stream_name,
+            ShardId=shard_id,
+            ShardIteratorType='TRIM_HORIZON'
+        )['ShardIterator']
+    except ClientError as e:
+        print(f"❌ Error al obtener el shard iterator: {e}")
+        return
 
     fragment_buffer = {}
 
     while True:
         response = kinesis_client.get_records(ShardIterator=shard_iterator, Limit=100)
         records = response['Records']
+
         for record in records:
             payload = json.loads(record['Data'])
             video_id = payload['video_id']
+
             if video_id not in fragment_buffer:
                 fragment_buffer[video_id] = [None] * payload['total_chunks']
+
             fragment_buffer[video_id][payload['chunk_index']] = bytes.fromhex(payload['data'])
+
             # Si ya tenemos todos los fragmentos
             if all(frag is not None for frag in fragment_buffer[video_id]):
                 file_data_bytes = b''.join(fragment_buffer[video_id])
@@ -41,21 +54,24 @@ def process_kinesis_records():
                 title = payload['title']
                 jugador_id = payload['jugador_id']
                 s3_key = f"{S3_PREFIX}{filename}" if S3_PREFIX else filename
-                s3_client = boto3.client("s3")
+
                 try:
+                    # Subir a S3
                     s3_client.put_object(Bucket=S3_BUCKET, Key=s3_key, Body=file_data_bytes, ContentType="video/mp4")
                     video_url = f"https://{S3_BUCKET}.s3.amazonaws.com/{s3_key}"
-                    # Registrar en la base de datos
+
+                    # Registrar en DB
                     from flask import Flask
                     from src.database import get_database_url
+
                     app = Flask(__name__)
                     app.config['SQLALCHEMY_DATABASE_URI'] = get_database_url()
                     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
                     db.init_app(app)
+
                     with app.app_context():
                         inspector = inspect(db.engine)
-                        existing_tables = inspector.get_table_names()
-                        if not existing_tables:
+                        if not inspector.has_table("videos"):
                             db.create_all()
                         video = Video(
                             title=title,
@@ -67,11 +83,15 @@ def process_kinesis_records():
                         )
                         db.session.add(video)
                         db.session.commit()
+
                 except Exception as e:
-                    print(f"Error al subir video a S3 o guardar en DB: {e}")
+                    print(f"❌ Error al subir a S3 o registrar en DB: {e}")
+
                 # Limpiar buffer
                 del fragment_buffer[video_id]
+
         shard_iterator = response['NextShardIterator']
+
 
 if __name__ == "__main__":
     process_kinesis_records()
