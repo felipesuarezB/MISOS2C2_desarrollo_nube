@@ -18,41 +18,38 @@ from src.tasks.video_tasks import async_save_video
 class VideoService:
     
     def save_video(self, jwt_payload, uploadVideo):
+        import math
+        import json
         jugador_id = jwt_payload['sub']
         filename = f"{datetime.now().strftime('%Y%m%d%H%M%S')}_{secure_filename(uploadVideo['video_file'].filename)}"
         file_data = uploadVideo['video_file'].read()
 
-        # --- Kinesis ---
-import boto3
-import math
-import uuid
+        kinesis_client = boto3.client('kinesis')
+        KINESIS_STREAM_NAME = os.environ.get('KINESIS_STREAM_NAME', 'video-upload-stream')
 
-kinesis_client = boto3.client('kinesis')
-KINESIS_STREAM_NAME = os.environ.get('KINESIS_STREAM_NAME', 'video-upload-stream')
+        video_id = str(uuid.uuid4())
+        chunk_size = 1024 * 1024  # 1 MB
+        num_chunks = math.ceil(len(file_data) / chunk_size)
 
-video_id = str(uuid.uuid4())
-chunk_size = 1024 * 1024  # 1 MB
-num_chunks = math.ceil(len(file_data) / chunk_size)
+        for idx in range(num_chunks):
+            chunk_data = file_data[idx * chunk_size:(idx + 1) * chunk_size]
+            record = {
+                'video_id': video_id,
+                'filename': filename,
+                'title': uploadVideo['title'],
+                'jugador_id': jugador_id,
+                'chunk_index': idx,
+                'total_chunks': num_chunks,
+                'data': chunk_data.hex()  # serializar como string hexadecimal
+            }
+            # Enviar a Kinesis
+            kinesis_client.put_record(
+                StreamName=KINESIS_STREAM_NAME,
+                Data=json.dumps(record),
+                PartitionKey=video_id
+            )
 
-for idx in range(num_chunks):
-    chunk_data = file_data[idx * chunk_size:(idx + 1) * chunk_size]
-    record = {
-        'video_id': video_id,
-        'filename': filename,
-        'title': uploadVideo['title'],
-        'jugador_id': jugador_id,
-        'chunk_index': idx,
-        'total_chunks': num_chunks,
-        'data': chunk_data.hex()  # serializar como string hexadecimal
-    }
-    # Enviar a Kinesis
-    kinesis_client.put_record(
-        StreamName=KINESIS_STREAM_NAME,
-        Data=json.dumps(record),
-        PartitionKey=video_id
-    )
-
-        return VideoUploaded("CARGA EN PROCESO. El video se está subiendo en segundo plano.")
+        return VideoUploaded(video_id)
     
     def list_videos(self, jwt_payload):
         jugador_id = jwt_payload['sub']
