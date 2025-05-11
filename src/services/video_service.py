@@ -13,7 +13,7 @@ from src.database import db
 from src.models.video import Video, VideoSchema
 from src.models.vote import Vote, VoteSchema
 from src.models.jugador import Jugador, JugadorSchema
-from src.tasks.video_tasks import async_save_video
+# from src.tasks.video_tasks import async_save_video
 
 class VideoService:
     
