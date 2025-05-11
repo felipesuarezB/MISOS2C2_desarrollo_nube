@@ -23,8 +23,11 @@ class VideoService:
         jugador_id = jwt_payload['sub']
         filename = f"{datetime.now().strftime('%Y%m%d%H%M%S')}_{secure_filename(uploadVideo['video_file'].filename)}"
         file_data = uploadVideo['video_file'].read()
+        kinesis_client = boto3.client(
+            'kinesis',
+            region_name=os.getenv("AWS_REGION", "us-east-1")  # o la región que uses
+        )
 
-        kinesis_client = boto3.client('kinesis')
         KINESIS_STREAM_NAME = os.environ.get('KINESIS_STREAM_NAME', 'video-upload-stream')
 
         video_id = str(uuid.uuid4())
