@@ -72,3 +72,6 @@ def process_kinesis_records():
                 # Limpiar buffer
                 del fragment_buffer[video_id]
         shard_iterator = response['NextShardIterator']
+
+if __name__ == "__main__":
+    process_kinesis_records()
