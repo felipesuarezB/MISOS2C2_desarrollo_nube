@@ -16,7 +16,7 @@ services:
     networks:
       - kinesis_net
     restart: always
-    command: ["python", "src/tasks/video_tasks/video_tasks.py"]
+    command: ["python", "src/tasks/video_tasks.py"]
 
 networks:
   kinesis_net:

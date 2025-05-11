@@ -17,4 +17,4 @@ RUN pip install --no-cache-dir pipenv && pipenv install --system --deploy
 COPY ./src /app/src
 
 # Establecer el punto de entrada al consumidor
-CMD ["python", "src/tasks/video_tasks/video_tasks.py"]
+CMD ["python", "src/tasks/video_tasks.py"]
