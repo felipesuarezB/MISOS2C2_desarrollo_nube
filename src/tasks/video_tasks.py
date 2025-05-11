@@ -1,78 +1,94 @@
-from datetime import datetime
 import boto3
 import json
-import uuid
+import threading
 import time
 from botocore.exceptions import ClientError
 
-# --- Kinesis Consumer ---
-def process_kinesis_records():
-    REGION = "us-east-1"
-    print(":rocket: Iniciando consumidor de Kinesis...")
-    kinesis_client = boto3.client('kinesis', region_name=REGION)
-    s3_client = boto3.client('s3', region_name=REGION)
-    S3_BUCKET = "videoteca-bucket1"
-    S3_PREFIX = "videos/"
-    stream_name = "video-upload-stream"
+REGION = "us-east-1"
+S3_BUCKET = "videoteca-bucket1"
+S3_PREFIX = "videos/"
+STREAM_NAME = "video-upload-stream"
 
-    # Obtener shard iterator
+kinesis_client = boto3.client('kinesis', region_name=REGION)
+s3_client = boto3.client('s3', region_name=REGION)
+fragment_buffer = {}
+
+def process_shard(shard_id):
+    print(f"🚀 Iniciando lectura de shard: {shard_id}")
     try:
-        stream_description = kinesis_client.describe_stream(StreamName=stream_name)
-        shard_id = stream_description['StreamDescription']['Shards'][0]['ShardId']
         shard_iterator = kinesis_client.get_shard_iterator(
-            StreamName=stream_name,
+            StreamName=STREAM_NAME,
             ShardId=shard_id,
-            ShardIteratorType='TRIM_HORIZON'
+            ShardIteratorType='LATEST'
         )['ShardIterator']
-        print(f":white_check_mark: Obtenido shard iterator del stream '{stream_name}' (shard ID: {shard_id})")
     except ClientError as e:
-        print(f":x: Error al obtener el shard iterator: {e}")
+        print(f"❌ Error al obtener shard iterator: {e}")
         return
 
-    fragment_buffer = {}
     while True:
         response = kinesis_client.get_records(ShardIterator=shard_iterator, Limit=100)
         records = response['Records']
 
         if not records:
-            print(":hourglass_flowing_sand: Esperando nuevos registros en el stream...")
-
+            print(f"⏳ No hay nuevos registros en shard {shard_id}, esperando...")
+            time.sleep(1)
+            shard_iterator = response['NextShardIterator']
+            continue
 
         for record in records:
             payload = json.loads(record['Data'])
             video_id = payload['video_id']
-            print(f":package: Recibido fragmento {payload['chunk_index'] + 1}/{payload['total_chunks']} del video '{payload['filename']}' (ID: {video_id})")
+            chunk_index = payload['chunk_index']
+            total_chunks = payload['total_chunks']
+            filename = payload['filename']
 
-            if payload['chunk_index'] == 0:
-                print(f":incoming_envelope: Iniciando la recepción del video: '{payload['filename']}' (ID: {video_id})")
+            print(f"📦 [Shard {shard_id}] Fragmento {chunk_index+1}/{total_chunks} del video '{filename}'")
 
             if video_id not in fragment_buffer:
-                fragment_buffer[video_id] = [None] * payload['total_chunks']
-            fragment_buffer[video_id][payload['chunk_index']] = bytes.fromhex(payload['data'])
+                fragment_buffer[video_id] = [None] * total_chunks
+
+            fragment_buffer[video_id][chunk_index] = bytes.fromhex(payload['data'])
 
             if all(frag is not None for frag in fragment_buffer[video_id]):
-                print(f":jigsaw: Video completo recibido: {payload['filename']} — procesando...")
-                file_data_bytes = b''.join(fragment_buffer[video_id])
-                filename = payload['filename']
+                print(f"🧩 Video completo recibido: {filename}, uniendo y subiendo...")
+
+                file_data = b''.join(fragment_buffer[video_id])
                 s3_key = f"{S3_PREFIX}{filename}"
 
                 try:
-                    print(f":cloud: Subiendo video '{filename}' a S3...")
                     s3_client.put_object(
                         Bucket=S3_BUCKET,
                         Key=s3_key,
-                        Body=file_data_bytes,
+                        Body=file_data,
                         ContentType="video/mp4"
                     )
-                    video_url = f"https://{S3_BUCKET}.s3.amazonaws.com/{s3_key}"
-                    print(f":white_check_mark: Video subido a S3: {video_url}")
+                    print(f"✅ Video subido a S3: https://{S3_BUCKET}.s3.amazonaws.com/{s3_key}")
                 except Exception as e:
-                    print(f":x: Error al subir a S3: {e}")
+                    print(f"❌ Error al subir a S3: {e}")
 
                 del fragment_buffer[video_id]
 
         shard_iterator = response['NextShardIterator']
-        time.sleep(1)
+        time.sleep(0.5)
+
+def main():
+    print("🔍 Descubriendo shards del stream...")
+    try:
+        stream_description = kinesis_client.describe_stream(StreamName=STREAM_NAME)
+        shards = stream_description['StreamDescription']['Shards']
+    except ClientError as e:
+        print(f"❌ Error al describir el stream: {e}")
+        return
+
+    threads = []
+    for shard in shards:
+        shard_id = shard['ShardId']
+        t = threading.Thread(target=process_shard, args=(shard_id,))
+        t.start()
+        threads.append(t)
+
+    for t in threads:
+        t.join()
 
 if __name__ == "__main__":
-    process_kinesis_records()
+    main()
