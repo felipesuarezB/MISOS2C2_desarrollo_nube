@@ -31,7 +31,15 @@ class VideoService:
         KINESIS_STREAM_NAME = os.environ.get('KINESIS_STREAM_NAME', 'video-upload-stream')
 
         video_id = str(uuid.uuid4())
-        chunk_size = 1024 * 1024  # 1 MB
+
+        # Máximo de bytes crudos por chunk:
+        MAX_KINESIS_PAYLOAD = 1048576  # 1 MB
+        json_overhead_estimate = 1024  # conservadoramente 1 KB para campos, comillas, etc.
+
+        # Como .hex() duplica tamaño:
+        chunk_size = (MAX_KINESIS_PAYLOAD - json_overhead_estimate) // 2
+        # chunk_size = 523776  # aproximadamente 511.5 KB de datos binarios
+
         num_chunks = math.ceil(len(file_data) / chunk_size)
 
         for idx in range(num_chunks):
