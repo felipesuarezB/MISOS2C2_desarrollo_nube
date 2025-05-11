@@ -12,7 +12,6 @@ from src.apis.jugador_bp import jugadores_bp
 from src.apis.video_bp import videos_bp
 from src.api_messages.base_api_error import ApiError
 from src.api_messages.api_errors import TokenNotFound, TokenInvalidOrExpired
-from src.tasks.celery_worker import celery
 
 from sqlalchemy import inspect
 from sqlalchemy.exc import OperationalError
@@ -52,7 +51,6 @@ def create_database_if_not_exists(db_uri):
 
     except psycopg2.Error as e:
         print(f"❌ Error conectando a PostgreSQL: {e}")
-
 
 def create_app():
     app = Flask(__name__)
@@ -111,18 +109,6 @@ def create_app():
     return app, jwt
 
 app, jwt = create_app()
-
-def init_celery(celery, app):
-    celery.conf.update(app.config)
-
-    class ContextTask(celery.Task):
-        def __call__(self, *args, **kwargs):
-            with app.app_context():
-                return self.run(*args, **kwargs)
-
-    celery.Task = ContextTask
-
-init_celery(celery, app)
 
 @app.errorhandler(ApiError)
 def handle_exception(err):
