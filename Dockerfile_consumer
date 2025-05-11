@@ -9,12 +9,10 @@ RUN apt-get update && apt-get install -y \
 
 ENV ENVIRONMENT=production
 ENV AWS_REGION=us-east-1
-
+ENV PYTHONPATH=/app
 COPY Pipfile Pipfile.lock ./
 RUN pip install --no-cache-dir pipenv && pipenv install --system --deploy
 
-# Copiar todo el código fuente incluyendo el consumer
 COPY ./src /app/src
 
-# Establecer el punto de entrada al consumidor
 CMD ["python", "src/tasks/video_tasks.py"]
