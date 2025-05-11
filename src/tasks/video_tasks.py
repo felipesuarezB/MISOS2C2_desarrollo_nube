@@ -11,7 +11,7 @@ from src.models.video import Video
 # --- Kinesis Consumer ---
 def process_kinesis_records():
     kinesis_client = boto3.client('kinesis')
-    S3_BUCKET = os.environ.get("S3_BUCKET_NAME", "videoteca-bucket")
+    S3_BUCKET = os.environ.get("S3_BUCKET_NAME", "videoteca-bucket1")
     S3_PREFIX = os.environ.get("S3_VIDEO_PREFIX", "videos/")
     stream_name = os.environ.get('KINESIS_STREAM_NAME', 'video-upload-stream')
     shard_iterator = kinesis_client.get_shard_iterator(
