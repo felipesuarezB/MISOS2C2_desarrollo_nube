@@ -11,6 +11,7 @@ from src.models.video import Video
 # --- Kinesis Consumer ---
 def process_kinesis_records():
     REGION = "us-east-1"
+    print("🚀 Iniciando consumidor de Kinesis...")
 
     kinesis_client = boto3.client('kinesis', region_name=REGION)
     s3_client = boto3.client('s3', region_name=REGION)
@@ -28,6 +29,7 @@ def process_kinesis_records():
             ShardId=shard_id,
             ShardIteratorType='TRIM_HORIZON'
         )['ShardIterator']
+        print(f"✅ Obtenido shard iterator del stream '{stream_name}' (shard ID: {shard_id})")
     except ClientError as e:
         print(f"❌ Error al obtener el shard iterator: {e}")
         return
@@ -38,9 +40,13 @@ def process_kinesis_records():
         response = kinesis_client.get_records(ShardIterator=shard_iterator, Limit=100)
         records = response['Records']
 
+        if not records:
+            print("⏳ Esperando nuevos registros en el stream...")
+        
         for record in records:
             payload = json.loads(record['Data'])
             video_id = payload['video_id']
+            print(f"📦 Recibido fragmento {payload['chunk_index'] + 1}/{payload['total_chunks']} del video '{payload['filename']}' (ID: {video_id})")
 
             if video_id not in fragment_buffer:
                 fragment_buffer[video_id] = [None] * payload['total_chunks']
@@ -49,6 +55,7 @@ def process_kinesis_records():
 
             # Si ya tenemos todos los fragmentos
             if all(frag is not None for frag in fragment_buffer[video_id]):
+                print(f"🧩 Video completo recibido: {payload['filename']} — procesando...")
                 file_data_bytes = b''.join(fragment_buffer[video_id])
                 filename = payload['filename']
                 title = payload['title']
@@ -59,6 +66,7 @@ def process_kinesis_records():
                     # Subir a S3
                     s3_client.put_object(Bucket=S3_BUCKET, Key=s3_key, Body=file_data_bytes, ContentType="video/mp4")
                     video_url = f"https://{S3_BUCKET}.s3.amazonaws.com/{s3_key}"
+                    print(f"✅ Video subido a S3: {video_url}")
 
                     # Registrar en DB
                     from flask import Flask
@@ -83,6 +91,7 @@ def process_kinesis_records():
                         )
                         db.session.add(video)
                         db.session.commit()
+                        print(f"📥 Registro guardado en DB para video: {title} (Jugador ID: {jugador_id})")
 
                 except Exception as e:
                     print(f"❌ Error al subir a S3 o registrar en DB: {e}")
