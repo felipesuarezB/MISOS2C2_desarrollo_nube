@@ -1,10 +1,10 @@
 from datetime import datetime
 import boto3
-import boto3
 import os
 from werkzeug.utils import secure_filename
-from werkzeug.utils import secure_filename
 import uuid
+import math
+import json
 from sqlalchemy import func
 from flask import jsonify
 from src.api_messages.api_errors import InternalServerError
@@ -13,37 +13,45 @@ from src.database import db
 from src.models.video import Video, VideoSchema
 from src.models.vote import Vote, VoteSchema
 from src.models.jugador import Jugador, JugadorSchema
-# from src.tasks.video_tasks import async_save_video
 
 class VideoService:
     
     def save_video(self, jwt_payload, uploadVideo):
-        import math
-        import json
         jugador_id = jwt_payload['sub']
-        filename = f"{datetime.now().strftime('%Y%m%d%H%M%S')}_{secure_filename(uploadVideo['video_file'].filename)}"
+        original_filename = uploadVideo['video_file'].filename
+        filename = f"{datetime.now().strftime('%Y%m%d%H%M%S')}_{secure_filename(original_filename)}"
         file_data = uploadVideo['video_file'].read()
+        
+        # Log del tamaño del archivo recibido
+        file_size_kb = len(file_data) / 1024
+        print(f"📥 Archivo recibido: {original_filename}")
+        print(f"🗂️ Nombre seguro: {filename}")
+        print(f"📏 Tamaño del archivo: {file_size_kb:.2f} KB")
+        
         kinesis_client = boto3.client(
             'kinesis',
-            region_name=os.getenv("AWS_REGION", "us-east-1")  # o la región que uses
+            region_name=os.getenv("AWS_REGION", "us-east-1")
         )
 
         KINESIS_STREAM_NAME = os.environ.get('KINESIS_STREAM_NAME', 'video-upload-stream')
-
         video_id = str(uuid.uuid4())
 
         # Máximo de bytes crudos por chunk:
         MAX_KINESIS_PAYLOAD = 1048576  # 1 MB
-        json_overhead_estimate = 1024  # conservadoramente 1 KB para campos, comillas, etc.
+        json_overhead_estimate = 1024  # estimación conservadora de 1 KB para campos, comillas, etc.
 
-        # Como .hex() duplica tamaño:
-        chunk_size = (MAX_KINESIS_PAYLOAD - json_overhead_estimate) // 2
-        # chunk_size = 523776  # aproximadamente 511.5 KB de datos binarios
-
+        # Calculamos el tamaño del chunk
+        chunk_size = (MAX_KINESIS_PAYLOAD - json_overhead_estimate) // 2  # dado que .hex() duplica el tamaño
         num_chunks = math.ceil(len(file_data) / chunk_size)
 
+        # Log del número de chunks
+        print(f"📦 Dividiendo archivo en {num_chunks} fragmentos de hasta {chunk_size} bytes cada uno")
+
+        # Enviar fragmentos a Kinesis
         for idx in range(num_chunks):
             chunk_data = file_data[idx * chunk_size:(idx + 1) * chunk_size]
+            chunk_size_actual = len(chunk_data)  # Tamaño real del chunk
+
             record = {
                 'video_id': video_id,
                 'filename': filename,
@@ -53,13 +61,22 @@ class VideoService:
                 'total_chunks': num_chunks,
                 'data': chunk_data.hex()  # serializar como string hexadecimal
             }
-            # Enviar a Kinesis
-            kinesis_client.put_record(
-                StreamName=KINESIS_STREAM_NAME,
-                Data=json.dumps(record),
-                PartitionKey=video_id
-            )
 
+            try:
+                kinesis_client.put_record(
+                    StreamName=KINESIS_STREAM_NAME,
+                    Data=json.dumps(record),
+                    PartitionKey=video_id
+                )
+                # Log del envío de cada chunk
+                print(f"✅ Chunk {idx+1}/{num_chunks} enviado a Kinesis, tamaño: {chunk_size_actual} bytes")
+            except Exception as e:
+                # Log de error al enviar chunk
+                print(f"❌ Error al enviar chunk {idx+1}: {e}")
+                raise InternalServerError() from e
+
+        # Log final de carga exitosa
+        print(f"🎉 Video '{filename}' enviado completo con ID: {video_id}")
         return VideoUploaded(video_id)
     
     def list_videos(self, jwt_payload):
@@ -77,7 +94,6 @@ class VideoService:
         return VideoListed(found_videos_json)
     
     def list_public_videos(self, jwt_payload):
-        
         found_videos = []
         try:
             found_videos = db.session.query(Video).all()
@@ -172,5 +188,5 @@ class VideoService:
 
         return VideoRanking(found_videos_json)
 
-    
+# Instanciando el servicio
 video_service = VideoService()
