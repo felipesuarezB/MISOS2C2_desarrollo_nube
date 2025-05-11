@@ -34,6 +34,10 @@ def process_kinesis_records():
         response = kinesis_client.get_records(ShardIterator=shard_iterator, Limit=100)
         records = response['Records']
 
+        if not records:
+            print(":hourglass_flowing_sand: Esperando nuevos registros en el stream...")
+
+
         for record in records:
             payload = json.loads(record['Data'])
             video_id = payload['video_id']
