@@ -1,59 +1,94 @@
-from datetime import datetime
-from src.tasks.celery_worker import celery
-from src.database import db
-from src.models.video import Video
-from src.models.jugador import Jugador
-from src.models.vote import Vote
-import uuid
-import os
 import boto3
+import json
+import threading
+import time
 from botocore.exceptions import ClientError
-from sqlalchemy import inspect
 
-@celery.task
-def async_save_video(jugador_id, title, filename, file_data_bytes):
-    print("Guardando archivo en S3")
+REGION = "us-east-1"
+S3_BUCKET = "videoteca-bucket1"
+S3_PREFIX = "videos/"
+STREAM_NAME = "video-upload-stream"
+
+kinesis_client = boto3.client('kinesis', region_name=REGION)
+s3_client = boto3.client('s3', region_name=REGION)
+fragment_buffer = {}
+
+def process_shard(shard_id):
+    print(f"🚀 Iniciando lectura de shard: {shard_id}")
     try:
-        # Configuración de S3
-        S3_BUCKET = os.environ.get("S3_BUCKET_NAME", "videoteca-bucket")
-        S3_PREFIX = os.environ.get("S3_VIDEO_PREFIX", "videos/")  # puede ser "" si no quieres prefijo
-        s3_key = f"{S3_PREFIX}{filename}" if S3_PREFIX else filename
-
-        s3_client = boto3.client("s3")
-        # Subir archivo
-        s3_client.put_object(Bucket=S3_BUCKET, Key=s3_key, Body=file_data_bytes, ContentType="video/mp4")
-
-        # URL pública
-        video_url = f"https://{S3_BUCKET}.s3.amazonaws.com/{s3_key}"
-
-        # Configurar la app de Flask para la DB
-        from flask import Flask
-        from src.database import get_database_url
-        app = Flask(__name__)
-        app.config['SQLALCHEMY_DATABASE_URI'] = get_database_url()
-        app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-        from src.database import db
-        db.init_app(app)
-
-        with app.app_context():
-            inspector = inspect(db.engine)
-            existing_tables = inspector.get_table_names()
-            if not existing_tables:
-                db.create_all()
-            video = Video(
-                title=title,
-                status='subido',
-                uploaded_at=datetime.now(),
-                processed_at=datetime.now(),
-                processed_url=video_url,
-                id_jugador=uuid.UUID(jugador_id)
-            )
-            db.session.add(video)
-            db.session.commit()
-        return True
+        shard_iterator = kinesis_client.get_shard_iterator(
+            StreamName=STREAM_NAME,
+            ShardId=shard_id,
+            ShardIteratorType='LATEST'
+        )['ShardIterator']
     except ClientError as e:
-        print(f"Error al subir video a S3: {e}")
-        return False
-    except Exception as e:
-        print(f"Error general al guardar video: {e}")
-        return False
+        print(f"❌ Error al obtener shard iterator: {e}")
+        return
+
+    while True:
+        response = kinesis_client.get_records(ShardIterator=shard_iterator, Limit=100)
+        records = response['Records']
+
+        if not records:
+            print(f"⏳ No hay nuevos registros en shard {shard_id}, esperando...")
+            time.sleep(1)
+            shard_iterator = response['NextShardIterator']
+            continue
+
+        for record in records:
+            payload = json.loads(record['Data'])
+            video_id = payload['video_id']
+            chunk_index = payload['chunk_index']
+            total_chunks = payload['total_chunks']
+            filename = payload['filename']
+
+            print(f"📦 [Shard {shard_id}] Fragmento {chunk_index+1}/{total_chunks} del video '{filename}'")
+
+            if video_id not in fragment_buffer:
+                fragment_buffer[video_id] = [None] * total_chunks
+
+            fragment_buffer[video_id][chunk_index] = bytes.fromhex(payload['data'])
+
+            if all(frag is not None for frag in fragment_buffer[video_id]):
+                print(f"🧩 Video completo recibido: {filename}, uniendo y subiendo...")
+
+                file_data = b''.join(fragment_buffer[video_id])
+                s3_key = f"{S3_PREFIX}{filename}"
+
+                try:
+                    s3_client.put_object(
+                        Bucket=S3_BUCKET,
+                        Key=s3_key,
+                        Body=file_data,
+                        ContentType="video/mp4"
+                    )
+                    print(f"✅ Video subido a S3: https://{S3_BUCKET}.s3.amazonaws.com/{s3_key}")
+                except Exception as e:
+                    print(f"❌ Error al subir a S3: {e}")
+
+                del fragment_buffer[video_id]
+
+        shard_iterator = response['NextShardIterator']
+        time.sleep(0.5)
+
+def main():
+    print("🔍 Descubriendo shards del stream...")
+    try:
+        stream_description = kinesis_client.describe_stream(StreamName=STREAM_NAME)
+        shards = stream_description['StreamDescription']['Shards']
+    except ClientError as e:
+        print(f"❌ Error al describir el stream: {e}")
+        return
+
+    threads = []
+    for shard in shards:
+        shard_id = shard['ShardId']
+        t = threading.Thread(target=process_shard, args=(shard_id,))
+        t.start()
+        threads.append(t)
+
+    for t in threads:
+        t.join()
+
+if __name__ == "__main__":
+    main()
